@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import RegionalPresence from '../../components/contact/RegionalPresence';
+import TrustedPartners from '../../components/contact/TrustedPartners';
 
 const Contact: React.FC = () => {
     const [formState, setFormState] = useState({
@@ -178,6 +179,9 @@ const Contact: React.FC = () => {
                         </div>
                     </div>
                 </div>
+
+                {/* Trusted Partners Section */}
+                <TrustedPartners />
 
                 {/* Full-Width Regional Map Section */}
                 <div className="mt-24">
