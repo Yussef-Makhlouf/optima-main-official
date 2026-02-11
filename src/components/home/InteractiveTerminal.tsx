@@ -50,11 +50,7 @@ const InteractiveTerminal: React.FC = () => {
         }
     };
 
-    useEffect(() => {
-        if (inputRef.current) {
-            inputRef.current.scrollIntoView({ behavior: "smooth" });
-        }
-    }, [output]);
+
 
     return (
         <section className="py-24 bg-black font-mono text-green-500 p-6 md:p-12 relative overflow-hidden border-y border-green-900/30">
