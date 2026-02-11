@@ -1,0 +1,50 @@
+
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Header from './components/common/Header';
+import Footer from './components/common/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Services from './pages/Services';
+import ServiceDetail from './pages/Services/ServiceDetail';
+import Projects from './pages/Projects';
+import ProjectDetail from './pages/Projects/ProjectDetail';
+import Contact from './pages/Contact';
+import Industries from './pages/Industries';
+
+// ScrollToTop component
+const ScrollToTop = () => {
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, [pathname]);
+
+    return null;
+};
+
+const App: React.FC = () => {
+    return (
+        <Router>
+            <ScrollToTop />
+            <div className="flex flex-col min-h-screen bg-slate-50 dark:bg-dark transition-colors duration-500">
+                <Header />
+                <main className="flex-grow">
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                        <Route path="/about" element={<About />} />
+                        <Route path="/services" element={<Services />} />
+                        <Route path="/services/:slug" element={<ServiceDetail />} />
+                        <Route path="/projects" element={<Projects />} />
+                        <Route path="/projects/:slug" element={<ProjectDetail />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="/industries" element={<Industries />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </Router>
+    );
+};
+
+export default App;
