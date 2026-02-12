@@ -1,12 +1,17 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Philosophy: React.FC = () => {
+    const { t, i18n } = useTranslation(['home']);
+    const isRtl = i18n.language === 'ar';
+
     const principles = [
         {
             id: 'p1',
             code: 'PRIN_01',
-            title: 'Precision Engineering',
-            description: 'Every line of code, every architectural decision is measured against the highest standards of technical excellence.',
+            // title and description are now fetched via t() inside the render or mapped
+            // Since we need to map them, we can either keep the structure and just use t() here
+            // or iterate over keys. But let's keep the structure for icons and codes.
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -16,8 +21,6 @@ const Philosophy: React.FC = () => {
         {
             id: 'p2',
             code: 'PRIN_02',
-            title: 'Zero Compromise',
-            description: 'We do not negotiate on quality, security, or performance. Your infrastructure deserves nothing less than absolute certainty.',
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -27,8 +30,6 @@ const Philosophy: React.FC = () => {
         {
             id: 'p3',
             code: 'PRIN_03',
-            title: 'Architectural Integrity',
-            description: 'Systems built to last decades, not quarters. We design for longevity, scalability, and evolution.',
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -38,8 +39,6 @@ const Philosophy: React.FC = () => {
         {
             id: 'p4',
             code: 'PRIN_04',
-            title: 'Transparent Operations',
-            description: 'No black boxes. Every decision, every metric, every process is documented and accessible to our partners.',
             icon: (
                 <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -63,14 +62,14 @@ const Philosophy: React.FC = () => {
                 <div className="text-center mb-20">
                     <div className="inline-flex items-center space-x-2 mb-6">
                         <div className="w-2 h-2 bg-primary rounded-full"></div>
-                        <span className="text-xs font-mono text-primary uppercase tracking-widest">Core Principles</span>
+                        <span className={`text-xs font-mono text-primary uppercase ${isRtl ? 'tracking-[0.2em]' : 'tracking-widest'}`}>{t('home:philosophy.tag')}</span>
                         <div className="w-2 h-2 bg-secondary rounded-full"></div>
                     </div>
-                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter">
-                        The <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Philosophy</span>
+                    <h2 className={`text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-6 uppercase ${isRtl ? '' : 'tracking-tighter'}`}>
+                        {t('home:philosophy.title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t('home:philosophy.titleHighlight')}</span>
                     </h2>
                     <p className="text-lg md:text-xl text-slate-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed font-light">
-                        Our approach is not just about technology—it's about building systems that embody trust, precision, and unwavering reliability.
+                        {t('home:philosophy.subtitle')}
                     </p>
                 </div>
 
@@ -97,11 +96,11 @@ const Philosophy: React.FC = () => {
                             </div>
 
                             {/* Content */}
-                            <h3 className="text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tight">
-                                {principle.title}
+                            <h3 className={`text-2xl font-black text-slate-900 dark:text-white mb-4 uppercase ${isRtl ? '' : 'tracking-tight'}`}>
+                                {t(`home:philosophy.items.${principle.id}.title`)}
                             </h3>
                             <p className="text-slate-600 dark:text-gray-400 leading-relaxed">
-                                {principle.description}
+                                {t(`home:philosophy.items.${principle.id}.description`)}
                             </p>
 
                             {/* Hover Line */}
@@ -115,7 +114,7 @@ const Philosophy: React.FC = () => {
                     <div className="inline-block relative">
                         <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 via-secondary/20 to-primary/20 blur-xl"></div>
                         <p className="relative text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase tracking-tight">
-                            Architecture of <span className="text-primary">Certainty</span>
+                            {t('home:philosophy.bottom')} <span className="text-primary">{t('home:philosophy.bottomHighlight')}</span>
                         </p>
                     </div>
                 </div>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&display=swap');
 
 
 
@@ -10,6 +10,37 @@ body {
     transition: background-color 0.5s ease, color 0.5s ease;
     overflow-x: hidden;
     font-family: 'Inter', sans-serif;
+}
+
+/* Arabic Font & Typography Overrides */
+html[lang="ar"] body {
+    font-family: 'Cairo', sans-serif;
+    font-size: 1.05rem;
+    /* Arabic text often looks smaller than English at same px */
+    line-height: 1.8;
+    /* Arabic glyphs need more vertical space */
+}
+
+/* Global Arabic text refinements */
+html[lang="ar"] h1,
+html[lang="ar"] h2,
+html[lang="ar"] h3,
+html[lang="ar"] h4,
+html[lang="ar"] h5,
+html[lang="ar"] h6 {
+    line-height: 1.4;
+    letter-spacing: 0 !important;
+    /* Letter spacing breaks Arabic ligatures */
+}
+
+html[lang="ar"] p {
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+/* RTL Support */
+html[dir="rtl"] {
+    direction: rtl;
 }
 
 .dark body {

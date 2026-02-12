@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Icons } from '../../data/content';
 
 const SecureHandshakeCTA: React.FC = () => {
     const [isHovered, setIsHovered] = useState(false);
+    const { t } = useTranslation(['about', 'common']);
 
     return (
         <section className="py-40 relative overflow-hidden bg-slate-50 dark:bg-black border-t border-slate-200 dark:border-white/5 transition-colors">
@@ -18,14 +20,14 @@ const SecureHandshakeCTA: React.FC = () => {
                 <div className="inline-block mb-12">
                     <div className="flex items-center space-x-4 mb-6 justify-center">
                         <div className="w-12 h-[1px] bg-secondary"></div>
-                        <span className="text-[10px] font-black text-secondary uppercase tracking-[0.6em]">Establish Protocol</span>
+                        <span className="text-[10px] font-black text-secondary uppercase tracking-[0.6em]">{t('about:cta.tag')}</span>
                         <div className="w-12 h-[1px] bg-secondary"></div>
                     </div>
                 </div>
 
                 <h2 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white mb-16 tracking-tighter uppercase transition-colors leading-none">
-                    Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Architect</span><br />
-                    absolute certainty?
+                    {t('about:cta.title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t('about:cta.titleHighlight')}</span><br />
+                    {t('about:cta.titleSuffix')}
                 </h2>
 
                 <div
@@ -47,7 +49,7 @@ const SecureHandshakeCTA: React.FC = () => {
                                         <Icons.Network />
                                     </div>
                                     <span className={`text-[10px] font-black uppercase tracking-[0.3em] transition-all duration-500 ${isHovered ? 'text-primary' : 'text-slate-400 dark:text-white/40'}`}>
-                                        {isHovered ? 'Initialize' : 'Connect'}
+                                        {isHovered ? t('about:cta.button.initialize') : t('about:cta.button.connect')}
                                     </span>
                                 </div>
                             </div>

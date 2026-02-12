@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import LogoMarquee from './LogoMarquee';
 
 interface Technology {
@@ -18,20 +19,23 @@ interface TechMarqueeProps {
 
 const TechMarquee: React.FC<TechMarqueeProps> = ({
     technologies,
-    title = "Powered By Modern Technologies",
+    title,
     showTitle = true,
     speed = 'normal'
 }) => {
+    const { t } = useTranslation(['common']);
+    const displayTitle = title || t('common:techStack.title');
+
     return (
-        <section className="py-16 md:py-24 bg-slate-50 dark:bg-surface/20 border-y border-slate-200 dark:border-white/5 transition-colors overflow-hidden">
+        <section className="py-16 md:py-24 bg-slate-50 dark:bg-surface/20 border-y border-slate-200 dark:border-white/5 transition-colors overflow-hidden" dir="ltr">
             <div className="max-w-7xl mx-auto px-6">
                 {showTitle && (
                     <div className="text-center mb-12">
                         <h2 className="text-[10px] md:text-xs font-mono font-bold text-primary uppercase tracking-[0.5em] mb-3">
-                            [ TECH_STACK ]
+                            [ {t('common:techStack.tag')} ]
                         </h2>
                         <h3 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tight uppercase">
-                            {title}
+                            {displayTitle}
                         </h3>
                     </div>
                 )}

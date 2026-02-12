@@ -1,0 +1,90 @@
+{
+    "title": "تواصل معنا",
+    "subtitle": "لنبني معاً",
+    "hero": {
+        "title": "افتتح",
+        "titleHighlight": "الاتصال.",
+        "subtitle": "مستعد لهندسة العمود الفقري لمستقبلك الرقمي؟ فريقنا في انتظارك."
+    },
+    "form": {
+        "nameLabel": "الاسم",
+        "namePlaceholder": "أدخل اسمك الكامل",
+        "emailLabel": "البريد الإلكتروني",
+        "emailPlaceholder": "أدخل بريد العمل",
+        "companyLabel": "الشركة",
+        "companyPlaceholder": "اسم المؤسسة",
+        "interestLabel": "اهتمام المشروع",
+        "messageLabel": "تفاصيل المشروع",
+        "messagePlaceholder": "أخبرنا عن احتياجات بنيتك التحتية...",
+        "submitButton": "بدء البروتوكول",
+        "successMessage": "تم استلام الإرسال. انتظر الاتصال.",
+        "options": {
+            "hosting": "استضافة آمنة",
+            "transformation": "تحول رقمي",
+            "webapp": "تطوير تطبيقات الويب",
+            "consultation": "استشارات استراتيجية"
+        }
+    },
+    "info": {
+        "locationsTitle": "المراكز العالمية",
+        "contactTitle": "خط مباشر"
+    },
+    "regional": {
+        "title": "التواجد الإقليمي",
+        "tag": "[ الانتشار_العالمي ]",
+        "description": "مواقع استراتيجية عبر الأسواق الرئيسية",
+        "gcc": "مركز دول الخليج",
+        "europe": "أوروبا",
+        "northAmerica": "أمريكا الشمالية",
+        "statusLive": "بث_مباشر",
+        "items": {
+            "ksa": {
+                "name": "المملكة العربية السعودية",
+                "city": "الرياض"
+            },
+            "uae": {
+                "name": "الإمارات العربية المتحدة",
+                "city": "أبو ظبي"
+            },
+            "egy": {
+                "name": "مصر",
+                "city": "القاهرة"
+            },
+            "kwt": {
+                "name": "الكويت",
+                "city": "مدينة الكويت"
+            },
+            "qat": {
+                "name": "قطر",
+                "city": "الدوحة"
+            },
+            "bHR": {
+                "name": "البحرين",
+                "city": "المنامة"
+            },
+            "omn": {
+                "name": "عمان",
+                "city": "مسقط"
+            }
+        }
+    },
+    "partners": {
+        "tag": "[ بيئة_الشركات ]",
+        "title": "موثوق به من قبل",
+        "titleHighlight": "رواد الصناعة",
+        "subtitle": "المؤسسات الرائدة",
+        "description": "تمكين التحول الرقمي لأكثر المؤسسات طموحاً في الشرق الأوسط",
+        "sectorLabel": "القطاع",
+        "activeStatus": "نشط",
+        "sectors": {
+            "software": "تطوير البرمجيات",
+            "ai": "ابتكارات الذكاء الاصطناعي",
+            "marketing": "التسويق والعلامات التجارية",
+            "digitalMarketing": "التسويق الرقمي",
+            "facility": "حلول المرافق",
+            "sports": "الرياضة والترفيه",
+            "animalHealth": "صحة الحيوان",
+            "realEstate": "العقارات"
+        }
+    }
+}

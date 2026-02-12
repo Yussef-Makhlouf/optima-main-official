@@ -1,0 +1,165 @@
+{
+    "hero": {
+        "tag": "[ ARCHITECTURE.01 ]",
+        "title": "ENGINEERING",
+        "titleHighlight": "CERTAINTY.",
+        "subtitle": "OPTIMA Solutions designs resilient digital foundations for the world's most ambitious enterprises.",
+        "target": "Target: Zero Downtime.",
+        "cta": "Initialize Connection",
+        "ctaSecondary": "Capabilities.bin",
+        "hudInit": "INIT_PROTOCOL::GLOBAL_SCALE",
+        "xCoord": "[X_COORD]",
+        "yCoord": "[Y_COORD]",
+        "sysStatus": "[SYS_STATUS]",
+        "ticker": "ARCHITECTING_THE_FUTURE_INFRASTRUCTURE_NOW_DEPLOYING_SYSTEM_v4.2.0"
+    },
+    "capabilities": {
+        "tag": "[ SYS_OPS ]",
+        "title": "Modular",
+        "titleSecond": "Stack.",
+        "watermark": "CAPABILITY",
+        "description": "Interoperable service modules designed for 24/7 mission-critical operational stability.",
+        "imageLabel": "System_Visualisation",
+        "imageTitle": "Global_Network_Map",
+        "imageCode": "FIG_3.1",
+        "sysCode": "SYS_DOCS.v4"
+    },
+    "methodology": {
+        "tag": "[ DEPLOY_PROTOCOL ]",
+        "title": "Engineered Flow.",
+        "status": "SYSTEM_CHECK: OK // VER_4.2",
+        "phase": "PHASE_",
+        "audit": {
+            "title": "Audit",
+            "description": "Comprehensive analysis of current infrastructure security and performance bottlenecks."
+        },
+        "architect": {
+            "title": "Architect",
+            "description": "Modular blueprints prioritizing scalability and zero-downtime migration paths."
+        },
+        "operate": {
+            "title": "Operate",
+            "description": "Continuous CI/CD deployment with 24/7 global telemetry monitoring."
+        }
+    },
+    "projects": {
+        "tag": "[ ARCHIVES ]",
+        "title": "Impact Data.",
+        "exploreAll": "Explore_All_Units",
+        "running": "RUNNING_STUDY_..."
+    },
+    "ticker": {
+        "text": "SECURE_DATA_TRANSFER_PROTOCOL_ACTIVE // GLOBAL_NODES_ONLINE // LATENCY: 12ms // OPTIMA_SOLUTIONS_v4 // SEC_VERIFIED: TRUE //"
+    },
+    "cta": {
+        "title": "BUILD THE",
+        "titleHighlight": "BACKBONE.",
+        "description": "Global scale requires infrastructure that adapts as fast as the market moves.",
+        "status": "[ CONNECTION_READY ]",
+        "initiate": "INITIATE",
+        "protocol": "PROTOCOL"
+    },
+    "terminal": {
+        "systemReady": "> SYSTEM_READY",
+        "typeHelp": "> TYPE \"HELP\" FOR COMMANDS",
+        "availableCommands": "AVAILABLE COMMANDS:",
+        "redirectServices": "REDIRECTING TO /SERVICES...",
+        "accessProjects": "ACCESSING PROJECT ARCHIVES...",
+        "loadingProfile": "LOADING OPTIMA_PROFILE...",
+        "openingChannels": "OPENING COMM_CHANNELS...",
+        "consoleCleared": "> CONSOLE_CLEARED",
+        "error": "ERROR: COMMAND \"{{cmd}}\" NOT RECOGNIZED",
+        "guest": "GUEST@OPTIMA-TML:~",
+        "placeholder": "ENTER_COMMAND..."
+    },
+    "faq": {
+        "tag": "[ SYSTEM_QUERIES ]",
+        "title": "Frequently",
+        "titleHighlight": "Asked.",
+        "items": {
+            "migration": {
+                "question": "How do you ensure zero-downtime during infrastructure migration?",
+                "answer": "Our 'Shadow Infrastructure' protocol involves spinning up a parallel, identical environment alongside your legacy system. We use blue-green deployment strategies and real-time data replication to ensure that the final cutover happens in milliseconds, with zero service interruption to end-users."
+            },
+            "compliance": {
+                "question": "What security compliance standards does OPTIMA Solutions adhere to?",
+                "answer": "OPTIMA Solutions is fully compliant with SOC2 Type II, PCI-DSS Level 1, and GDPR. Every architecture we deploy is built on a Zero-Trust framework, incorporating end-to-end encryption (AES-256) and hardware-backed security modules as baseline requirements."
+            },
+            "scaling": {
+                "question": "Can your platforms handle seasonal traffic surges of 100x baseline?",
+                "answer": "Yes. Our 'Elastic Redundancy' architecture utilizes automated Kubernetes orchestration and global load balancing. Systems are configured to auto-scale across multiple geographic regions, ensuring performance remains stable even during extreme, unpredictable traffic events."
+            },
+            "integration": {
+                "question": "Do you offer custom API integrations for legacy ERP systems?",
+                "answer": "Our Engineering division specialized in 'Legacy Bridging'. we develop custom middleware and secure GraphQL layers that act as an interface between older mainframe systems (SAP, Oracle, COBOL-based) and modern cloud-native applications."
+            },
+            "support": {
+                "question": "What is your response time for critical system alerts?",
+                "answer": "We operate a 24/7 Global Network Operations Center (GNOC). For critical tier-1 incidents, our SLA guarantees a 15-minute response time with active intervention from senior site-reliability engineers until the resolution is verified."
+            }
+        }
+    },
+    "faqAccordion": {
+        "tag": "[ FAQ_DATABASE ]",
+        "defaultTitle": "Frequently Asked Questions"
+    },
+    "testimonials": {
+        "tag": "Signal_Source",
+        "encryption": "ENCRYPTION: AES-256",
+        "status": "STATUS: DECRYPTED",
+        "incoming": "INCOMING_TRANSMISSION...",
+        "verified": "VERIFIED_PURCHASER_KEY",
+        "items": {
+            "t1": {
+                "role": "CTO",
+                "text": "OPTIMA's infrastructure redesign reduced our transaction latency by 99%. They don't just write code; they architect resilience.",
+                "location": "London, UK",
+                "encrypted": "SECURE_TRANSMISSION_VERIFIED"
+            },
+            "t2": {
+                "role": "Head of Research",
+                "text": "The genomic visualization platform allows us to collaborate in real-time on datasets that used to take days to transfer.",
+                "location": "Boston, USA",
+                "encrypted": "BIO_DATA_STREAM_ACTIVE"
+            },
+            "t3": {
+                "role": "Director of Ops",
+                "text": "We now have complete visibility over our global fleet. The digital twin implementation is a game-changer for our efficiency.",
+                "location": "Berlin, DE",
+                "encrypted": "LOGISTICS_NET_ONLINE"
+            },
+            "t4": {
+                "role": "Lead Engineer",
+                "text": "Their security protocols are unmatched. We've seen a 0% breach rate since implementing their zero-trust architecture.",
+                "location": "Silicon Valley, USA",
+                "encrypted": "SYS_SECURITY_MAX"
+            }
+        }
+    },
+    "philosophy": {
+        "tag": "Core Principles",
+        "title": "The",
+        "titleHighlight": "Philosophy",
+        "subtitle": "Our approach is not just about technology—it's about building systems that embody trust, precision, and unwavering reliability.",
+        "bottom": "Architecture of",
+        "bottomHighlight": "Certainty",
+        "items": {
+            "p1": {
+                "title": "Precision Engineering",
+                "description": "Every line of code, every architectural decision is measured against the highest standards of technical excellence."
+            },
+            "p2": {
+                "title": "Zero Compromise",
+                "description": "We do not negotiate on quality, security, or performance. Your infrastructure deserves nothing less than absolute certainty."
+            },
+            "p3": {
+                "title": "Architectural Integrity",
+                "description": "Systems built to last decades, not quarters. We design for longevity, scalability, and evolution."
+            },
+            "p4": {
+                "title": "Transparent Operations",
+                "description": "No black boxes. Every decision, every metric, every process is documented and accessible to our partners."
+            }
+        }
+    }
+}

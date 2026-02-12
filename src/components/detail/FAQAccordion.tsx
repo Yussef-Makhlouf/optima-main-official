@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 export interface FAQ {
     question: string;
@@ -12,9 +13,11 @@ interface FAQAccordionProps {
 
 const FAQAccordion: React.FC<FAQAccordionProps> = ({
     faqs,
-    title = "Frequently Asked Questions"
+    title
 }) => {
+    const { t } = useTranslation(['home']);
     const [openIndex, setOpenIndex] = useState<number | null>(null);
+    const displayTitle = title || t('home:faqAccordion.defaultTitle');
 
     const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -26,10 +29,10 @@ const FAQAccordion: React.FC<FAQAccordionProps> = ({
                 {/* Header */}
                 <div className="mb-16 text-center">
                     <h2 className="text-[10px] md:text-xs font-mono font-bold text-secondary uppercase tracking-[0.5em] mb-4">
-                        [ FAQ_DATABASE ]
+                        {t('home:faqAccordion.tag')}
                     </h2>
                     <h3 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase">
-                        {title}
+                        {displayTitle}
                     </h3>
                 </div>
 

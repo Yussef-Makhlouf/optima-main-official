@@ -1,9 +1,11 @@
 
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import RegionalPresence from '../../components/contact/RegionalPresence';
 import TrustedPartners from '../../components/contact/TrustedPartners';
 
 const Contact: React.FC = () => {
+    const { t } = useTranslation(['contact', 'common']);
     const [formState, setFormState] = useState({
         name: '',
         email: '',
@@ -14,7 +16,7 @@ const Contact: React.FC = () => {
 
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
-        alert("Thank you for your inquiry. An enterprise account manager will contact you within 24 business hours.");
+        alert(t('contact:form.successMessage'));
     };
 
     return (
@@ -31,14 +33,14 @@ const Contact: React.FC = () => {
                         <div className="mb-12">
                             <div className="inline-flex items-center space-x-2 mb-4">
                                 <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
-                                <span className="text-xs font-mono text-primary uppercase tracking-widest">System Status: Online</span>
+                                <span className="text-xs font-mono text-primary uppercase tracking-widest">{t('common:status.online')}</span>
                             </div>
                             <h1 className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tighter transition-colors leading-[0.9]">
-                                Establish <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">Protocol.</span>
+                                {t('contact:hero.title')} <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t('contact:hero.titleHighlight')}</span>
                             </h1>
                             <p className="text-lg md:text-xl text-slate-600 dark:text-gray-400 leading-relaxed font-light transition-colors border-l-2 border-primary/20 pl-6">
-                                Initiate a secure channel for enterprise consultations. Our architects are standing by to engineer your digital evolution.
+                                {t('contact:hero.subtitle')}
                             </p>
                         </div>
 
@@ -48,7 +50,7 @@ const Contact: React.FC = () => {
                                 <div className="absolute -left-4 top-0 bottom-0 w-[1px] bg-gradient-to-b from-primary/0 via-primary/50 to-primary/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                                 <h3 className="text-xs font-black text-slate-400 dark:text-gray-500 uppercase tracking-[0.3em] mb-6 flex items-center">
                                     <span className="w-8 h-[1px] bg-slate-300 dark:bg-white/10 mr-4"></span>
-                                    Physical Nodes
+                                    {t('contact:info.locationsTitle')}
                                 </h3>
                                 <div className="space-y-4 font-mono text-sm">
                                     <div className="flex items-center space-x-4">
@@ -70,7 +72,7 @@ const Contact: React.FC = () => {
                             <div>
                                 <h3 className="text-xs font-black text-slate-400 dark:text-gray-500 uppercase tracking-[0.3em] mb-6 flex items-center">
                                     <span className="w-8 h-[1px] bg-slate-300 dark:bg-white/10 mr-4"></span>
-                                    Signal Frequency
+                                    {t('contact:info.contactTitle')}
                                 </h3>
                                 <div className="space-y-2">
                                     <a href="mailto:partnerships@optima.solutions" className="block text-xl md:text-2xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors">
@@ -98,23 +100,23 @@ const Contact: React.FC = () => {
                                 <div className="space-y-8">
                                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                         <div className="group space-y-2">
-                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">Identity // Full Name</label>
+                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">{t('contact:form.nameLabel')}</label>
                                             <input
                                                 required
                                                 type="text"
                                                 className="w-full bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 p-4 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all font-mono text-sm placeholder:text-slate-300 dark:placeholder:text-gray-700"
-                                                placeholder="ENTER_NAME"
+                                                placeholder={t('contact:form.namePlaceholder')}
                                                 value={formState.name}
                                                 onChange={(e) => setFormState({ ...formState, name: e.target.value })}
                                             />
                                         </div>
                                         <div className="group space-y-2">
-                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">Comms // Email</label>
+                                            <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">{t('contact:form.emailLabel')}</label>
                                             <input
                                                 required
                                                 type="email"
                                                 className="w-full bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 p-4 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all font-mono text-sm placeholder:text-slate-300 dark:placeholder:text-gray-700"
-                                                placeholder="ENTER_EMAIL"
+                                                placeholder={t('contact:form.emailPlaceholder')}
                                                 value={formState.email}
                                                 onChange={(e) => setFormState({ ...formState, email: e.target.value })}
                                             />
@@ -122,29 +124,29 @@ const Contact: React.FC = () => {
                                     </div>
 
                                     <div className="group space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">Entity // Company Name</label>
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">{t('contact:form.companyLabel')}</label>
                                         <input
                                             required
                                             type="text"
                                             className="w-full bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 p-4 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all font-mono text-sm placeholder:text-slate-300 dark:placeholder:text-gray-700"
-                                            placeholder="ENTER_ORGANIZATION"
+                                            placeholder={t('contact:form.companyPlaceholder')}
                                             value={formState.company}
                                             onChange={(e) => setFormState({ ...formState, company: e.target.value })}
                                         />
                                     </div>
 
                                     <div className="group space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">Objective // Primary Interest</label>
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">{t('contact:form.interestLabel')}</label>
                                         <div className="relative">
                                             <select
                                                 className="w-full bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 p-4 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all font-mono text-sm appearance-none cursor-pointer"
                                                 value={formState.interest}
                                                 onChange={(e) => setFormState({ ...formState, interest: e.target.value })}
                                             >
-                                                <option>Enterprise Hosting</option>
-                                                <option>Digital Transformation</option>
-                                                <option>Custom Web Application</option>
-                                                <option>General Consultation</option>
+                                                <option>{t('contact:form.options.hosting')}</option>
+                                                <option>{t('contact:form.options.transformation')}</option>
+                                                <option>{t('contact:form.options.webapp')}</option>
+                                                <option>{t('contact:form.options.consultation')}</option>
                                             </select>
                                             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
@@ -153,12 +155,12 @@ const Contact: React.FC = () => {
                                     </div>
 
                                     <div className="group space-y-2">
-                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">Parameters // Project Details</label>
+                                        <label className="text-[10px] font-black text-slate-400 uppercase tracking-widest group-focus-within:text-primary transition-colors">{t('contact:form.messageLabel')}</label>
                                         <textarea
                                             required
                                             rows={4}
                                             className="w-full bg-slate-50 dark:bg-white/5 border-b border-slate-200 dark:border-white/10 p-4 text-slate-900 dark:text-white focus:outline-none focus:border-primary focus:bg-white dark:focus:bg-white/10 transition-all font-mono text-sm resize-none placeholder:text-slate-300 dark:placeholder:text-gray-700"
-                                            placeholder="DEFINE_REQUIREMENTS..."
+                                            placeholder={t('contact:form.messagePlaceholder')}
                                             value={formState.message}
                                             onChange={(e) => setFormState({ ...formState, message: e.target.value })}
                                         ></textarea>
@@ -169,7 +171,7 @@ const Contact: React.FC = () => {
                                         className="w-full group relative overflow-hidden bg-slate-900 dark:bg-white text-white dark:text-black py-6 font-black uppercase tracking-[0.3em] hover:bg-primary dark:hover:bg-primary hover:text-white transition-all duration-500 shadow-xl"
                                     >
                                         <span className="relative z-10 flex items-center justify-center space-x-4">
-                                            <span>Transmit Inquiry</span>
+                                            <span>{t('contact:form.submitButton')}</span>
                                             <svg className="w-4 h-4 transform group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" /></svg>
                                         </span>
                                         <div className="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
@@ -188,10 +190,10 @@ const Contact: React.FC = () => {
                     <div className="mb-8">
                         <h3 className="text-xs font-black text-slate-400 dark:text-gray-500 uppercase tracking-[0.3em] mb-2 flex items-center justify-center">
                             <span className="w-12 h-[1px] bg-slate-300 dark:bg-white/10 mr-4"></span>
-                            Network Topology
+                            {t('contact:regional.title')}
                             <span className="w-12 h-[1px] bg-slate-300 dark:bg-white/10 ml-4"></span>
                         </h3>
-                        <p className="text-center text-sm text-slate-500 dark:text-gray-400 font-mono">Regional Operations Coverage</p>
+                        <p className="text-center text-sm text-slate-500 dark:text-gray-400 font-mono">{t('contact:regional.subtitle')}</p>
                     </div>
                     <div className="relative border border-slate-200 dark:border-white/10 p-2 bg-white/50 dark:bg-white/5 backdrop-blur-sm">
                         <RegionalPresence />

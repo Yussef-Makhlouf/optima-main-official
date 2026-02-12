@@ -1,0 +1,90 @@
+{
+    "title": "Contact Us",
+    "subtitle": "Let's Build Together",
+    "hero": {
+        "title": "Initialize",
+        "titleHighlight": "Connection.",
+        "subtitle": "Ready to architect the backbone of your digital future? Our team is standing by."
+    },
+    "form": {
+        "nameLabel": "Name",
+        "namePlaceholder": "Enter your full name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Enter your work email",
+        "companyLabel": "Company",
+        "companyPlaceholder": "Organization name",
+        "interestLabel": "Project Interest",
+        "messageLabel": "Project Details",
+        "messagePlaceholder": "Tell us about your infrastructure needs...",
+        "submitButton": "Initialize Protocol",
+        "successMessage": "Transmission Received. Stand by for contact.",
+        "options": {
+            "hosting": "Secure Hosting",
+            "transformation": "Digital Transformation",
+            "webapp": "Web App Development",
+            "consultation": "Strategic Consultation"
+        }
+    },
+    "info": {
+        "locationsTitle": "Global Hubs",
+        "contactTitle": "Direct Line"
+    },
+    "regional": {
+        "title": "Regional Presence",
+        "tag": "[ GLOBAL_REACH ]",
+        "description": "Strategic locations across key markets",
+        "gcc": "GCC Hub",
+        "europe": "Europe",
+        "northAmerica": "North America",
+        "statusLive": "LIVE_FEED",
+        "items": {
+            "ksa": {
+                "name": "Saudi Arabia",
+                "city": "Riyadh"
+            },
+            "uae": {
+                "name": "UAE",
+                "city": "Abu Dhabi"
+            },
+            "egy": {
+                "name": "Egypt",
+                "city": "Cairo"
+            },
+            "kwt": {
+                "name": "Kuwait",
+                "city": "Kuwait City"
+            },
+            "qat": {
+                "name": "Qatar",
+                "city": "Doha"
+            },
+            "bHR": {
+                "name": "Bahrain",
+                "city": "Manama"
+            },
+            "omn": {
+                "name": "Oman",
+                "city": "Muscat"
+            }
+        }
+    },
+    "partners": {
+        "tag": "[ ENTERPRISE_ECOSYSTEM ]",
+        "title": "Trusted By",
+        "titleHighlight": "Industry Pioneers",
+        "subtitle": "Leading Organizations",
+        "description": "Powering digital transformation for the Middle East's most ambitious organizations",
+        "sectorLabel": "SECTOR",
+        "activeStatus": "ACTIVE",
+        "sectors": {
+            "software": "Software Development",
+            "ai": "AI Innovation",
+            "marketing": "Marketing & Branding",
+            "digitalMarketing": "Digital Marketing",
+            "facility": "Facility Solutions",
+            "sports": "Sports & Entertainment",
+            "animalHealth": "Animal Health",
+            "realEstate": "Real Estate"
+        }
+    }
+}

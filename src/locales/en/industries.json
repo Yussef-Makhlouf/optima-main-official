@@ -1,0 +1,66 @@
+{
+    "page": {
+        "tag": "Sector_Vertical_Engineering",
+        "title": "Vertical",
+        "titleHighlight": "Precision.",
+        "description": "Deploying domain-specific infrastructure modules across mission-critical sectors with absolute architectural integrity.",
+        "visualSchema": "VISUAL_SCHEMA::UNIT_"
+    },
+    "finance": {
+        "title": "Finance & Banking",
+        "tag": "FIN_INFRA_v4",
+        "description": "In the high-stakes environment of global capital, latency is risk. We engineer ultra-low latency transaction environments that combine the agility of modern Fintech with the security of central bank systems.",
+        "points": [
+            {
+                "title": "Deterministic Performance",
+                "text": "Sub-millisecond packet processing for high-frequency trading and instant settlement protocols."
+            },
+            {
+                "title": "Compliance Architecture",
+                "text": "Automated, immutable audit trails designed for strict banking regulations and real-time reporting."
+            },
+            {
+                "title": "Crypto-Asset Security",
+                "text": "Hardware-backed signing environments and cold-storage integration for digital asset pioneers."
+            }
+        ]
+    },
+    "healthcare": {
+        "title": "Healthcare & BioTech",
+        "tag": "BIO_DATA_v2",
+        "description": "Protecting the most sensitive data on earth while enabling global scientific cooperation. Our Bio-Cloud architectures support massive genetic research datasets and HIPAA-compliant delivery.",
+        "points": [
+            {
+                "title": "Genomic Computation",
+                "text": "Distributed parallel processing clusters for real-time DNA sequencing and protein folding simulations."
+            },
+            {
+                "title": "Data Sovereignity",
+                "text": "Encrypted-at-rest storage architectures ensuring absolute patient privacy across international borders."
+            },
+            {
+                "title": "Telemetry Platforms",
+                "text": "High-availability streams for remote medical interventions and IoT patient monitoring systems."
+            }
+        ]
+    },
+    "logistics": {
+        "title": "Logistics & Supply",
+        "tag": "LOG_AUTO_v9",
+        "description": "Transforming physical movement into digital clarity. We leverage real-time IoT telemetry and digital twin simulations to drive operational efficiency across the global supply chain.",
+        "points": [
+            {
+                "title": "Dynamic Digital Twins",
+                "text": "Virtual mirroring of your entire physical fleet for predictive maintenance and route optimization."
+            },
+            {
+                "title": "Sensor Ecosystems",
+                "text": "Real-time tracking of cold-chain metrics, asset location, and vibration sensing for sensitive cargo."
+            },
+            {
+                "title": "Autonomous Nodes",
+                "text": "Engineering the backend for automated warehouses and self-navigating freight infrastructure."
+            }
+        ]
+    }
+}

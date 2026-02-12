@@ -1,8 +1,10 @@
-
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Icons, TechIllustrations } from '../../data/content';
 
 const Industries: React.FC = () => {
+    const { t } = useTranslation(['industries']);
+
     return (
         <div className="pt-24 md:pt-32 min-h-screen transition-colors bg-white dark:bg-dark">
             {/* Page Header */}
@@ -10,11 +12,11 @@ const Industries: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="flex items-center space-x-4 mb-10">
                         <div className="w-12 h-[1px] bg-secondary"></div>
-                        <span className="text-[10px] font-mono font-bold text-secondary uppercase tracking-[0.6em]">Sector_Vertical_Engineering</span>
+                        <span className="text-[10px] font-mono font-bold text-secondary uppercase tracking-[0.6em]">{t('industries:page.tag')}</span>
                     </div>
-                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-none uppercase">Vertical <br /><span className="text-primary italic">Precision.</span></h1>
+                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-none uppercase">{t('industries:page.title')} <br /><span className="text-primary italic">{t('industries:page.titleHighlight')}</span></h1>
                     <p className="text-xl md:text-3xl text-slate-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed border-l-4 border-cyber pl-8">
-                        Deploying domain-specific infrastructure modules across mission-critical sectors with absolute architectural integrity.
+                        {t('industries:page.description')}
                     </p>
                 </div>
                 <div className="absolute bottom-0 right-0 p-10 opacity-5 hidden lg:block">
@@ -28,49 +30,52 @@ const Industries: React.FC = () => {
 
                     {/* Finance Section */}
                     <IndustryBlock
-                        title="Finance & Banking"
+                        title={t('industries:finance.title')}
                         icon={<Icons.Finance />}
                         id="finance"
-                        tag="FIN_INFRA_v4"
-                        description="In the high-stakes environment of global capital, latency is risk. We engineer ultra-low latency transaction environments that combine the agility of modern Fintech with the security of central bank systems."
+                        tag={t('industries:finance.tag')}
+                        description={t('industries:finance.description')}
                         points={[
-                            { title: "Deterministic Performance", text: "Sub-millisecond packet processing for high-frequency trading and instant settlement protocols." },
-                            { title: "Compliance Architecture", text: "Automated, immutable audit trails designed for strict banking regulations and real-time reporting." },
-                            { title: "Crypto-Asset Security", text: "Hardware-backed signing environments and cold-storage integration for digital asset pioneers." }
+                            { title: t('industries:finance.points.0.title'), text: t('industries:finance.points.0.text') },
+                            { title: t('industries:finance.points.1.title'), text: t('industries:finance.points.1.text') },
+                            { title: t('industries:finance.points.2.title'), text: t('industries:finance.points.2.text') }
                         ]}
+                        visualSchema={t('industries:page.visualSchema')}
                     >
                         <AbstractGraphic type="finance" />
                     </IndustryBlock>
 
                     {/* Healthcare Section */}
                     <IndustryBlock
-                        title="Healthcare & BioTech"
+                        title={t('industries:healthcare.title')}
                         icon={<Icons.Healthcare />}
                         id="healthcare"
-                        tag="BIO_DATA_v2"
+                        tag={t('industries:healthcare.tag')}
                         isReversed
-                        description="Protecting the most sensitive data on earth while enabling global scientific cooperation. Our Bio-Cloud architectures support massive genetic research datasets and HIPAA-compliant delivery."
+                        description={t('industries:healthcare.description')}
                         points={[
-                            { title: "Genomic Computation", text: "Distributed parallel processing clusters for real-time DNA sequencing and protein folding simulations." },
-                            { title: "Data Sovereignity", text: "Encrypted-at-rest storage architectures ensuring absolute patient privacy across international borders." },
-                            { title: "Telemetry Platforms", text: "High-availability streams for remote medical interventions and IoT patient monitoring systems." }
+                            { title: t('industries:healthcare.points.0.title'), text: t('industries:healthcare.points.0.text') },
+                            { title: t('industries:healthcare.points.1.title'), text: t('industries:healthcare.points.1.text') },
+                            { title: t('industries:healthcare.points.2.title'), text: t('industries:healthcare.points.2.text') }
                         ]}
+                        visualSchema={t('industries:page.visualSchema')}
                     >
                         <AbstractGraphic type="healthcare" />
                     </IndustryBlock>
 
                     {/* Logistics Section */}
                     <IndustryBlock
-                        title="Logistics & Supply"
+                        title={t('industries:logistics.title')}
                         icon={<Icons.Logistics />}
                         id="logistics"
-                        tag="LOG_AUTO_v9"
-                        description="Transforming physical movement into digital clarity. We leverage real-time IoT telemetry and digital twin simulations to drive operational efficiency across the global supply chain."
+                        tag={t('industries:logistics.tag')}
+                        description={t('industries:logistics.description')}
                         points={[
-                            { title: "Dynamic Digital Twins", text: "Virtual mirroring of your entire physical fleet for predictive maintenance and route optimization." },
-                            { title: "Sensor Ecosystems", text: "Real-time tracking of cold-chain metrics, asset location, and vibration sensing for sensitive cargo." },
-                            { title: "Autonomous Nodes", text: "Engineering the backend for automated warehouses and self-navigating freight infrastructure." }
+                            { title: t('industries:logistics.points.0.title'), text: t('industries:logistics.points.0.text') },
+                            { title: t('industries:logistics.points.1.title'), text: t('industries:logistics.points.1.text') },
+                            { title: t('industries:logistics.points.2.title'), text: t('industries:logistics.points.2.text') }
                         ]}
+                        visualSchema={t('industries:page.visualSchema')}
                     >
                         <AbstractGraphic type="logistics" />
                     </IndustryBlock>
@@ -81,7 +86,7 @@ const Industries: React.FC = () => {
     );
 };
 
-const IndustryBlock: React.FC<{ title: string, icon: React.ReactNode, id: string, tag: string, description: string, points: any[], isReversed?: boolean, children?: React.ReactNode }> = ({ title, icon, tag, description, points, isReversed, children }) => (
+const IndustryBlock: React.FC<{ title: string, icon: React.ReactNode, id: string, tag: string, description: string, points: any[], isReversed?: boolean, children?: React.ReactNode, visualSchema: string }> = ({ title, icon, tag, description, points, isReversed, children, visualSchema }) => (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 md:gap-24 items-start">
         <div className={`lg:col-span-6 ${isReversed ? 'lg:order-2' : ''}`}>
             <div className="flex flex-col md:flex-row items-start md:items-center space-y-4 md:space-y-0 md:space-x-8 mb-12">
@@ -109,7 +114,7 @@ const IndustryBlock: React.FC<{ title: string, icon: React.ReactNode, id: string
 
         <div className={`lg:col-span-6 aspect-square bg-slate-50 dark:bg-dark/40 border border-slate-200 dark:border-white/5 relative flex items-center justify-center overflow-hidden hud-bracket hud-bracket-tr hud-bracket-bl ${isReversed ? 'lg:order-1' : ''}`}>
             <div className="absolute inset-0 grid-bg opacity-20"></div>
-            <div className="absolute top-4 left-4 text-[10px] font-mono text-primary/40 uppercase tracking-widest hidden md:block">VISUAL_SCHEMA::UNIT_{title.substring(0, 3).toUpperCase()}</div>
+            <div className="absolute top-4 left-4 text-[10px] font-mono text-primary/40 uppercase tracking-widest hidden md:block">{visualSchema}{title.substring(0, 3).toUpperCase()}</div>
             {children}
         </div>
     </div>

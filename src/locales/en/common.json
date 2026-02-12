@@ -1,0 +1,66 @@
+{
+    "nav": {
+        "home": "Home",
+        "services": "Services",
+        "industries": "Industries",
+        "projects": "Projects",
+        "about": "About",
+        "contact": "Contact"
+    },
+    "header": {
+        "logo": "OPTIMA",
+        "partnership": "PARTNERSHIP"
+    },
+    "footer": {
+        "description": "Engineering resilient digital infrastructure for the world's most ambitious enterprises.",
+        "tagline": "We are providers of digital solutions in GCC and Egypt",
+        "social": "Follow Us",
+        "servicesTitle": "Services",
+        "companyTitle": "Company",
+        "connectTitle": "Connect",
+        "copyright": "© {{year}} OPTIMA Solutions. All rights reserved.",
+        "secureTransmission": "SECURE_DATA_TRANSFER_PROTOCOL_ACTIVE",
+        "email": "Email",
+        "phone": "Phone",
+        "global": "GLOBAL",
+        "office": {
+            "hq": "TX-HQ: 01_Enterprise_Plaza",
+            "london": "LDN: 50_Innovation_Way",
+            "singapore": "SG: 88_Marina_Blvd"
+        },
+        "contact": {
+            "partnerships": "partnerships@optima.solutions"
+        },
+        "legal": {
+            "privacy": "[ PRIVACY ]",
+            "terms": "[ TERMS ]"
+        },
+        "newsletter": {
+            "title": "INTEL_FEED",
+            "description": "Join 12,000+ engineers receiving our monthly technical updates.",
+            "placeholder": "ENTER_COORDINATES...",
+            "button": "TRANSMIT",
+            "status": "TELEMETRY_FEED :: ACTIVE"
+        }
+    },
+    "buttons": {
+        "learnMore": "Learn More",
+        "viewDetails": "View Details",
+        "getStarted": "Get Started",
+        "contactUs": "Contact Us",
+        "exploreAll": "Explore All",
+        "viewProject": "View Project",
+        "readMore": "Read More",
+        "inquire": "Inquire"
+    },
+    "status": {
+        "stable": "STABLE",
+        "optimizing": "OPTIMIZING",
+        "online": "ONLINE",
+        "verified": "VERIFIED"
+    },
+    "techStack": {
+        "tag": "TECH_STACK",
+        "title": "Powered By Modern Technologies"
+    }
+}

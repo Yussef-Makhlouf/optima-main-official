@@ -1,13 +1,20 @@
-
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 import { TESTIMONIALS } from '../../data/content';
 
 const ClientTransmissions: React.FC = () => {
+    const { t } = useTranslation(['home']);
     const [activeIndex, setActiveIndex] = useState(0);
     const [decodedText, setDecodedText] = useState('');
     const [isDecoding, setIsDecoding] = useState(false);
 
     const currentTestimonial = TESTIMONIALS[activeIndex];
+
+    // Get localized text
+    const localizedText = t(`home:testimonials.items.${currentTestimonial.id}.text`);
+    const localizedRole = t(`home:testimonials.items.${currentTestimonial.id}.role`);
+    const localizedLocation = t(`home:testimonials.items.${currentTestimonial.id}.location`);
+    const localizedEncrypted = t(`home:testimonials.items.${currentTestimonial.id}.encrypted`);
 
     useEffect(() => {
         let interval: number;
@@ -22,7 +29,7 @@ const ClientTransmissions: React.FC = () => {
 
     useEffect(() => {
         // Decode effect when active index changes
-        const text = currentTestimonial.text;
+        const text = localizedText;
         let iteration = 0;
         setIsDecoding(true);
 
@@ -48,7 +55,7 @@ const ClientTransmissions: React.FC = () => {
         }, 15);
 
         return () => clearInterval(interval);
-    }, [activeIndex, currentTestimonial]);
+    }, [activeIndex, currentTestimonial, localizedText]); // Added localizedText dependency
 
     return (
         <section className="py-32 bg-slate-900 text-white relative overflow-hidden border-y border-white/10">
@@ -62,7 +69,7 @@ const ClientTransmissions: React.FC = () => {
                     {/* Signal Status Sidebar */}
                     <div className="w-full md:w-64 border-b md:border-b-0 md:border-r border-primary/30 p-6 md:p-10 flex flex-col justify-between min-h-[300px]">
                         <div>
-                            <div className="text-[10px] font-mono text-primary uppercase tracking-widest mb-2">Signal_Source</div>
+                            <div className="text-[10px] font-mono text-primary uppercase tracking-widest mb-2">{t('home:testimonials.tag')}</div>
                             <div className="flex space-x-1 mb-8">
                                 {[1, 2, 3, 4, 5].map(i => (
                                     <div key={i} className={`h-8 w-2 ${i <= 3 ? 'bg-secondary' : 'bg-secondary/20'} animate-pulse`}></div>
@@ -70,38 +77,38 @@ const ClientTransmissions: React.FC = () => {
                             </div>
 
                             <div className="space-y-4">
-                                {TESTIMONIALS.map((t, idx) => (
+                                {TESTIMONIALS.map((tItem, idx) => (
                                     <button
-                                        key={t.id}
+                                        key={tItem.id}
                                         onClick={() => setActiveIndex(idx)}
                                         className={`block w-full text-left text-[10px] font-mono uppercase tracking-widest px-3 py-2 border-l-2 transition-all ${idx === activeIndex
-                                                ? 'border-cyber bg-cyber/10 text-white'
-                                                : 'border-transparent text-gray-500 hover:text-gray-300'
+                                            ? 'border-cyber bg-cyber/10 text-white'
+                                            : 'border-transparent text-gray-500 hover:text-gray-300'
                                             }`}
                                     >
-                                        Src_0{idx + 1} :: {t.client}
+                                        Src_0{idx + 1} :: {tItem.client}
                                     </button>
                                 ))}
                             </div>
                         </div>
                         <div className="mt-8 text-[9px] text-gray-600 font-mono">
-                            ENCRYPTION: AES-256<br />
-                            STATUS: DECRYPTED
+                            {t('home:testimonials.encryption')}<br />
+                            {t('home:testimonials.status')}
                         </div>
                     </div>
 
                     {/* Main Display Area */}
                     <div className="flex-1 p-8 md:p-16 relative min-h-[300px] flex flex-col justify-center">
                         <div className="absolute top-4 right-4 text-[10px] font-mono text-cyber animate-pulse">
-                            INCOMING_TRANSMISSION...
+                            {t('home:testimonials.incoming')}
                         </div>
 
                         <div className="mb-8">
                             <h3 className="text-2xl md:text-3xl font-black uppercase text-white mb-2">{currentTestimonial.client}</h3>
                             <div className="flex items-center space-x-4 text-xs font-mono text-primary">
-                                <span>[{currentTestimonial.role}]</span>
+                                <span>[{localizedRole}]</span>
                                 <span>//</span>
-                                <span>{currentTestimonial.location}</span>
+                                <span>{localizedLocation}</span>
                             </div>
                         </div>
 
@@ -111,8 +118,8 @@ const ClientTransmissions: React.FC = () => {
                         </blockquote>
 
                         <div className="mt-8 flex justify-between items-center border-t border-white/10 pt-4">
-                            <div className="text-[9px] font-mono text-gray-500">{currentTestimonial.encrypted}</div>
-                            <div className="text-[9px] font-mono text-cyber">VERIFIED_PURCHASER_KEY</div>
+                            <div className="text-[9px] font-mono text-gray-500">{localizedEncrypted}</div>
+                            <div className="text-[9px] font-mono text-cyber">{t('home:testimonials.verified')}</div>
                         </div>
                     </div>
 

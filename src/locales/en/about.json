@@ -1,0 +1,74 @@
+{
+    "page": {
+        "tag": "OPTIMA Protocol",
+        "titleHighlight": "Absolute.",
+        "title": "Built for",
+        "subtitle": "We operate at the intersection of technical excellence and strategic certainty. We build for enterprises that refuse to fail.",
+        "corePhilosophy": {
+            "tag": "Core Philosophy",
+            "title": "Strategy is Engineering.",
+            "description": "OPTIMA Solutions was established to bridge the gap between corporate ambition and infrastructure reality. We move beyond trends to focus on long-term systemic stability."
+        },
+        "values": {
+            "redundancy": {
+                "title": "Redundancy",
+                "description": "Every system we architect includes failure tolerance as a baseline. Zero-downtime is not a goal; it is a standard."
+            },
+            "integrity": {
+                "title": "Integrity",
+                "description": "Security is not a feature added later. It is baked into the very core of our modular architecture."
+            },
+            "scale": {
+                "title": "Scale",
+                "description": "We build for the future versions of your enterprise, ensuring your stack grows with your global reach."
+            }
+        },
+        "stats": {
+            "availability": "Availability SLA",
+            "operations": "Network Operations",
+            "deployments": "Global Deployments",
+            "partnerships": "Year Partnerships"
+        }
+    },
+    "team": {
+        "tag": "Personnel",
+        "title": "System Architects.",
+        "members": {
+            "t1": {
+                "name": "Yussef_Makhlouf",
+                "role": "Chief Architect",
+                "bio": "Former infrastructure lead at massive-scale fintech. Specializes in zero-downtime migration strategies."
+            },
+            "t2": {
+                "name": "Eslam_Hussien",
+                "role": "Head of Engineering",
+                "bio": "Rigorous focus on code quality and automated testing pipelines. 15+ years in systems programming."
+            },
+            "t3": {
+                "name": "Mohamed_Hosny",
+                "role": "Security Ops",
+                "bio": "Dedicated to proactive threat modeling and defensive architecture. Certified CISSP."
+            },
+            "t4": {
+                "name": "Mahmoud_Taha",
+                "role": "Product Strategy",
+                "bio": "Bridging the gap between technical capability and business objectives. Data-driven decision making."
+            },
+            "t5": {
+                "name": "Momen_Ahmed",
+                "role": "UI/UX & Graphic Designer",
+                "bio": "Specializes in user interface and user experience design. Expert in graphic design and visual identity creation."
+            }
+        }
+    },
+    "cta": {
+        "tag": "Establish Protocol",
+        "title": "Ready to",
+        "titleHighlight": "Architect",
+        "titleSuffix": "absolute certainty?",
+        "button": {
+            "initialize": "Initialize",
+            "connect": "Connect"
+        }
+    }
+}

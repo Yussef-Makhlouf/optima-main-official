@@ -1,0 +1,84 @@
+{
+    "page": {
+        "title": "Case Studies.",
+        "description": "A proven track record of delivering technical excellence for high-stakes enterprise projects across finance, logistics, and biotech.",
+        "verticals": {
+            "tag": "Verticals",
+            "title": "Domain Specialized.",
+            "finance": {
+                "title": "Finance & Banking",
+                "description": "Securing high-frequency transactional data and cloud migration for global banks."
+            },
+            "biotech": {
+                "title": "BioTech & Health",
+                "description": "Building collaborative platforms for genomic research and clinical trial data."
+            },
+            "logistics": {
+                "title": "Logistics & Supply",
+                "description": "Developing real-time IoT dashboards for end-to-end supply chain visibility."
+            }
+        },
+        "viewProject": "Read Full Case Study"
+    },
+    "tags": {
+        "cloud": "Cloud",
+        "security": "Security",
+        "fintech": "FinTech",
+        "web-app": "Web App",
+        "biotech": "BioTech",
+        "big-data": "Big Data",
+        "transformation": "Transformation",
+        "iot": "IoT",
+        "logistics": "Logistics"
+    },
+    "detail": {
+        "backToArchives": "BACK_TO_ARCHIVES",
+        "caseStudy": "CASE_STUDY",
+        "challenge": "Client Challenge",
+        "solution": "Implemented Solution",
+        "architecture": "Architecture",
+        "impact": "Impact Metrics",
+        "techSpecs": "TECHNICAL_SPECS.v4",
+        "projectShowcase": "Project Showcase",
+        "techUsed": "Technologies Used",
+        "nextDeployment": "NEXT_DEPLOYMENT",
+        "metrics": {
+            "efficiency": "Efficiency Lift",
+            "uptime": "Uptime Standard",
+            "latency": "Latency Reduction"
+        },
+        "tech_items": {
+            "distributed": "Distributed Cluster Node",
+            "encryption": "End-to-end Encryption (AES-256)",
+            "zeroTrust": "Zero-Trust Access Architecture",
+            "telemetry": "Real-time Telemetry Dashboard",
+            "pci": "PCI-DSS Compliance Layer"
+        }
+    },
+    "items": {
+        "p1": {
+            "title": "Core Banking Infrastructure",
+            "description": "A complete overhaul of their high-frequency transaction environment using cloud-native architectures.",
+            "challenge": "Scaling legacy monolithic architectures to support modern high-frequency trading demands without sacrificing security or uptime.",
+            "solution": "Transition to a zero-trust, microservices-based cloud architecture with automated scaling and real-time fraud detection pipelines.",
+            "longDescription": "Stellaris Bank faced critical bottlenecks during peak trading hours. We redesigned their core infrastructure from the ground up, implementing a private cloud environment that utilizes distributed ledgers and microservices to handle over 100,000 transactions per second with sub-millisecond latency.",
+            "impact": "99% reduction in transaction latency, 100% uptime during record-breaking traffic events, and enhanced regulatory compliance visibility."
+        },
+        "p2": {
+            "title": "Genomic Data Visualization",
+            "description": "A custom web application allowing real-time collaboration on petabyte-scale genetic sequencing data.",
+            "challenge": "Rendering and collaborating on petabyte-scale data files over standard internet connections without data loss or significant lag.",
+            "solution": "A bespoke data-segmentation engine that streams only visible segments to the browser, combined with a WebSocket-driven collaboration layer.",
+            "longDescription": "NeoGen Bio needed a way for researchers across four continents to collaborate on massive genomic datasets. We developed a custom web application that streams data segments on-demand, allowing researchers to visualize and annotate complex DNA strands in real-time through a secure browser interface.",
+            "impact": "Researchers reduced analysis time by 40% and enabled the first global real-time collaboration on the Human Genome v4 project."
+        },
+        "p3": {
+            "title": "Supply Chain Digital Twin",
+            "description": "End-to-end digital transformation of their global logistics network using IoT and real-time dashboards.",
+            "challenge": "Consolidating thousands of disparate data points from third-party shippers, internal GPS units, and environmental sensors into a single source of truth.",
+            "solution": "Development of a unified data lake integrated with a WebGL-based 3D globe visualization tool and automated alerting systems.",
+            "longDescription": "Aura Logistics operated with a fragmented view of their global fleet. We implemented an IoT-integrated digital twin platform that provides a real-time, 3D visualization of their entire supply chain, from container temperatures in the Atlantic to truck locations in Berlin.",
+            "impact": "Optimized route efficiency by 15%, reduced inventory shrinkage by 22%, and provided clients with real-time transparency for the first time."
+        }
+    }
+}

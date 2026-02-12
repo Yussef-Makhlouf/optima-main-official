@@ -19,7 +19,7 @@ const ClientLogos: React.FC<ClientLogosProps> = ({
     showTitle = true
 }) => {
     return (
-        <section className="py-16 md:py-24 bg-white dark:bg-dark border-y border-slate-200 dark:border-white/5 transition-colors overflow-hidden">
+        <section className="py-16 md:py-24 bg-white dark:bg-dark border-y border-slate-200 dark:border-white/5 transition-colors overflow-hidden" dir="ltr">
             <div className="max-w-7xl mx-auto px-6">
                 {showTitle && (
                     <div className="text-center mb-12">

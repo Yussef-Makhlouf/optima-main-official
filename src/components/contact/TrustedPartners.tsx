@@ -1,24 +1,27 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Partner {
     name: string;
     logo?: string;
-    sector: string;
+    sectorKey: string;
 }
 
 const TrustedPartners: React.FC = () => {
+    const { t } = useTranslation(['contact']);
+
     const partners: Partner[] = [
-        { name: 'Tarmez Tech', sector: 'Software Development', logo: '/partners/tarmezmain.svg' },
-        { name: 'Logix Pro', sector: 'Software Development', logo: '/partners/logixi.png' },
-        { name: 'Technova', sector: 'AI Innovation', logo: '/partners/technova.svg' },
-        { name: 'Fifth Floor', sector: 'Marketing & Branding', logo: '/partners/fifith-floor-light.png' },
-        { name: 'Golden Moon', sector: 'Digital Marketing', logo: '/partners/golden-moon.png' },
-        { name: 'MACC', sector: 'Facility Solutions', logo: '/partners/macc.svg' },
-        { name: 'UAEMMAF', sector: 'Sports & Entertainment', logo: '/partners/uaemmaf.svg' },
-        { name: 'ARTAT', sector: 'Animal Health', logo: '/partners/artat.png' },
-        { name: 'Tasis Al-Binaa', sector: 'Real Estate', logo: '/partners/tasis-albinaa.svg' },
-        { name: 'RAF', sector: 'Real Estate', logo: '/partners/raf.png' },
-        { name: 'Ghanfa', sector: 'Facility Solutions', logo: '/partners/mainlogo.png' },
+        { name: 'Tarmez Tech', sectorKey: 'software', logo: '/partners/tarmezmain.svg' },
+        { name: 'Logix Pro', sectorKey: 'software', logo: '/partners/logixi.png' },
+        { name: 'Technova', sectorKey: 'ai', logo: '/partners/technova.svg' },
+        { name: 'Fifth Floor', sectorKey: 'marketing', logo: '/partners/fifith-floor-light.png' },
+        { name: 'Golden Moon', sectorKey: 'digitalMarketing', logo: '/partners/golden-moon.png' },
+        { name: 'MACC', sectorKey: 'facility', logo: '/partners/macc.svg' },
+        { name: 'UAEMMAF', sectorKey: 'sports', logo: '/partners/uaemmaf.svg' },
+        { name: 'ARTAT', sectorKey: 'animalHealth', logo: '/partners/artat.png' },
+        { name: 'Tasis Al-Binaa', sectorKey: 'realEstate', logo: '/partners/tasis-albinaa.svg' },
+        { name: 'RAF', sectorKey: 'realEstate', logo: '/partners/raf.png' },
+        { name: 'Ghanfa', sectorKey: 'facility', logo: '/partners/mainlogo.png' },
     ];
 
     return (
@@ -35,18 +38,18 @@ const TrustedPartners: React.FC = () => {
                     <div className="inline-flex items-center space-x-2 mb-4">
                         <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
                         <span className="text-xs font-mono text-secondary uppercase tracking-widest">
-                            [ ENTERPRISE_ECOSYSTEM ]
+                            {t('contact:partners.tag')}
                         </span>
                         <div className="w-2 h-2 bg-secondary rounded-full animate-pulse"></div>
                     </div>
                     <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white mb-4 uppercase tracking-tighter">
-                        Trusted By
+                        {t('contact:partners.title')}
                         <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary">
-                            Industry Pioneers
+                            {t('contact:partners.titleHighlight')}
                         </span>
                     </h2>
                     <p className="text-slate-600 dark:text-gray-400 max-w-2xl mx-auto text-lg font-light">
-                        Powering digital transformation for the Middle East's most ambitious organizations
+                        {t('contact:partners.description')}
                     </p>
                 </div>
 
@@ -99,17 +102,17 @@ const TrustedPartners: React.FC = () => {
                                     {/* Company Info */}
                                     <div className="border-t border-slate-200 dark:border-white/5 pt-4">
                                         <div className="text-[9px] font-mono text-slate-400 dark:text-gray-500 uppercase tracking-wider mb-1">
-                                            SECTOR
+                                            {t('contact:partners.sectorLabel')}
                                         </div>
                                         <div className="text-sm font-semibold text-slate-600 dark:text-gray-300 group-hover:text-primary transition-colors">
-                                            {partner.sector}
+                                            {t(`contact:partners.sectors.${partner.sectorKey}`)}
                                         </div>
                                     </div>
 
                                     {/* Status Indicator */}
                                     <div className="absolute top-4 right-4 flex items-center space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                         <div className="w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse"></div>
-                                        <span className="text-[8px] font-mono text-green-400 uppercase tracking-wider">ACTIVE</span>
+                                        <span className="text-[8px] font-mono text-green-400 uppercase tracking-wider">{t('contact:partners.activeStatus')}</span>
                                     </div>
                                 </div>
                             </div>

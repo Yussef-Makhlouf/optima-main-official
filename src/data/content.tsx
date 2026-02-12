@@ -108,168 +108,54 @@ export const TechIllustrations = {
     )
 };
 
-export const SERVICES: ServiceInfo[] = [
+export const SERVICES: any[] = [
     {
         id: 'hosting',
         slug: 'scalable-infrastructure',
-        title: 'Scalable Infrastructure',
-        tag: 'Infrastructure',
+        // Text content is now in locales/services.json
         icon: <Icons.Hosting />,
-        description: "Our managed cloud ecosystems are built on the principles of high-availability and elastic redundancy.",
-        longDescription: "In the modern enterprise landscape, downtime is catastrophic. OPTIMA Solutions provides a managed hosting environment that treats reliability as an engineering challenge, not just a promise. We leverage multi-cloud failover, global edge propagation, and tier-4 data center standards to ensure your application remains accessible 100% of the time, regardless of traffic surges or regional disruptions.",
-        features: ["Distributed Load Balancing", "Multi-Region Redundancy", "Dedicated Security Layers", "99.99% Uptime SLA"],
-        technicalSpecs: ["SOC2 Type II Compliant", "PCI-DSS Level 1", "Global CDN Nodes: 150+", "Bare-metal performance options"],
+        features: ["loadBalancing", "redundancy", "security", "uptime"],
         technicalCode: "SYS_INFRA_RES_01",
+        technicalSpecs: ["soc2", "pci", "cdn", "performance"],
         processSteps: [
-            {
-                number: "01",
-                title: "Infrastructure Audit",
-                description: "We analyze your current infrastructure, identify bottlenecks, and map out scalability requirements for your specific workload patterns.",
-                icon: <Icons.Security />
-            },
-            {
-                number: "02",
-                title: "Architecture Design",
-                description: "Our team designs a multi-region, fault-tolerant architecture with automated failover mechanisms and optimized resource allocation.",
-                icon: <Icons.Network />
-            },
-            {
-                number: "03",
-                title: "Migration & Deployment",
-                description: "Zero-downtime migration of your applications to the new infrastructure with comprehensive testing at each stage.",
-                icon: <Icons.DigitalTransform />
-            },
-            {
-                number: "04",
-                title: "Monitoring & Optimization",
-                description: "24/7 monitoring with real-time alerts, continuous performance optimization, and proactive scaling based on traffic patterns.",
-                icon: <Icons.Scalability />
-            }
+            { number: "01", key: "step1", icon: <Icons.Security /> },
+            { number: "02", key: "step2", icon: <Icons.Network /> },
+            { number: "03", key: "step3", icon: <Icons.DigitalTransform /> },
+            { number: "04", key: "step4", icon: <Icons.Scalability /> }
         ],
-        faqs: [
-            {
-                question: "What is your guaranteed uptime SLA?",
-                answer: "We provide a 99.99% uptime SLA, which translates to less than 1 hour of downtime per year. Our multi-region architecture ensures automatic failover in case of any infrastructure issues."
-            },
-            {
-                question: "How quickly can you scale during traffic spikes?",
-                answer: "Our auto-scaling infrastructure can provision additional resources within seconds. We've successfully handled traffic increases of 1000% during client product launches and major campaigns."
-            },
-            {
-                question: "Do you support hybrid cloud deployments?",
-                answer: "Yes, we specialize in hybrid cloud architectures that seamlessly integrate on-premise infrastructure with cloud resources, providing the best of both worlds for security-sensitive workloads."
-            },
-            {
-                question: "What security certifications do you maintain?",
-                answer: "We maintain SOC2 Type II, PCI-DSS Level 1, ISO 27001, and HIPAA compliance. All data is encrypted at rest and in transit using AES-256-GCM encryption."
-            }
-        ],
+        faqs: ["q1", "q2", "q3", "q4"],
         relatedProjects: ['stellaris-bank-core-infrastructure', 'aura-logistics-digital-twin']
     },
     {
         id: 'web-dev',
         slug: 'enterprise-platforms',
-        title: 'Enterprise Platforms',
-        tag: 'Engineering',
         icon: <Icons.WebDev />,
-        description: "High-performance digital presence platforms engineered for corporate scale.",
-        longDescription: "A corporate website is the digital front door of your organization. We build platforms that combine aesthetic authority with technical precision. Our engineering team focuses on performance-first frontends using modern frameworks (React, Next.js) integrated with headless CMS architectures. This results in blazing fast load times, superior SEO, and a design-system driven approach that scales across your entire digital portfolio.",
-        features: ["Headless CMS Integration", "Performance-first Frontend", "Global Edge Propagation", "Strategic UI Roadmaps"],
-        technicalSpecs: ["Web Vitals Optimization", "Accessibility (A11y) L3", "Internationalization (i18n)", "Static Site Generation"],
+        features: ["cms", "performance", "edge", "roadmaps"],
         technicalCode: "SYS_PLAT_ENG_02",
+        technicalSpecs: ["vitals", "accessibility", "i18n", "ssg"],
         processSteps: [
-            {
-                number: "01",
-                title: "Discovery & Research",
-                description: "Understanding your brand, audience, and business objectives through stakeholder interviews and competitive analysis.",
-                icon: <Icons.Globe />
-            },
-            {
-                number: "02",
-                title: "Design System Creation",
-                description: "Building a comprehensive design system with reusable components, ensuring consistency across all digital touchpoints.",
-                icon: <Icons.WebDev />
-            },
-            {
-                number: "03",
-                title: "Development & Integration",
-                description: "Implementing the frontend with modern frameworks, integrating with headless CMS, and optimizing for performance.",
-                icon: <Icons.Hosting />
-            },
-            {
-                number: "04",
-                title: "Testing & Launch",
-                description: "Comprehensive testing across devices and browsers, performance optimization, and smooth deployment to production.",
-                icon: <Icons.Check />
-            }
+            { number: "01", key: "step1", icon: <Icons.Globe /> },
+            { number: "02", key: "step2", icon: <Icons.WebDev /> },
+            { number: "03", key: "step3", icon: <Icons.Hosting /> },
+            { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
-        faqs: [
-            {
-                question: "What CMS platforms do you work with?",
-                answer: "We specialize in headless CMS solutions including Contentful, Sanity, Strapi, and WordPress (headless). We'll recommend the best fit based on your content management needs and team capabilities."
-            },
-            {
-                question: "How do you ensure optimal performance?",
-                answer: "We employ advanced techniques like code splitting, lazy loading, image optimization, static site generation, and CDN distribution. All our websites score 90+ on Google PageSpeed Insights."
-            },
-            {
-                question: "Can you redesign an existing website?",
-                answer: "Absolutely. We excel at modernizing legacy websites while preserving SEO rankings and migrating existing content. We ensure zero business disruption during the transition."
-            }
-        ],
+        faqs: ["q1", "q2", "q3"],
         relatedProjects: ['neogen-bio-genomic-visualization']
     },
     {
         id: 'apps',
         slug: 'intelligent-workflow',
-        title: 'Intelligent Workflow',
-        tag: 'Applications',
         icon: <Icons.WebApp />,
-        description: "Bespoke software solutions built to bridge legacy gaps and automate your business.",
-        longDescription: "Complex business problems require architectural thinking. Our application development service focuses on creating custom tools that integrate with your existing enterprise systems. We specialize in building SaaS platforms, ERP extensions, and real-time data visualization dashboards that transform scattered spreadsheets into actionable, secure, and automated operational assets.",
-        features: ["API Ecosystem Design", "Real-time Data Processing", "SaaS Infrastructure", "Legacy Modernization"],
-        technicalSpecs: ["GraphQL & RESTful APIs", "Real-time WebSockets", "Encrypted Data Pipelines", "Kubernetes Orchestration"],
+        features: ["api", "realtime", "saas", "legacy"],
         technicalCode: "SYS_APP_DEV_03",
+        technicalSpecs: ["graphql", "websockets", "encryption", "kubernetes"],
         processSteps: [
-            {
-                number: "01",
-                title: "Requirements Analysis",
-                description: "Deep dive into your business processes, pain points, and workflow bottlenecks to identify automation opportunities.",
-                icon: <Icons.Network />
-            },
-            {
-                number: "02",
-                title: "System Architecture",
-                description: "Designing scalable microservices architecture with API-first approach and integration plans for existing systems.",
-                icon: <Icons.Hosting />
-            },
-            {
-                number: "03",
-                title: "Agile Development",
-                description: "Iterative development with bi-weekly sprints, continuous integration, and regular stakeholder demonstrations.",
-                icon: <Icons.DigitalTransform />
-            },
-            {
-                number: "04",
-                title: "Deployment & Training",
-                description: "Containerized deployment, comprehensive documentation, and hands-on training for your team.",
-                icon: <Icons.Check />
-            }
+            { number: "01", key: "step1", icon: <Icons.Network /> },
+            { number: "02", key: "step2", icon: <Icons.Hosting /> },
+            { number: "03", key: "step3", icon: <Icons.DigitalTransform /> },
+            { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
-        faqs: [
-            {
-                question: "How do you handle integration with legacy systems?",
-                answer: "We've extensive experience with legacy system integration using APIs, database connectors, and middleware. We ensure data integrity and create robust error handling mechanisms."
-            },
-            {
-                question: "What's your typical development timeline?",
-                answer: "Most custom applications take 3-6 months from requirements to launch. We use agile methodology with 2-week sprints, allowing you to see progress and provide feedback continuously."
-            },
-            {
-                question: "Do you provide ongoing maintenance?",
-                answer: "Yes, we offer comprehensive maintenance packages including bug fixes, security updates, feature enhancements, and 24/7 support SLAs tailored to your needs."
-            }
-        ],
+        faqs: ["q1", "q2", "q3"],
         relatedProjects: ['neogen-bio-genomic-visualization', 'aura-logistics-digital-twin']
     }
 ];
@@ -281,7 +167,7 @@ export const TEAM = [
         role: 'Chief Architect',
         bio: 'Former infrastructure lead at massive-scale fintech. Specializes in zero-downtime migration strategies.',
         code: 'ARCH_LEAD_01',
-        image: '/about.png' // Utilizing existing asset as placeholder if needed, or specific team images
+        image: '/about.png'
     },
     {
         id: 't2',
@@ -306,7 +192,15 @@ export const TEAM = [
         bio: 'Bridging the gap between technical capability and business objectives. Data-driven decision making.',
         code: 'PROD_STRAT_04',
         image: '/about.png'
-    }
+    },
+    {
+        id: 't5',
+        name: 'Moamen_Ahmed',
+        role: 'UI/UX Designer & Graphic Designer',
+        bio: 'Bridging the gap between technical capability and business objectives. Data-driven decision making.',
+        code: 'UI_UX_05',
+        image: '/about.png'
+    },
 ];
 
 
@@ -315,6 +209,7 @@ export const PROJECTS: ProjectInfo[] = [
         id: 'p1',
         slug: 'stellaris-bank-core-infrastructure',
         client: 'Stellaris Bank',
+        // Content for title/desc is in locales/projects.json under items.p1
         title: 'Core Banking Infrastructure',
         description: 'A complete overhaul of their high-frequency transaction environment using cloud-native architectures.',
         longDescription: 'Stellaris Bank faced critical bottlenecks during peak trading hours. We redesigned their core infrastructure from the ground up, implementing a private cloud environment that utilizes distributed ledgers and microservices to handle over 100,000 transactions per second with sub-millisecond latency.',
@@ -427,34 +322,17 @@ export const TESTIMONIALS = [
     {
         id: 't1',
         client: 'Stellaris Bank',
-        role: 'CTO',
-        text: "OPTIMA's infrastructure redesign reduced our transaction latency by 99%. They don't just write code; they architect resilience.",
-        location: "London, UK",
-        encrypted: "SECURE_TRANSMISSION_VERIFIED"
     },
     {
         id: 't2',
         client: 'NeoGen Bio',
-        role: 'Head of Research',
-        text: "The genomic visualization platform allows us to collaborate in real-time on datasets that used to take days to transfer.",
-        location: "Boston, USA",
-        encrypted: "BIO_DATA_STREAM_ACTIVE"
     },
     {
         id: 't3',
         client: 'Aura Logistics',
-        role: 'Director of Ops',
-        text: "We now have complete visibility over our global fleet. The digital twin implementation is a game-changer for our efficiency.",
-        location: "Berlin, DE",
-        encrypted: "LOGISTICS_NET_ONLINE"
     },
     {
         id: 't4',
         client: 'CyberDyne Systems',
-        role: 'Lead Engineer',
-        text: "Their security protocols are unmatched. We've seen a 0% breach rate since implementing their zero-trust architecture.",
-        location: "Silicon Valley, USA",
-        encrypted: "SYS_SECURITY_MAX"
     }
 ];
-

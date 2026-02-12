@@ -24,7 +24,7 @@ const LogoMarquee: React.FC<LogoMarqueeProps> = ({
     const directionClass = direction === 'right' ? 'flex-row-reverse' : '';
 
     return (
-        <div className={`relative overflow-hidden group/marquee ${className}`}>
+        <div className={`relative overflow-hidden group/marquee ${className}`} dir="ltr">
             {/* Side Fade Masks */}
             <div className="absolute inset-y-0 left-0 w-24 md:w-32 bg-gradient-to-r from-white dark:from-dark to-transparent z-10 pointer-events-none transition-colors"></div>
             <div className="absolute inset-y-0 right-0 w-24 md:w-32 bg-gradient-to-l from-white dark:from-dark to-transparent z-10 pointer-events-none transition-colors"></div>

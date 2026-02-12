@@ -1,0 +1,65 @@
+{
+    "nav": {
+        "home": "الرئيسية",
+        "services": "الخدمات",
+        "industries": "القطاعات",
+        "projects": "المشاريع",
+        "about": "من نحن",
+        "contact": "تواصل معنا"
+    },
+    "header": {
+        "logo": "أوبتيما",
+        "partnership": "شراكة استراتيجية"
+    },
+    "footer": {
+        "description": "نهندس البنية التحتية الرقمية الموثوقة للمؤسسات الطموحة حول العالم.",
+        "tagline": "نحن مزودو الحلول الرقمية في دول مجلس التعاون الخليجي ومصر",
+        "social": "تابعنا",
+        "servicesTitle": "خدماتنا",
+        "companyTitle": "الشركة",
+        "connectTitle": "تواصل",
+        "copyright": "© {{year}} أوبتيما سوليوشنز. جميع الحقوق محفوظة.",
+        "secureTransmission": "بروتوكول_نقل_البيانات_الآمن_نشط",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "global": "عالمي",
+        "office": {
+            "hq": "تكساس-المقر: 01_ساحة_المؤسسات",
+            "london": "لندن: 50_طريق_الابتكار",
+            "singapore": "سنغافورة: 88_مارينا_بوليفارد"
+        },
+        "contact": {
+            "partnerships": "partnerships@optima.solutions"
+        },
+        "legal": {
+            "privacy": "[ الخصوصية ]",
+            "terms": "[ الشروط ]"
+        },
+        "newsletter": {
+            "title": "تغذية_المعلومات",
+            "description": "انضم إلى أكثر من 12,000 مهندس يتلقون تحديثاتنا التقنية الشهرية.",
+            "placeholder": "أدخل_الإحداثيات...",
+            "button": "إرسال",
+            "status": "تغذية_القياس_عن_بعد :: نشط"
+        }
+    },
+    "buttons": {
+        "learnMore": "اعرف المزيد",
+        "viewDetails": "عرض التفاصيل",
+        "getStarted": "ابدأ الآن",
+        "contactUs": "تواصل معنا",
+        "exploreAll": "استكشف الكل",
+        "viewProject": "عرض المشروع",
+        "readMore": "اقرأ المزيد"
+    },
+    "status": {
+        "stable": "مستقر",
+        "optimizing": "جاري_التحسين",
+        "online": "متصل",
+        "verified": "موثق"
+    },
+    "techStack": {
+        "tag": "حزمة_التقنيات",
+        "title": "مدعوم بتقنيات حديثة"
+    }
+}

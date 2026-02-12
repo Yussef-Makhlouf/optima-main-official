@@ -1,17 +1,21 @@
 import React, { useState } from 'react';
-
-const REGIONS = [
-    { id: 'ksa', name: 'Saudi Arabia', city: 'Riyadh', code: 'SA_R_01' },
-    { id: 'uae', name: 'UAE', city: 'Abu Dhabi', code: 'AE_AD_02' },
-    { id: 'egy', name: 'Egypt', city: 'Cairo', code: 'EG_C_03' },
-    { id: 'kwt', name: 'Kuwait', city: 'Kuwait City', code: 'KW_KC_04' },
-    { id: 'qat', name: 'Qatar', city: 'Doha', code: 'QA_D_05' },
-    { id: 'bHR', name: 'Bahrain', city: 'Manama', code: 'BH_M_06' },
-    { id: 'omn', name: 'Oman', city: 'Muscat', code: 'OM_M_07' },
-];
+import { useTranslation } from 'react-i18next';
 
 const RegionalPresence: React.FC = () => {
-    const [activeRegion, setActiveRegion] = useState(REGIONS[0]);
+    const { t } = useTranslation(['contact']);
+
+    const REGIONS = [
+        { id: 'ksa', name: t('contact:regional.items.ksa.name'), city: t('contact:regional.items.ksa.city'), code: 'SA_R_01' },
+        { id: 'uae', name: t('contact:regional.items.uae.name'), city: t('contact:regional.items.uae.city'), code: 'AE_AD_02' },
+        { id: 'egy', name: t('contact:regional.items.egy.name'), city: t('contact:regional.items.egy.city'), code: 'EG_C_03' },
+        { id: 'kwt', name: t('contact:regional.items.kwt.name'), city: t('contact:regional.items.kwt.city'), code: 'KW_KC_04' },
+        { id: 'qat', name: t('contact:regional.items.qat.name'), city: t('contact:regional.items.qat.city'), code: 'QA_D_05' },
+        { id: 'bHR', name: t('contact:regional.items.bHR.name'), city: t('contact:regional.items.bHR.city'), code: 'BH_M_06' },
+        { id: 'omn', name: t('contact:regional.items.omn.name'), city: t('contact:regional.items.omn.city'), code: 'OM_M_07' },
+    ];
+
+    const [activeRegionId, setActiveRegionId] = useState('ksa');
+    const activeRegion = REGIONS.find(r => r.id === activeRegionId) || REGIONS[0];
 
     return (
         <div className="border border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-black p-1 transition-colors relative overflow-hidden group">
@@ -22,7 +26,7 @@ const RegionalPresence: React.FC = () => {
                 {REGIONS.map((region) => (
                     <button
                         key={region.id}
-                        onClick={() => setActiveRegion(region)}
+                        onClick={() => setActiveRegionId(region.id)}
                         className={`px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all duration-300 border border-transparent ${activeRegion.id === region.id
                             ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20'
                             : 'bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-gray-400 hover:border-slate-300 dark:hover:border-white/20'
@@ -37,7 +41,7 @@ const RegionalPresence: React.FC = () => {
             <div className="relative aspect-video w-full bg-slate-200 dark:bg-dark/50 overflow-hidden">
                 <div className="absolute top-4 left-4 z-10 px-3 py-1 bg-black/80 backdrop-blur-sm border border-white/10 text-white text-[10px] font-mono tracking-widest">
                     <span className="text-secondary mr-2">●</span>
-                    LIVE_FEED :: {activeRegion.city.toUpperCase()}
+                    {t('contact:regional.statusLive')} :: {activeRegion.city.toUpperCase()}
                 </div>
 
                 <div className="absolute top-4 right-4 z-10 px-3 py-1 bg-black/80 backdrop-blur-sm border border-white/10 text-white text-[10px] font-mono tracking-widest">

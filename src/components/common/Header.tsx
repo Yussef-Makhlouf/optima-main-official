@@ -1,12 +1,15 @@
 
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './LanguageSwitcher';
 
 const Header: React.FC = () => {
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'));
     const location = useLocation();
+    const { t } = useTranslation('common');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -41,39 +44,48 @@ const Header: React.FC = () => {
     }, [mobileMenuOpen]);
 
     const navItems = [
-        { label: 'Home', path: '/' },
-        { label: 'Services', path: '/services' },
-        { label: 'Industries', path: '/industries' },
-        { label: 'Projects', path: '/projects' },
-        { label: 'About', path: '/about' },
-        { label: 'Contact', path: '/contact' },
+        { label: t('nav.home'), path: '/' },
+        { label: t('nav.services'), path: '/services' },
+        { label: t('nav.industries'), path: '/industries' },
+        { label: t('nav.projects'), path: '/projects' },
+        { label: t('nav.about'), path: '/about' },
+        { label: t('nav.contact'), path: '/contact' },
     ];
 
     return (
         <>
-            <header className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${scrolled ? 'bg-white/80 dark:bg-dark/95 backdrop-blur-xl border-b border-primary/10 py-3' : 'bg-transparent py-8'}`}>
+            <header className={`fixed top-0 left-0 right-0 z-[60] transition-all duration-500 ${scrolled ? 'bg-white/80 dark:bg-dark/95 backdrop-blur-xl border-b border-primary/10 py-3' : 'bg-transparent py-6'}`}>
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                     <Link to="/" className="flex items-center space-x-3 group">
                         <div className="relative w-10 h-10 flex items-center justify-center">
                             <div className="absolute inset-0 bg-primary/20 rounded-sm rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
                             <div className="w-5 h-5 border-2 border-secondary rounded-sm rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
                         </div>
-                        <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase">O P T I M A</span>
+                        <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase hidden md:block">O P T I M A</span>
+                        <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase md:hidden">O</span>
                     </Link>
 
-                    {/* Desktop Nav */}
-                    <nav className="hidden lg:flex items-center space-x-10">
-                        {navItems.map((item) => (
-                            <Link
-                                key={item.path}
-                                to={item.path}
-                                className={`text-xs uppercase tracking-[0.2em] font-bold transition-all duration-300 hover:text-secondary relative group py-2 ${location.pathname === item.path ? 'text-secondary' : 'text-slate-500 dark:text-gray-400'
-                                    }`}
-                            >
-                                {item.label}
-                                <span className={`absolute bottom-0 left-0 h-[2px] bg-secondary transition-all duration-300 ${location.pathname === item.path ? 'w-full' : 'w-0 group-hover:w-full'}`}></span>
-                            </Link>
-                        ))}
+                    {/* Desktop Nav - Centered Pill */}
+                    <div className="hidden lg:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                        <nav className="flex items-center p-1 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-slate-200 dark:border-white/10 rounded-full shadow-lg shadow-primary/5">
+                            {navItems.map((item) => (
+                                <Link
+                                    key={item.path}
+                                    to={item.path}
+                                    className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-widest font-bold transition-all duration-300 ${location.pathname === item.path
+                                        ? 'bg-primary text-white shadow-md shadow-primary/20'
+                                        : 'text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
+                                        }`}
+                                >
+                                    {item.label}
+                                </Link>
+                            ))}
+                        </nav>
+                    </div>
+
+                    {/* Desktop Actions */}
+                    <div className="hidden lg:flex items-center space-x-6">
+                        <LanguageSwitcher />
 
                         <button
                             onClick={toggleTheme}
@@ -89,11 +101,11 @@ const Header: React.FC = () => {
 
                         <Link
                             to="/contact"
-                            className="bg-primary hover:bg-secondary text-white px-8 py-3 rounded-sm text-[11px] font-bold transition-all duration-500 border border-primary/50 tracking-[0.2em] hover:shadow-[0_0_20px_rgba(86,165,221,0.3)]"
+                            className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-[11px] font-bold transition-all duration-500 shadow-lg shadow-primary/20 hover:shadow-primary/40 tracking-widest"
                         >
-                            PARTNERSHIP
+                            {t('header.partnership')}
                         </Link>
-                    </nav>
+                    </div>
 
                     {/* Mobile Toggle */}
                     <div className="lg:hidden flex items-center space-x-4">
@@ -132,12 +144,25 @@ const Header: React.FC = () => {
                             >
                                 <Link
                                     to={item.path}
-                                    className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white hover:text-secondary uppercase tracking-tighter"
+                                    onClick={() => setMobileMenuOpen(false)}
+                                    className={`text-4xl md:text-6xl font-black uppercase tracking-tighter ${location.pathname === item.path ? 'text-primary' : 'text-slate-900 dark:text-white hover:text-secondary'}`}
                                 >
                                     {item.label}
                                 </Link>
                             </div>
                         ))}
+                    </div>
+
+                    {/* Mobile Menu Footer Actions */}
+                    <div className={`mt-12 flex items-center space-x-6 transition-all duration-500 delay-700 ${mobileMenuOpen ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
+                        <LanguageSwitcher />
+                        {/* <Link
+                            to="/contact"
+                            onClick={() => setMobileMenuOpen(false)}
+                            className="bg-primary text-white px-8 py-3 rounded-full font-bold text-sm shadow-xl shadow-primary/20"
+                        >
+                            {t('header.partnership')}
+                        </Link> */}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,8 @@
 
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
+import './i18n';
 import Header from './components/common/Header';
 import Footer from './components/common/Footer';
 import Home from './pages/Home';
@@ -24,6 +26,13 @@ const ScrollToTop = () => {
 };
 
 const App: React.FC = () => {
+    const { i18n } = useTranslation();
+
+    useEffect(() => {
+        document.documentElement.dir = i18n.language === 'ar' ? 'rtl' : 'ltr';
+        document.documentElement.lang = i18n.language;
+    }, [i18n.language]);
+
     return (
         <Router>
             <ScrollToTop />

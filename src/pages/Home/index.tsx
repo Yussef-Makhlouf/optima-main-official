@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { PROJECTS, SERVICES, TechIllustrations } from '../../data/content';
 import FAQ from '../../components/sections/FAQ';
 
@@ -11,23 +12,24 @@ import ClientLogos from '../../components/common/ClientLogos';
 import { CLIENTS } from '../../data/content-marquee';
 
 const Home: React.FC = () => {
+    const { t, i18n } = useTranslation(['home', 'common', 'services', 'projects']);
     const [scrollY, setScrollY] = useState(0);
     const [activeStep, setActiveStep] = useState(0);
-    const [systemStatus, setSystemStatus] = useState("STABLE");
+    const [systemStatus, setSystemStatus] = useState(t('common:status.stable'));
 
     useEffect(() => {
         const handleScroll = () => setScrollY(window.scrollY);
         window.addEventListener('scroll', handleScroll);
 
         const interval = setInterval(() => {
-            setSystemStatus(Math.random() > 0.9 ? "OPTIMIZING" : "STABLE");
+            setSystemStatus(Math.random() > 0.9 ? t('common:status.optimizing') : t('common:status.stable'));
         }, 5000);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
             clearInterval(interval);
         };
-    }, []);
+    }, [t]);
 
     return (
         <div className="relative">
@@ -42,12 +44,12 @@ const Home: React.FC = () => {
                 {/* Abstract HUD Decorative Elements - Hidden on small mobile */}
                 <div className="absolute top-40 right-10 w-64 text-[10px] font-mono opacity-40 hidden xl:block z-10">
                     <div className="border-t border-secondary pt-4 mb-4">
-                        <div className="flex justify-between dark:text-white"><span>[X_COORD]</span><span>{Math.floor(scrollY)}</span></div>
-                        <div className="flex justify-between dark:text-white"><span>[Y_COORD]</span><span>{Math.floor(Math.random() * 100)}</span></div>
-                        <div className="flex justify-between dark:text-white"><span>[SYS_STATUS]</span><span className="text-cyber font-bold">{systemStatus}</span></div>
+                        <div className="flex justify-between dark:text-white"><span>{t('home:hero.xCoord')}</span><span>{Math.floor(scrollY)}</span></div>
+                        <div className="flex justify-between dark:text-white"><span>{t('home:hero.yCoord')}</span><span>{Math.floor(Math.random() * 100)}</span></div>
+                        <div className="flex justify-between dark:text-white"><span>{t('home:hero.sysStatus')}</span><span className="text-cyber font-bold">{systemStatus}</span></div>
                     </div>
                     <div className="h-20 bg-primary/5 border border-primary/20 p-2 overflow-hidden">
-                        <div className="ticker-text whitespace-nowrap text-secondary">ARCHITECTING_THE_FUTURE_INFRASTRUCTURE_NOW_DEPLOYING_SYSTEM_v4.2.0</div>
+                        <div className="ticker-text whitespace-nowrap text-secondary">{t('home:hero.ticker')}</div>
                     </div>
                 </div>
 
@@ -56,30 +58,30 @@ const Home: React.FC = () => {
                         <div className="col-span-12 lg:col-span-10 xl:col-span-9">
                             <div className="flex items-center space-x-4 md:space-x-6 mb-8 md:mb-12">
                                 <div className="w-12 md:w-16 h-[2px] bg-secondary animate-pulse"></div>
-                                <span className="text-[9px] md:text-[11px] uppercase tracking-[0.6em] md:tracking-[0.8em] font-mono text-secondary">[ ARCHITECTURE.01 ]</span>
+                                <span className={`text-[9px] md:text-[11px] uppercase ${i18n.language === 'ar' ? 'tracking-[0.4em] md:tracking-[0.5em]' : 'tracking-[0.6em] md:tracking-[0.8em]'} font-mono text-secondary`}>{t('home:hero.tag')}</span>
                             </div>
 
-                            <h1 className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white mb-8 md:mb-10 leading-[0.9] tracking-tighter uppercase transition-colors relative">
-                                ENGINEERING <br />
+                            <h1 className={`text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white mb-8 md:mb-10 leading-[0.9] ${i18n.language === 'ar' ? '' : 'tracking-tighter'} uppercase transition-colors relative`}>
+                                {t('home:hero.title')} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-cyber bg-[length:200%_auto] animate-[gradient:8s_linear_infinite] glitch-hover">
-                                    CERTAINTY.
+                                    {t('home:hero.titleHighlight')}
                                 </span>
-                                <span className="absolute -top-10 -left-10 text-[10px] font-mono text-secondary/30 opacity-50 hidden md:block uppercase tracking-widest">INIT_PROTOCOL::GLOBAL_SCALE</span>
+                                <span className={`absolute -top-10 -left-10 text-[10px] font-mono text-secondary/30 opacity-50 hidden md:block uppercase ${i18n.language === 'ar' ? 'tracking-normal' : 'tracking-widest'}`}>{t('home:hero.hudInit')}</span>
                             </h1>
 
                             <div className="max-w-2xl">
                                 <p className="text-lg md:text-2xl text-slate-600 dark:text-gray-400 mb-10 md:mb-14 leading-relaxed font-light border-l-2 md:border-l-4 border-cyber pl-6 md:pl-10 transition-colors relative">
-                                    OPTIMA Solutions designs resilient digital foundations for the world's most ambitious enterprises.
-                                    <span className="block mt-4 text-[10px] md:text-xs font-mono uppercase tracking-widest text-primary">Target: Zero Downtime.</span>
+                                    {t('home:hero.subtitle')}
+                                    <span className="block mt-4 text-[10px] md:text-xs font-mono uppercase tracking-widest text-primary">{t('home:hero.target')}</span>
                                 </p>
 
                                 <div className="flex flex-col sm:flex-row gap-4">
                                     <Link to="/contact" className="group relative px-8 md:px-12 py-5 md:py-7 bg-primary text-white font-mono font-bold tracking-[0.4em] text-[10px] md:text-[12px] overflow-hidden transition-all duration-500 shadow-xl shadow-primary/20 hud-bracket hud-bracket-tl hud-bracket-br text-center">
-                                        <span className="relative z-10 uppercase">Initialize Connection</span>
+                                        <span className="relative z-10 uppercase">{t('home:hero.cta')}</span>
                                         <div className="absolute inset-0 bg-secondary translate-y-[100%] group-hover:translate-y-0 transition-transform duration-500"></div>
                                     </Link>
                                     <Link to="/services" className="px-8 md:px-12 py-5 md:py-7 border border-slate-200 dark:border-white/10 hover:border-cyber text-slate-900 dark:text-white font-mono font-bold tracking-[0.4em] text-[10px] md:text-[12px] transition-all duration-500 uppercase backdrop-blur-md text-center">
-                                        Capabilities.bin
+                                        {t('home:hero.ctaSecondary')}
                                     </Link>
                                 </div>
                             </div>
@@ -94,14 +96,14 @@ const Home: React.FC = () => {
                     <div className="flex flex-col lg:flex-row justify-between items-start mb-16 md:mb-32 gap-12">
                         <div className="max-w-2xl relative">
                             <h2 className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-mono text-primary mb-8 md:mb-10 flex items-center">
-                                <span className="w-8 md:w-12 h-[1px] bg-primary mr-4 md:mr-6"></span> [ SYS_OPS ]
+                                <span className="w-8 md:w-12 h-[1px] bg-primary mr-4 md:mr-6"></span> {t('home:capabilities.tag')}
                             </h2>
-                            <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none uppercase">Modular <br />Stack.</h3>
-                            <div className="absolute -right-10 md:-right-20 top-0 text-[60px] md:text-[100px] font-black text-slate-100 dark:text-white/[0.02] select-none -z-10 uppercase">CAPABILITY</div>
+                            <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none uppercase">{t('home:capabilities.title')}</h3>
+                            <div className="absolute -right-10 md:right-20 top-0 text-[60px] md:text-[100px] font-black text-slate-100 dark:text-white/[0.02] select-none -z-10 uppercase">{t('home:capabilities.watermark')}</div>
                         </div>
                         <div className="max-w-xs p-6 md:p-8 border border-primary/20 bg-primary/5 hud-bracket hud-bracket-tr hud-bracket-bl">
                             <p className="text-slate-500 dark:text-gray-400 text-xs md:text-sm font-mono leading-relaxed uppercase">
-                                Interoperable service modules designed for 24/7 mission-critical operational stability.
+                                {t('home:capabilities.description')}
                             </p>
                         </div>
                     </div>
@@ -112,9 +114,10 @@ const Home: React.FC = () => {
                                 <Link to={`/services/${s.slug}`}>
                                     <SystemNode
                                         icon={s.icon}
-                                        title={s.title}
-                                        desc={s.description}
+                                        title={t(`services:services.${s.id}.title`)}
+                                        desc={t(`services:services.${s.id}.description`)}
                                         code={s.technicalCode}
+                                        label={t('home:capabilities.sysCode')}
                                     />
                                 </Link>
                             </div>
@@ -128,12 +131,12 @@ const Home: React.FC = () => {
                                 className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
                             />
                             <div className="absolute bottom-8 left-8 z-30">
-                                <div className="text-[10px] font-mono text-cyber uppercase tracking-widest mb-2">System_Visualisation</div>
-                                <div className="text-white text-xl font-bold uppercase tracking-tighter">Global_Network_Map</div>
+                                <div className="text-[10px] font-mono text-cyber uppercase tracking-widest mb-2">{t('home:capabilities.imageLabel')}</div>
+                                <div className="text-white text-xl font-bold uppercase tracking-tighter">{t('home:capabilities.imageTitle')}</div>
                             </div>
                             {/* Decorative Corners */}
                             <div className="absolute top-0 right-0 p-4 z-30">
-                                <div className="w-16 h-16 border-t font-mono text-[9px] text-white/50 border-r border-white/20 pt-2 pr-2 text-right">FIG_3.1</div>
+                                <div className="w-16 h-16 border-t font-mono text-[9px] text-white/50 border-r border-white/20 pt-2 pr-2 text-right">{t('home:capabilities.imageCode')}</div>
                             </div>
                         </div>
                     </div>
@@ -150,33 +153,36 @@ const Home: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="mb-16 md:mb-24 flex flex-col md:flex-row items-start md:items-end justify-between border-b border-primary/20 pb-10 gap-6">
                         <div>
-                            <h2 className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] font-mono text-secondary mb-4 md:mb-6">[ DEPLOY_PROTOCOL ]</h2>
-                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors">Engineered Flow.</h3>
+                            <h2 className="text-[10px] md:text-[11px] uppercase tracking-[0.6em] font-mono text-secondary mb-4 md:mb-6">{t('home:methodology.tag')}</h2>
+                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors">{t('home:methodology.title')}</h3>
                         </div>
-                        <div className="text-[10px] font-mono text-secondary animate-pulse uppercase tracking-widest">SYSTEM_CHECK: OK // VER_4.2</div>
+                        <div className="text-[10px] font-mono text-secondary animate-pulse uppercase tracking-widest">{t('home:methodology.status')}</div>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-1 relative z-10 bg-slate-200 dark:bg-white/10">
                         <DiagramStep
                             number="01"
-                            title="Audit"
-                            desc="Comprehensive analysis of current infrastructure security and performance bottlenecks."
+                            title={t('home:methodology.audit.title')}
+                            desc={t('home:methodology.audit.description')}
                             onEnter={() => setActiveStep(0)}
                             isActive={activeStep === 0}
+                            phaseLabel={t('home:methodology.phase')}
                         />
                         <DiagramStep
                             number="02"
-                            title="Architect"
-                            desc="Modular blueprints prioritizing scalability and zero-downtime migration paths."
+                            title={t('home:methodology.architect.title')}
+                            desc={t('home:methodology.architect.description')}
                             onEnter={() => setActiveStep(1)}
                             isActive={activeStep === 1}
+                            phaseLabel={t('home:methodology.phase')}
                         />
                         <DiagramStep
                             number="03"
-                            title="Operate"
-                            desc="Continuous CI/CD deployment with 24/7 global telemetry monitoring."
+                            title={t('home:methodology.operate.title')}
+                            desc={t('home:methodology.operate.description')}
                             onEnter={() => setActiveStep(2)}
                             isActive={activeStep === 2}
+                            phaseLabel={t('home:methodology.phase')}
                         />
                     </div>
                 </div>
@@ -191,7 +197,7 @@ const Home: React.FC = () => {
             {/* Ticker Banner */}
             <div className="bg-primary py-3 md:py-4 overflow-hidden border-y border-white/10">
                 <div className="ticker-text whitespace-nowrap text-white font-mono text-[8px] md:text-[10px] tracking-[0.4em] md:tracking-[0.5em] uppercase">
-                    SECURE_DATA_TRANSFER_PROTOCOL_ACTIVE // GLOBAL_NODES_ONLINE // LATENCY: 12ms // OPTIMA_SOLUTIONS_v4 // SEC_VERIFIED: TRUE //
+                    {t('home:ticker.text')}
                 </div>
             </div>
 
@@ -200,11 +206,11 @@ const Home: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 md:mb-24 gap-8">
                         <div>
-                            <h2 className="text-[10px] md:text-[11px] font-mono text-primary uppercase tracking-[0.6em] mb-4 md:mb-6">[ ARCHIVES ]</h2>
-                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors leading-none">Impact Data.</h3>
+                            <h2 className="text-[10px] md:text-[11px] font-mono text-primary uppercase tracking-[0.6em] mb-4 md:mb-6">{t('home:projects.tag')}</h2>
+                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors leading-none">{t('home:projects.title')}</h3>
                         </div>
                         <Link to="/projects" className="text-xs font-mono font-bold uppercase tracking-widest text-secondary hover:text-cyber transition-colors flex items-center group">
-                            Explore_All_Units
+                            {t('home:projects.exploreAll')}
                             <svg className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
                         </Link>
                     </div>
@@ -219,8 +225,8 @@ const Home: React.FC = () => {
                                         <div className="w-6 h-6 md:w-8 md:h-8 border border-primary/30 flex items-center justify-center text-[9px] md:text-[10px] font-mono text-primary">0{PROJECTS.indexOf(p) + 1}</div>
                                     </div>
                                     <div>
-                                        <div className="text-[9px] md:text-[10px] font-mono text-cyber mb-4 opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">RUNNING_STUDY_...</div>
-                                        <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase mb-6 group-hover:text-primary transition-colors leading-none">{p.title}</h4>
+                                        <div className="text-[9px] md:text-[10px] font-mono text-cyber mb-4 opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">{t('home:projects.running')}</div>
+                                        <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase mb-6 group-hover:text-primary transition-colors leading-none">{t(`projects:items.${p.id}.title`)}</h4>
                                         <div className="w-0 h-1 bg-secondary group-hover:w-full transition-all duration-700"></div>
                                     </div>
                                 </div>
@@ -247,11 +253,11 @@ const Home: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                         <div className="lg:col-span-8 text-center lg:text-left">
                             <h3 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 md:mb-12 uppercase leading-[0.85] transition-colors">
-                                BUILD THE <br /><span className="text-primary italic">BACKBONE.</span>
+                                {t('home:cta.title')} <br /><span className="text-primary italic">{t('home:cta.titleHighlight')}</span>
                             </h3>
                             <p className="text-lg md:text-2xl text-slate-600 dark:text-gray-400 font-light leading-relaxed transition-colors max-w-2xl mx-auto lg:mx-0 border-l-0 lg:border-l-4 border-secondary pl-0 lg:pl-10">
-                                Global scale requires infrastructure that adapts as fast as the market moves.
-                                <span className="block mt-4 text-[10px] md:text-sm font-mono text-primary uppercase tracking-[0.2em]">[ CONNECTION_READY ]</span>
+                                {t('home:cta.subtitle')}
+                                <span className="block mt-4 text-[10px] md:text-sm font-mono text-primary uppercase tracking-[0.2em]">{t('home:cta.tag')}</span>
                             </p>
                         </div>
                         <div className="lg:col-span-4 flex justify-center">
@@ -260,8 +266,8 @@ const Home: React.FC = () => {
                                 <div className="absolute inset-3 md:inset-4 border border-secondary/10 rounded-full animate-[spin_15s_linear_infinite]"></div>
                                 <div className="absolute inset-8 md:inset-10 border border-cyber/5 rounded-full animate-[spin_10s_linear_infinite_reverse]"></div>
                                 <div className="text-center relative z-10">
-                                    <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.4em] md:tracking-[0.6em] text-slate-900 dark:text-white group-hover:text-cyber transition-colors uppercase font-bold">INITIATE</span>
-                                    <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.4em] md:tracking-[0.6em] text-slate-500 dark:text-gray-400 uppercase">PROTOCOL</span>
+                                    <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.4em] md:tracking-[0.6em] text-slate-900 dark:text-white group-hover:text-cyber transition-colors uppercase font-bold">{t('home:cta.initiate')}</span>
+                                    <span className="block text-[10px] md:text-[11px] font-mono tracking-[0.4em] md:tracking-[0.6em] text-slate-500 dark:text-gray-400 uppercase">{t('home:cta.protocol')}</span>
                                 </div>
                             </Link>
                         </div>
@@ -274,7 +280,7 @@ const Home: React.FC = () => {
 
 
 
-const SystemNode: React.FC<{ icon: React.ReactNode, title: string, desc: string, code: string }> = ({ icon, title, desc, code }) => (
+const SystemNode: React.FC<{ icon: React.ReactNode, title: string, desc: string, code: string, label: string }> = ({ icon, title, desc, code, label }) => (
     <div className={`group relative p-10 md:p-16 bg-white dark:bg-white/[0.02] hover:bg-slate-50 dark:hover:bg-white/[0.05] transition-all duration-700 h-full flex flex-col justify-between overflow-hidden`}>
         <div className="relative z-10">
             <div className="flex justify-between items-start mb-12 md:mb-16">
@@ -289,7 +295,7 @@ const SystemNode: React.FC<{ icon: React.ReactNode, title: string, desc: string,
             </p>
         </div>
         <div className="mt-12 md:mt-20 flex items-center space-x-6 opacity-0 group-hover:opacity-100 transition-all duration-700 translate-y-4 group-hover:translate-y-0 relative z-10">
-            <span className="text-[10px] md:text-[11px] font-mono font-bold tracking-[0.4em] text-secondary uppercase">SYS_DOCS.v4</span>
+            <span className="text-[10px] md:text-[11px] font-mono font-bold tracking-[0.4em] text-secondary uppercase">{label}</span>
             <div className="w-12 md:w-16 h-[1px] bg-secondary"></div>
         </div>
         <div className="absolute top-0 left-0 w-8 h-8 border-t border-l border-primary/20 group-hover:border-cyber/50 transition-colors"></div>
@@ -297,14 +303,14 @@ const SystemNode: React.FC<{ icon: React.ReactNode, title: string, desc: string,
     </div>
 );
 
-const DiagramStep: React.FC<{ number: string, title: string, desc: string, isActive: boolean, onEnter: () => void }> = ({ number, title, desc, isActive, onEnter }) => (
+const DiagramStep: React.FC<{ number: string, title: string, desc: string, isActive: boolean, onEnter: () => void, phaseLabel: string }> = ({ number, title, desc, isActive, onEnter, phaseLabel }) => (
     <div
         className={`p-10 md:p-16 transition-all duration-700 relative overflow-hidden group cursor-default border-x border-transparent ${isActive ? 'bg-primary/5 dark:bg-primary/10 border-primary/40' : 'bg-white dark:bg-dark/40 hover:border-primary/20'}`}
         onMouseEnter={onEnter}
     >
         <div className={`absolute top-0 right-0 p-8 md:p-12 text-7xl md:text-9xl font-black transition-all duration-700 select-none ${isActive ? 'text-primary/10 dark:text-primary/20 scale-125 translate-x-5 md:translate-x-10' : 'text-slate-100 dark:text-white/[0.02]'}`}>{number}</div>
         <div className="relative z-10">
-            <div className={`font-mono text-[10px] md:text-[11px] tracking-[0.4em] md:tracking-[0.6em] mb-6 md:mb-10 uppercase transition-colors duration-500 ${isActive ? 'text-cyber' : 'text-slate-400 dark:text-gray-500'}`}>PHASE_0{number}</div>
+            <div className={`font-mono text-[10px] md:text-[11px] tracking-[0.4em] md:tracking-[0.6em] mb-6 md:mb-10 uppercase transition-colors duration-500 ${isActive ? 'text-cyber' : 'text-slate-400 dark:text-gray-500'}`}>{phaseLabel}{number}</div>
             <h4 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 md:mb-8 uppercase tracking-tighter leading-none">{title}</h4>
             <p className={`text-base md:text-lg font-light leading-relaxed transition-colors duration-500 ${isActive ? 'text-slate-700 dark:text-gray-200' : 'text-slate-500 dark:text-gray-500'}`}>{desc}</p>
         </div>
