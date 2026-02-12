@@ -18,7 +18,7 @@ const About: React.FC = () => {
                         <div className="w-12 h-[1px] bg-secondary"></div>
                         <span className="text-[10px] font-black text-secondary uppercase tracking-[0.6em]">{t('about:page.tag')}</span>
                     </div>
-                    <h1 className="text-5xl md:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-12 leading-[0.85] uppercase transition-colors">
+                    <h1 className="text-5xl md:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-12 leading-tight uppercase transition-colors">
                         {t('about:page.title')} <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t('about:page.titleHighlight')}</span>
                     </h1>
                     <p className="text-2xl md:text-3xl text-slate-600 dark:text-gray-400 max-w-4xl font-light leading-snug transition-colors">
@@ -36,7 +36,7 @@ const About: React.FC = () => {
                             <img src="/about.png" alt="Optima Philosophy" className="relative z-10 rounded-sm shadow-2xl shadow-primary/10 mb-12 grayscale hover:grayscale-0 transition-all duration-700" />
 
                             <h2 className="text-[10px] uppercase tracking-[0.5em] font-black text-primary mb-10">{t('about:page.corePhilosophy.tag')}</h2>
-                            <h3 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none mb-10 transition-colors">{t('about:page.corePhilosophy.title')}</h3>
+                            <h3 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-tight mb-10 transition-colors">{t('about:page.corePhilosophy.title')}</h3>
                             <p className="text-lg text-slate-500 dark:text-gray-500 font-light leading-relaxed mb-10 italic transition-colors">
                                 {t('about:page.corePhilosophy.description')}
                             </p>

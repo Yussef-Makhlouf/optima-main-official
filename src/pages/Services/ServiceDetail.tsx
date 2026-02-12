@@ -93,7 +93,7 @@ const ServiceDetail: React.FC = () => {
                                 </div>
                                 <div>
                                     <div className="text-[10px] md:text-[11px] font-mono text-primary uppercase tracking-[0.6em] md:tracking-[0.8em] mb-2">{service.technicalCode}</div>
-                                    <h1 className="text-4xl sm:text-6xl md:text-8xl xl:text-9xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none">{localizedTitle}</h1>
+                                    <h1 className="text-4xl sm:text-6xl md:text-8xl xl:text-9xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-tight">{localizedTitle}</h1>
                                 </div>
                             </div>
                             <p className={`text-xl md:text-3xl text-slate-600 dark:text-gray-400 font-light leading-relaxed max-w-2xl ${isRtl ? 'border-r-2 md:border-r-4 pr-6 md:pr-10' : 'border-l-2 md:border-l-4 pl-6 md:pl-10'} border-cyber transition-colors`}>
@@ -151,7 +151,7 @@ const ServiceDetail: React.FC = () => {
                         {localizedFeatures.map((feature, i) => (
                             <div key={i} className="p-8 md:p-12 bg-white dark:bg-surface/20 group hover:bg-primary transition-all duration-500 relative">
                                 <div className="text-secondary font-mono text-[10px] md:text-[11px] tracking-widest uppercase mb-8 md:mb-10 group-hover:text-white/60 transition-colors">MOD_0{i + 1}</div>
-                                <h4 className="text-slate-900 dark:text-white font-black text-xl md:text-2xl uppercase tracking-tight mb-6 group-hover:text-white transition-colors leading-none">{feature}</h4>
+                                <h4 className="text-slate-900 dark:text-white font-black text-xl md:text-2xl uppercase tracking-tight mb-6 group-hover:text-white transition-colors leading-tight">{feature}</h4>
                                 <div className="w-8 h-1 bg-cyber group-hover:bg-white group-hover:w-full transition-all duration-500"></div>
                             </div>
                         ))}
@@ -183,7 +183,7 @@ const ServiceDetail: React.FC = () => {
                         <div className="lg:col-span-4 space-y-8">
                             <div className="bg-primary p-10 md:p-12 relative overflow-hidden flex flex-col justify-between hud-bracket hud-bracket-tl hud-bracket-br min-h-[350px] md:min-h-[400px]">
                                 <div className="relative z-10">
-                                    <h3 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 md:mb-8 leading-[0.9]">
+                                    <h3 className="text-4xl md:text-5xl font-black text-white tracking-tighter uppercase mb-6 md:mb-8 leading-tight">
                                         {t('services:page.engageTitle1')} <br /> {t('services:page.engageTitle2')}
                                     </h3>
                                     <p className="text-white/70 font-light leading-relaxed mb-10 text-base md:text-lg uppercase">

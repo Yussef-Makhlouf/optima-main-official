@@ -45,7 +45,7 @@ const ProjectDetail: React.FC = () => {
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-end">
                         <div className="lg:col-span-8">
                             <div className="text-primary font-mono font-bold text-[10px] md:text-xs uppercase tracking-[0.5em] mb-4 md:mb-6">{t('projects:detail.caseStudy')} // {project.client}</div>
-                            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none uppercase mb-8">{t(`projects:items.${project.id}.title`)}</h1>
+                            <h1 className="text-4xl sm:text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight uppercase mb-8">{t(`projects:items.${project.id}.title`)}</h1>
                             <div className="flex flex-wrap gap-2">
                                 {project.tags.map(tag => (
                                     <span key={tag} className="px-3 md:px-4 py-1 border border-primary/40 text-primary text-[9px] md:text-[10px] font-black uppercase tracking-widest">{tag}</span>
@@ -160,7 +160,7 @@ const ProjectDetail: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 text-center">
                     <h3 className="text-[10px] md:text-xs font-mono font-bold text-secondary uppercase tracking-[0.5em] mb-12">[ {t('projects:detail.nextDeployment')} ]</h3>
                     <Link to={`/projects/${nextProject.slug}`} className="group inline-block">
-                        <h4 className="text-3xl sm:text-5xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter uppercase group-hover:text-primary transition-all duration-700 leading-none">
+                        <h4 className="text-3xl sm:text-5xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter uppercase group-hover:text-primary transition-all duration-700 leading-tight">
                             {t(`projects:items.${nextProject.id}.title`)}
                         </h4>
                         <div className="mt-12 w-24 h-[2px] bg-slate-300 dark:bg-white/10 mx-auto group-hover:w-full transition-all duration-700 group-hover:bg-primary"></div>

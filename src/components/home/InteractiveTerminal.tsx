@@ -6,7 +6,9 @@ const InteractiveTerminal: React.FC = () => {
     const { t } = useTranslation(['home']);
     const [input, setInput] = useState('');
     const [output, setOutput] = useState<string[]>([]);
+    const [isFocused, setIsFocused] = useState(false);
     const inputRef = useRef<HTMLInputElement>(null);
+    const containerRef = useRef<HTMLDivElement>(null);
     const navigate = useNavigate();
 
     // Initialize terminal with localized welcome message
@@ -60,32 +62,39 @@ const InteractiveTerminal: React.FC = () => {
         <section className="py-24 bg-black font-mono text-green-500 p-6 md:p-12 relative overflow-hidden border-y border-green-900/30">
             <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] z-10 bg-[length:100%_2px,3px_100%]"></div>
 
-            <div className="max-w-3xl mx-auto border border-green-800/50 bg-black/90 p-6 shadow-[0_0_20px_rgba(0,255,0,0.1)] rounded-md relative z-20">
+            <div
+                ref={containerRef}
+                onClick={() => inputRef.current?.focus()}
+                className={`max-w-3xl mx-auto border bg-black/90 p-6 shadow-2xl transition-all duration-500 rounded-md relative z-20 ${isFocused ? 'border-green-500/50 shadow-[0_0_30px_rgba(0,255,0,0.15)]' : 'border-green-800/30 shadow-[0_0_10px_rgba(0,255,0,0.05)]'}`}
+            >
                 <div className="flex justify-between items-center border-b border-green-900/50 pb-2 mb-4">
-                    <span className="text-xs text-green-700">{t('home:terminal.guest')}</span>
+                    <span className="text-[10px] font-mono text-green-700 uppercase tracking-widest">{t('home:terminal.guest')} // {isFocused ? 'ACTIVE' : 'IDLE'}</span>
                     <div className="flex space-x-2">
-                        <div className="w-3 h-3 rounded-full bg-red-500/20"></div>
-                        <div className="w-3 h-3 rounded-full bg-yellow-500/20"></div>
-                        <div className="w-3 h-3 rounded-full bg-green-500/20"></div>
+                        <div className={`w-3 h-3 rounded-full ${isFocused ? 'bg-red-500' : 'bg-red-500/20'} transition-colors`}></div>
+                        <div className={`w-3 h-3 rounded-full ${isFocused ? 'bg-yellow-500' : 'bg-yellow-500/20'} transition-colors`}></div>
+                        <div className={`w-3 h-3 rounded-full ${isFocused ? 'bg-green-500' : 'bg-green-500/20'} transition-colors`}></div>
                     </div>
                 </div>
 
                 <div className="h-64 overflow-y-auto font-mono text-sm space-y-1 scrollbar-hide">
                     {output.map((line, i) => (
-                        <div key={i} className="opacity-80 hover:opacity-100 transition-opacity">{line}</div>
+                        <div key={i} className={`transition-opacity duration-300 ${isFocused ? 'opacity-90' : 'opacity-40'}`}>{line}</div>
                     ))}
-                    <div ref={inputRef}></div>
+                    <div ref={inputRef as any}></div>
                 </div>
 
-                <div className="mt-4 flex items-center border-t border-green-900/50 pt-2">
-                    <span className="mr-2 text-green-400">$</span>
+                <div className={`mt-4 flex items-center border-t py-2 transition-colors ${isFocused ? 'border-green-500/50' : 'border-green-900/30'}`}>
+                    <span className={`mr-2 transition-colors ${isFocused ? 'text-green-400' : 'text-green-900'}`}>$</span>
                     <input
+                        ref={inputRef}
                         type="text"
                         value={input}
+                        onFocus={() => setIsFocused(true)}
+                        onBlur={() => setIsFocused(false)}
                         onChange={(e) => setInput(e.target.value)}
                         onKeyDown={handleKeyDown}
-                        className="bg-transparent border-none outline-none text-green-400 w-full placeholder-green-900"
-                        placeholder={t('home:terminal.placeholder')}
+                        className={`bg-transparent border-none outline-none w-full placeholder-green-900/50 text-sm transition-colors ${isFocused ? 'text-green-400' : 'text-green-900'}`}
+                        placeholder={isFocused ? '' : t('home:terminal.placeholder')}
                     />
                 </div>
             </div>

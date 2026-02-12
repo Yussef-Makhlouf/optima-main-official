@@ -61,8 +61,8 @@ const Header: React.FC = () => {
                             <div className="absolute inset-0 bg-primary/20 rounded-sm rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
                             <div className="w-5 h-5 border-2 border-secondary rounded-sm rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
                         </div>
-                        <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase hidden md:block">O P T I M A</span>
-                        <span className="text-2xl font-black tracking-tighter text-slate-900 dark:text-white uppercase md:hidden">O</span>
+                        <span className="text-2xl font-display font-black tracking-[0.15em] text-slate-900 dark:text-white uppercase hidden md:block">O P T I M A</span>
+                        <span className="text-2xl font-display font-black tracking-tighter text-slate-900 dark:text-white uppercase md:hidden">O</span>
                     </Link>
 
                     {/* Desktop Nav - Centered Pill */}
@@ -145,7 +145,7 @@ const Header: React.FC = () => {
                                 <Link
                                     to={item.path}
                                     onClick={() => setMobileMenuOpen(false)}
-                                    className={`text-4xl md:text-6xl font-black uppercase tracking-tighter ${location.pathname === item.path ? 'text-primary' : 'text-slate-900 dark:text-white hover:text-secondary'}`}
+                                    className={`text-4xl md:text-5xl font-display font-black uppercase tracking-tighter ${location.pathname === item.path ? 'text-primary' : 'text-slate-900 dark:text-white hover:text-secondary'}`}
                                 >
                                     {item.label}
                                 </Link>

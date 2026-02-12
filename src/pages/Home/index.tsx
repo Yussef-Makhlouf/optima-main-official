@@ -61,7 +61,7 @@ const Home: React.FC = () => {
                                 <span className={`text-[9px] md:text-[11px] uppercase ${i18n.language === 'ar' ? 'tracking-[0.4em] md:tracking-[0.5em]' : 'tracking-[0.6em] md:tracking-[0.8em]'} font-mono text-secondary`}>{t('home:hero.tag')}</span>
                             </div>
 
-                            <h1 className={`text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white mb-8 md:mb-10 leading-[0.9] ${i18n.language === 'ar' ? '' : 'tracking-tighter'} uppercase transition-colors relative`}>
+                            <h1 className={`text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white mb-8 md:mb-10 leading-[1.1] ${i18n.language === 'ar' ? '' : 'tracking-tighter'} uppercase transition-colors relative`}>
                                 {t('home:hero.title')} <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-cyber bg-[length:200%_auto] animate-[gradient:8s_linear_infinite] glitch-hover">
                                     {t('home:hero.titleHighlight')}
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
                             <h2 className="text-[10px] md:text-[12px] uppercase tracking-[0.6em] font-mono text-primary mb-8 md:mb-10 flex items-center">
                                 <span className="w-8 md:w-12 h-[1px] bg-primary mr-4 md:mr-6"></span> {t('home:capabilities.tag')}
                             </h2>
-                            <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-none uppercase">{t('home:capabilities.title')}</h3>
+                            <h3 className="text-5xl md:text-7xl lg:text-8xl font-black text-slate-900 dark:text-white tracking-tighter leading-tight uppercase">{t('home:capabilities.title')}</h3>
                             <div className="absolute -right-10 md:right-20 top-0 text-[60px] md:text-[100px] font-black text-slate-100 dark:text-white/[0.02] select-none -z-10 uppercase">{t('home:capabilities.watermark')}</div>
                         </div>
                         <div className="max-w-xs p-6 md:p-8 border border-primary/20 bg-primary/5 hud-bracket hud-bracket-tr hud-bracket-bl">
@@ -207,7 +207,7 @@ const Home: React.FC = () => {
                     <div className="flex flex-col md:flex-row items-start md:items-end justify-between mb-16 md:mb-24 gap-8">
                         <div>
                             <h2 className="text-[10px] md:text-[11px] font-mono text-primary uppercase tracking-[0.6em] mb-4 md:mb-6">{t('home:projects.tag')}</h2>
-                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors leading-none">{t('home:projects.title')}</h3>
+                            <h3 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors leading-tight">{t('home:projects.title')}</h3>
                         </div>
                         <Link to="/projects" className="text-xs font-mono font-bold uppercase tracking-widest text-secondary hover:text-cyber transition-colors flex items-center group">
                             {t('home:projects.exploreAll')}
@@ -226,7 +226,7 @@ const Home: React.FC = () => {
                                     </div>
                                     <div>
                                         <div className="text-[9px] md:text-[10px] font-mono text-cyber mb-4 opacity-0 group-hover:opacity-100 transition-opacity uppercase tracking-widest">{t('home:projects.running')}</div>
-                                        <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase mb-6 group-hover:text-primary transition-colors leading-none">{t(`projects:items.${p.id}.title`)}</h4>
+                                        <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase mb-6 group-hover:text-primary transition-colors leading-tight">{t(`projects:items.${p.id}.title`)}</h4>
                                         <div className="w-0 h-1 bg-secondary group-hover:w-full transition-all duration-700"></div>
                                     </div>
                                 </div>
@@ -252,7 +252,7 @@ const Home: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                         <div className="lg:col-span-8 text-center lg:text-left">
-                            <h3 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 md:mb-12 uppercase leading-[0.85] transition-colors">
+                            <h3 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 md:mb-12 uppercase leading-tight transition-colors">
                                 {t('home:cta.title')} <br /><span className="text-primary italic">{t('home:cta.titleHighlight')}</span>
                             </h3>
                             <p className="text-lg md:text-2xl text-slate-600 dark:text-gray-400 font-light leading-relaxed transition-colors max-w-2xl mx-auto lg:mx-0 border-l-0 lg:border-l-4 border-secondary pl-0 lg:pl-10">
@@ -289,7 +289,7 @@ const SystemNode: React.FC<{ icon: React.ReactNode, title: string, desc: string,
                 </div>
                 <div className="text-[9px] md:text-[10px] font-mono text-slate-400 dark:text-gray-600 tracking-widest uppercase">{code}</div>
             </div>
-            <h4 className="text-3xl md:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight group-hover:translate-x-4 transition-transform duration-500 leading-none">{title}</h4>
+            <h4 className="text-3xl md:text-3xl lg:text-5xl font-black text-slate-900 dark:text-white mb-6 uppercase tracking-tight group-hover:translate-x-4 transition-transform duration-500 leading-tight">{title}</h4>
             <p className="text-base md:text-lg text-slate-500 dark:text-gray-500 font-light leading-relaxed max-w-sm transition-colors">
                 {desc}
             </p>
@@ -311,7 +311,7 @@ const DiagramStep: React.FC<{ number: string, title: string, desc: string, isAct
         <div className={`absolute top-0 right-0 p-8 md:p-12 text-7xl md:text-9xl font-black transition-all duration-700 select-none ${isActive ? 'text-primary/10 dark:text-primary/20 scale-125 translate-x-5 md:translate-x-10' : 'text-slate-100 dark:text-white/[0.02]'}`}>{number}</div>
         <div className="relative z-10">
             <div className={`font-mono text-[10px] md:text-[11px] tracking-[0.4em] md:tracking-[0.6em] mb-6 md:mb-10 uppercase transition-colors duration-500 ${isActive ? 'text-cyber' : 'text-slate-400 dark:text-gray-500'}`}>{phaseLabel}{number}</div>
-            <h4 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 md:mb-8 uppercase tracking-tighter leading-none">{title}</h4>
+            <h4 className="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-6 md:mb-8 uppercase tracking-tighter leading-tight">{title}</h4>
             <p className={`text-base md:text-lg font-light leading-relaxed transition-colors duration-500 ${isActive ? 'text-slate-700 dark:text-gray-200' : 'text-slate-500 dark:text-gray-500'}`}>{desc}</p>
         </div>
         <div className={`absolute bottom-0 left-0 h-1 bg-cyber transition-all duration-700 ${isActive ? 'w-full' : 'w-0'}`}></div>

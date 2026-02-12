@@ -25,7 +25,7 @@ const SecureHandshakeCTA: React.FC = () => {
                     </div>
                 </div>
 
-                <h2 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white mb-16 tracking-tighter uppercase transition-colors leading-none">
+                <h2 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white mb-16 tracking-tighter uppercase transition-colors leading-tight">
                     {t('about:cta.title')} <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">{t('about:cta.titleHighlight')}</span><br />
                     {t('about:cta.titleSuffix')}
                 </h2>

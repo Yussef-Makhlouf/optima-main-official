@@ -35,27 +35,27 @@
         "title": "System Architects.",
         "members": {
             "t1": {
-                "name": "Yussef_Makhlouf",
+                "name": "Yussef Makhlouf",
                 "role": "Chief Architect",
                 "bio": "Former infrastructure lead at massive-scale fintech. Specializes in zero-downtime migration strategies."
             },
             "t2": {
-                "name": "Eslam_Hussien",
+                "name": "Eslam Hussien",
                 "role": "Head of Engineering",
                 "bio": "Rigorous focus on code quality and automated testing pipelines. 15+ years in systems programming."
             },
             "t3": {
-                "name": "Mohamed_Hosny",
+                "name": "Mohamed Hosny",
                 "role": "Security Ops",
                 "bio": "Dedicated to proactive threat modeling and defensive architecture. Certified CISSP."
             },
             "t4": {
-                "name": "Mahmoud_Taha",
+                "name": "Mahmoud Taha",
                 "role": "Product Strategy",
                 "bio": "Bridging the gap between technical capability and business objectives. Data-driven decision making."
             },
             "t5": {
-                "name": "Momen_Ahmed",
+                "name": "Momen Ahmed",
                 "role": "UI/UX & Graphic Designer",
                 "bio": "Specializes in user interface and user experience design. Expert in graphic design and visual identity creation."
             }

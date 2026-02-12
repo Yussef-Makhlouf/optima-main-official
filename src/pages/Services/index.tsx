@@ -16,7 +16,7 @@ const Services: React.FC = () => {
                         <div className="w-12 h-[1px] bg-primary"></div>
                         <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">{t('services:page.tag')}</span>
                     </div>
-                    <h1 className="text-6xl md:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-none uppercase">{t('services:page.title')}</h1>
+                    <h1 className="text-6xl md:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-tight uppercase">{t('services:page.title')}</h1>
                     <p className="text-2xl text-slate-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed">
                         {t('services:page.subtitle')}
                     </p>

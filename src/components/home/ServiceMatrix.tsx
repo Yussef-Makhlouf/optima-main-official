@@ -19,7 +19,7 @@ const ServiceMatrix: React.FC = () => {
                             <span className="w-2 h-2 bg-primary mr-2 animate-pulse"></span>
                             [ ACTIVE_MODULES ]
                         </h2>
-                        <h3 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-none">
+                        <h3 className="text-4xl md:text-7xl font-black text-slate-900 dark:text-white uppercase tracking-tighter leading-tight">
                             Infrastructure <br /> Matrix.
                         </h3>
                     </div>
@@ -54,7 +54,7 @@ const ServiceMatrix: React.FC = () => {
 
                                 {/* Content */}
                                 <div className="relative z-10 mt-auto">
-                                    <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase mb-4 leading-none group-hover:translate-x-2 transition-transform duration-300">
+                                    <h4 className="text-2xl md:text-3xl font-black text-slate-900 dark:text-white uppercase mb-4 leading-tight group-hover:translate-x-2 transition-transform duration-300">
                                         {service.title}
                                     </h4>
 

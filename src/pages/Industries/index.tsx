@@ -14,7 +14,7 @@ const Industries: React.FC = () => {
                         <div className="w-12 h-[1px] bg-secondary"></div>
                         <span className="text-[10px] font-mono font-bold text-secondary uppercase tracking-[0.6em]">{t('industries:page.tag')}</span>
                     </div>
-                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-none uppercase">{t('industries:page.title')} <br /><span className="text-primary italic">{t('industries:page.titleHighlight')}</span></h1>
+                    <h1 className="text-5xl md:text-8xl lg:text-9xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 leading-tight uppercase">{t('industries:page.title')} <br /><span className="text-primary italic">{t('industries:page.titleHighlight')}</span></h1>
                     <p className="text-xl md:text-3xl text-slate-600 dark:text-gray-400 max-w-3xl font-light leading-relaxed border-l-4 border-cyber pl-8">
                         {t('industries:page.description')}
                     </p>
@@ -95,7 +95,7 @@ const IndustryBlock: React.FC<{ title: string, icon: React.ReactNode, id: string
                 </div>
                 <div>
                     <span className="text-[10px] font-mono font-bold text-primary uppercase tracking-[0.4em] mb-2 block">{tag}</span>
-                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-none">{title}</h2>
+                    <h2 className="text-4xl md:text-6xl font-black text-slate-900 dark:text-white tracking-tighter uppercase leading-tight">{title}</h2>
                 </div>
             </div>
             <p className="text-xl md:text-2xl text-slate-600 dark:text-gray-400 font-light leading-relaxed mb-16 border-l-2 border-primary/20 pl-8 transition-colors">
@@ -105,7 +105,7 @@ const IndustryBlock: React.FC<{ title: string, icon: React.ReactNode, id: string
                 {points.map((p, i) => (
                     <div key={i} className="group relative">
                         <div className="absolute -left-8 md:-left-12 top-0 h-full w-[2px] bg-slate-200 dark:bg-white/5 group-hover:bg-primary transition-colors duration-500"></div>
-                        <h4 className="text-xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight group-hover:text-secondary transition-colors leading-none">{p.title}</h4>
+                        <h4 className="text-xl font-black text-slate-900 dark:text-white mb-2 uppercase tracking-tight group-hover:text-secondary transition-colors leading-tight">{p.title}</h4>
                         <p className="text-lg text-slate-500 dark:text-gray-500 font-light leading-relaxed">{p.text}</p>
                     </div>
                 ))}

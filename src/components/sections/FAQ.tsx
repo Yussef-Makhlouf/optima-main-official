@@ -13,7 +13,7 @@ const FAQ: React.FC = () => {
             <div className="max-w-4xl mx-auto px-6">
                 <div className="mb-16 text-center">
                     <h2 className={`text-[11px] font-mono text-secondary uppercase ${isRtl ? 'tracking-[0.2em]' : 'tracking-[0.6em]'} mb-6`}>{t('home:faq.tag')}</h2>
-                    <h3 className={`text-4xl md:text-6xl font-black text-slate-900 dark:text-white ${isRtl ? '' : 'tracking-tighter'} uppercase leading-none`}>
+                    <h3 className={`text-4xl md:text-6xl font-black text-slate-900 dark:text-white ${isRtl ? '' : 'tracking-tighter'} uppercase leading-tight`}>
                         {t('home:faq.title')}
                         {t('home:faq.titleHighlight')}
                     </h3>

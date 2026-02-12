@@ -39,7 +39,7 @@ const TeamGrid: React.FC = () => {
 
                             {/* Content */}
                             <div className="px-4 pb-6">
-                                <h4 className="text-xl font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1 select-none">{t(`about:team.members.${member.id}.name`)}</h4>
+                                <h4 className="text-xl font-display font-black text-slate-900 dark:text-white uppercase tracking-tighter mb-1 select-none">{t(`about:team.members.${member.id}.name`)}</h4>
                                 <div className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] mb-4">{t(`about:team.members.${member.id}.role`)}</div>
                                 <p className="text-xs text-slate-500 dark:text-gray-400 font-mono leading-relaxed opacity-80 border-l border-slate-300 dark:border-white/10 pl-3">
                                     "{t(`about:team.members.${member.id}.bio`)}"

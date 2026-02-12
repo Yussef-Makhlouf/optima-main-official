@@ -27,7 +27,7 @@ const RegionalPresence: React.FC = () => {
                     <button
                         key={region.id}
                         onClick={() => setActiveRegionId(region.id)}
-                        className={`px-4 py-2 text-[10px] font-black uppercase tracking-widest transition-all duration-300 border border-transparent ${activeRegion.id === region.id
+                        className={`px-4 py-2 text-[10px] font-display font-black uppercase tracking-widest transition-all duration-300 border border-transparent ${activeRegion.id === region.id
                             ? 'bg-primary text-white border-primary shadow-lg shadow-primary/20'
                             : 'bg-slate-100 dark:bg-white/5 text-slate-500 dark:text-gray-400 hover:border-slate-300 dark:hover:border-white/20'
                             }`}
