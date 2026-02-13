@@ -140,7 +140,7 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
         faqs: ["q1", "q2", "q3", "q4"],
-        relatedProjects: ['raaf-construction', 'ghonfa-interior']
+        relatedProjects: ['raf-construction', 'ghonfa-interior']
     },
     {
         id: 'hosting',
@@ -405,11 +405,11 @@ export const PROJECTS: ProjectInfo[] = [
     },
     {
         id: 'p4',
-        slug: 'raaf-construction',
-        client: 'RAAF Construction',
+        slug: 'raf-construction',
+        client: 'raf Construction',
         title: 'Project Management Platform',
         description: 'Platform for showcasing construction projects.',
-        longDescription: 'We provided RAAF Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.',
+        longDescription: 'We provided raf Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.',
         challenge: 'Need for a platform to showcase company projects and manage projects digitally.',
         solution: 'We designed a comprehensive platform that showcases projects and reflects professionalism.',
         impact: 'Improved company image, ease of showcasing work to new clients.',
@@ -615,7 +615,7 @@ export const TESTIMONIALS = [
     },
     {
         id: 't4',
-        client: 'RAAF Construction',
+        client: 'raf Construction',
     }
 ];
 

@@ -116,13 +116,13 @@
             ]
         },
         "p4": {
-            "title": "RAAF Construction",
+            "title": "raf Construction",
             "description": "Project management platform and portfolio showcase",
-            "client": "RAAF Construction",
+            "client": "raf Construction",
             "sector": "Construction & Development",
             "challenge": "Need for a platform to showcase company projects and manage projects digitally.",
             "solution": "We designed a comprehensive platform that showcases the company's projects and reflects its professionalism in construction and development.",
-            "longDescription": "We provided RAAF Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.",
+            "longDescription": "We provided raf Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.",
             "impact": "Improved company image, ease of showcasing work to new clients.",
             "technologies": [
                 "Next.js",
