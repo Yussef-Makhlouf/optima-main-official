@@ -143,7 +143,7 @@ const Footer: React.FC = () => {
                         <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.privacy')}</a>
                         <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.terms')}</a>
                         <span className="text-slate-300 dark:text-white/10 hidden md:inline">|</span>
-                        <span className="font-mono text-[10px] opacity-70"> OPYIMA v1.0</span>
+                        <span className="font-mono text-[10px] opacity-70"> OPTIMA v1.0</span>
                     </div>
                 </div>
             </div>
