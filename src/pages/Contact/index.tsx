@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import RegionalPresence from '../../components/contact/RegionalPresence';
 import TrustedPartners from '../../components/contact/TrustedPartners';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const Contact: React.FC = () => {
     const { t } = useTranslation(['contact', 'common']);
@@ -23,7 +25,9 @@ const Contact: React.FC = () => {
         <div className="relative min-h-screen pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-black transition-colors">
             {/* Background Effects */}
             <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+            <BrandDecoration />
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-primary/5 to-transparent rounded-bl-full pointer-events-none"></div>
+
             <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-t from-secondary/5 to-transparent rounded-tr-full pointer-events-none"></div>
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">

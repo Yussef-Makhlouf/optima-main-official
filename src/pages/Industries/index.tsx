@@ -1,6 +1,8 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Icons, TechIllustrations } from '../../data/content';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const Industries: React.FC = () => {
     const { t } = useTranslation(['industries']);
@@ -9,7 +11,9 @@ const Industries: React.FC = () => {
         <div className="pt-24 md:pt-32 min-h-screen transition-colors bg-white dark:bg-dark">
             {/* Page Header */}
             <section className="py-24 md:py-40 relative overflow-hidden grid-bg border-b border-slate-200 dark:border-white/5">
+                <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
+
                     <div className="flex items-center space-x-4 mb-10">
                         <div className="w-12 h-[1px] bg-secondary"></div>
                         <span className="text-[10px] font-mono font-bold text-secondary uppercase tracking-[0.6em]">{t('industries:page.tag')}</span>

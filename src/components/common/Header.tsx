@@ -58,8 +58,16 @@ const Header: React.FC = () => {
                 <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                     <Link to="/" className="flex items-center space-x-3 group">
                         <div className="relative w-10 h-10 flex items-center justify-center">
-                            <div className="absolute inset-0 bg-primary/20 rounded-sm rotate-45 group-hover:rotate-90 transition-transform duration-500"></div>
-                            <div className="w-5 h-5 border-2 border-secondary rounded-sm rotate-45 group-hover:scale-110 transition-transform duration-500"></div>
+                            <img
+                                src="/logos/optima-05-symbol-light.svg"
+                                alt="Optima Symbol"
+                                className="w-10 h-10 object-contain dark:hidden group-hover:scale-110 transition-transform duration-500 rounded-full border border-primary/10"
+                            />
+                            <img
+                                src="/logos/optima-04-symbol-dark.svg"
+                                alt="Optima Symbol"
+                                className="w-10 h-10 object-contain hidden dark:block group-hover:scale-110 transition-transform duration-500 rounded-full border border-primary/10"
+                            />
                         </div>
                         <span className="text-2xl font-display font-black tracking-[0.15em] text-slate-900 dark:text-white uppercase hidden md:block">O P T I M A</span>
                         <span className="text-2xl font-display font-black tracking-tighter text-slate-900 dark:text-white uppercase md:hidden">O</span>

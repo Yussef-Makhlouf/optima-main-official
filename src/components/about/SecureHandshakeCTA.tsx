@@ -16,6 +16,12 @@ const SecureHandshakeCTA: React.FC = () => {
                 <div className="absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent animate-[slide_5s_infinite_0.5s]"></div>
             </div>
 
+            {/* Brand Decos */}
+            <div className="absolute -left-20 top-1/2 -translate-y-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] opacity-[0.02] dark:opacity-[0.04] pointer-events-none rotate-12">
+                <img src="/logos/optima-04-symbol-dark.svg" className="w-full h-full object-contain dark:hidden" alt="" />
+                <img src="/logos/optima-05-symbol-light.svg" className="w-full h-full object-contain hidden dark:block" alt="" />
+            </div>
+
             <div className="max-w-5xl mx-auto px-6 relative z-10 text-center">
                 <div className="inline-block mb-12">
                     <div className="flex items-center space-x-4 mb-6 justify-center">

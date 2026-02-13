@@ -5,6 +5,8 @@ import { PROJECTS } from '../../data/content';
 import { Icons } from '../../data/content';
 import TechMarquee from '../../components/common/TechMarquee';
 import { TECHNOLOGIES } from '../../data/content-marquee';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const Projects: React.FC = () => {
     const { t } = useTranslation(['projects']);
@@ -13,7 +15,9 @@ const Projects: React.FC = () => {
         <div className="pt-32 min-h-screen bg-white dark:bg-dark transition-colors">
             {/* Banner */}
             <section className="py-24 bg-slate-50 dark:bg-dark relative overflow-hidden grid-bg border-b border-slate-200 dark:border-white/5 transition-colors">
+                <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
+
                     <h1 className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 uppercase transition-colors">{t('projects:page.title')}</h1>
                     <p className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl font-light transition-colors">
                         {t('projects:page.description')}

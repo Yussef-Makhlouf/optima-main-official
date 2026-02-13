@@ -10,6 +10,8 @@ import TechMarquee from '../../components/home/TechMarquee';
 import Philosophy from '../../components/home/Philosophy';
 import ClientLogos from '../../components/common/ClientLogos';
 import { CLIENTS } from '../../data/content-marquee';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const Home: React.FC = () => {
     const { t, i18n } = useTranslation(['home', 'common', 'services', 'projects']);
@@ -40,6 +42,8 @@ const Home: React.FC = () => {
                     <div className="absolute inset-0"></div>
                 </div>
                 <div className="scanline"></div>
+                <BrandDecoration />
+
 
                 {/* Abstract HUD Decorative Elements - Hidden on small mobile */}
                 <div className="absolute top-40 right-10 w-64 text-[10px] font-mono opacity-40 hidden xl:block z-10">
@@ -249,6 +253,13 @@ const Home: React.FC = () => {
             {/* 9. Footer CTA */}
             <section className="relative py-32 md:py-60 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-dark transition-colors overflow-hidden">
                 <div className="absolute inset-0 grid-bg opacity-30"></div>
+
+                {/* Brand Decos */}
+                <div className="absolute -right-20 -bottom-20 w-[400px] md:w-[600px] h-[400px] md:h-[600px] opacity-[0.03] dark:opacity-[0.05] pointer-events-none -rotate-12">
+                    <img src="/logos/optima-04-symbol-dark.svg" className="w-full h-full object-contain dark:hidden" alt="" />
+                    <img src="/logos/optima-05-symbol-light.svg" className="w-full h-full object-contain hidden dark:block" alt="" />
+                </div>
+
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
                         <div className="lg:col-span-8 text-center lg:text-left">

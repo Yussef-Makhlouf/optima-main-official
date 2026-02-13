@@ -61,12 +61,17 @@ const Footer: React.FC = () => {
 
                     {/* Brand Column */}
                     <div className="lg:col-span-5 space-y-8">
-                        <Link to="/" className="flex items-center space-x-3 group w-fit">
-                            <div className="relative w-10 h-10 flex items-center justify-center">
-                                <div className="absolute inset-0 bg-primary rounded-sm rotate-45 group-hover:rotate-90 transition-transform duration-500 shadow-lg shadow-primary/20"></div>
-                                <div className="w-4 h-4 bg-white rounded-sm rotate-45"></div>
-                            </div>
-                            <span className="text-2xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors">Optima<span className="text-secondary">Solutions</span></span>
+                        <Link to="/" className="flex items-center group w-fit transition-transform duration-500 hover:scale-105">
+                            <img
+                                src="/logos/optima-05-symbol-light.svg"
+                                alt="OPTIMA"
+                                className="h-20 md:h-20 w-auto dark:hidden rounded-full border border-slate-200 dark:border-white/10"
+                            />
+                            <img
+                                src="/logos/optima-04-symbol-dark.svg"
+                                alt="OPTIMA"
+                                className="h-20 md:h-24 w-auto hidden dark:block rounded-full border border-slate-200 dark:border-white/10"
+                            />
                         </Link>
                         <p className="text-slate-500 dark:text-gray-400 text-base leading-relaxed max-w-sm transition-colors">
                             {t('footer.description')}

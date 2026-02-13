@@ -5,6 +5,8 @@ import { useTranslation } from 'react-i18next';
 import { PROJECTS } from '../../data/content';
 import ImageGallery from '../../components/detail/ImageGallery';
 import TechStackGrid from '../../components/detail/TechStackGrid';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 // Removed AnimatedCounter import as it was unused in original file or will be unused now? 
 // Actually it was imported but not used in the original snippet I viewed (or passed to a child). 
 // Wait, MetricBox was defined in the file.
@@ -34,7 +36,9 @@ const ProjectDetail: React.FC = () => {
             {/* Schematic Header */}
             <section className="relative py-24 md:py-40 overflow-hidden bg-slate-50 dark:bg-dark border-b border-slate-200 dark:border-white/5 transition-colors">
                 <div className="absolute inset-0 grid-bg opacity-20"></div>
+                <BrandDecoration />
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[800px] h-[300px] md:h-[800px] bg-primary/5 dark:bg-primary/10 blur-[60px] md:blur-[120px] rounded-full pointer-events-none"></div>
+
 
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
                     <Link to="/projects" className="inline-flex items-center space-x-3 text-secondary text-[10px] md:text-xs font-black tracking-[0.4em] mb-10 md:mb-12 hover:-translate-x-2 transition-transform duration-300">
@@ -156,8 +160,14 @@ const ProjectDetail: React.FC = () => {
             )}
 
             {/* CTA Next Project */}
-            <section className="py-24 md:py-40 bg-slate-50 dark:bg-dark border-t border-slate-200 dark:border-white/5 transition-colors">
-                <div className="max-w-7xl mx-auto px-6 text-center">
+            <section className="py-24 md:py-40 bg-slate-50 dark:bg-dark border-t border-slate-200 dark:border-white/5 transition-colors relative overflow-hidden">
+                {/* Brand Deco */}
+                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] md:w-[500px] h-[300px] md:h-[500px] opacity-[0.03] dark:opacity-[0.05] pointer-events-none">
+                    <img src="/logos/optima-04-symbol-dark.svg" className="w-full h-full object-contain dark:hidden" alt="" />
+                    <img src="/logos/optima-05-symbol-light.svg" className="w-full h-full object-contain hidden dark:block" alt="" />
+                </div>
+
+                <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
                     <h3 className="text-[10px] md:text-xs font-mono font-bold text-secondary uppercase tracking-[0.5em] mb-12">[ {t('projects:detail.nextDeployment')} ]</h3>
                     <Link to={`/projects/${nextProject.slug}`} className="group inline-block">
                         <h4 className="text-3xl sm:text-5xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter uppercase group-hover:text-primary transition-all duration-700 leading-tight">

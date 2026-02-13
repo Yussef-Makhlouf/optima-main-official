@@ -4,6 +4,8 @@ import { useTranslation } from 'react-i18next';
 import { SERVICES } from '../../data/content';
 import ClientLogos from '../../components/common/ClientLogos';
 import { CLIENTS } from '../../data/content-marquee';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const Services: React.FC = () => {
     const { t } = useTranslation(['services', 'common']);
@@ -11,7 +13,9 @@ const Services: React.FC = () => {
         <div className="pt-32 bg-white dark:bg-dark transition-colors">
             {/* Architectural Banner */}
             <section className="py-24 bg-slate-50 dark:bg-dark relative overflow-hidden grid-bg border-b border-slate-200 dark:border-white/5 mb-32 transition-colors">
+                <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
+
                     <div className="flex items-center space-x-4 mb-10">
                         <div className="w-12 h-[1px] bg-primary"></div>
                         <span className="text-[10px] font-black text-primary uppercase tracking-[0.5em]">{t('services:page.tag')}</span>

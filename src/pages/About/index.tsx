@@ -4,6 +4,8 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import TeamGrid from '../../components/about/TeamGrid';
 import SecureHandshakeCTA from '../../components/about/SecureHandshakeCTA';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const About: React.FC = () => {
     const { t } = useTranslation(['about', 'common']);
@@ -13,7 +15,9 @@ const About: React.FC = () => {
             {/* Immersive Typography Banner */}
             <section className="py-40 bg-slate-50 dark:bg-dark relative overflow-hidden transition-colors">
                 <div className="absolute inset-0 grid-bg opacity-20"></div>
+                <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
+
                     <div className="flex items-center space-x-4 mb-12">
                         <div className="w-12 h-[1px] bg-secondary"></div>
                         <span className="text-[10px] font-black text-secondary uppercase tracking-[0.6em]">{t('about:page.tag')}</span>

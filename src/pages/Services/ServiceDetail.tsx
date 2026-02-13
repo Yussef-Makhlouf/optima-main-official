@@ -6,6 +6,8 @@ import { SERVICES, TechIllustrations, PROJECTS } from '../../data/content';
 import InteractiveTimeline from '../../components/detail/InteractiveTimeline';
 import FAQAccordion from '../../components/detail/FAQAccordion';
 import AnimatedCounter from '../../components/detail/AnimatedCounter';
+import BrandDecoration from '../../components/common/BrandDecoration';
+
 
 const ServiceDetail: React.FC = () => {
     const { slug } = useParams<{ slug: string }>();
@@ -84,7 +86,9 @@ const ServiceDetail: React.FC = () => {
             {/* Abnormal Schematic Header */}
             <section className="relative py-24 md:py-48 overflow-hidden bg-slate-50 dark:bg-dark border-b border-slate-200 dark:border-white/5 transition-colors">
                 <div className="absolute inset-0 grid-bg opacity-30"></div>
+                <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
+
                     <div className="flex flex-col lg:flex-row items-start justify-between gap-12 md:gap-16">
                         <div className="max-w-4xl relative">
                             <div className={`flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 ${isRtl ? 'md:space-x-reverse md:space-x-8' : 'md:space-x-8'} mb-10 md:mb-12`}>
