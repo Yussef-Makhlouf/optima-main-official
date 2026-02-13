@@ -8,7 +8,7 @@
         "contact": "Contact"
     },
     "header": {
-        "logo": "OPYIMA",
+        "logo": "OPTIMA",
         "partnership": "Strategic Partnership"
     },
     "footer": {
@@ -18,7 +18,7 @@
         "servicesTitle": "Services",
         "companyTitle": "Company",
         "connectTitle": "Connect",
-        "copyright": "© {{year}} OPYIMA. All rights reserved.",
+        "copyright": "© {{year}} OPTIMA. All rights reserved.",
         "secureTransmission": "SECURE_DATA_TRANSFER",
         "email": "Email",
         "phone": "Phone",
@@ -76,7 +76,7 @@
         "loading": "Loading..."
     },
     "meta": {
-        "title": "OPYIMA - Advanced Web Development for GCC Market",
+        "title": "OPTIMA- Advanced Web Development for GCC Market",
         "description": "Your trusted technical partner for building advanced digital presence. Specializing in web development and web applications using Next.js and React.",
         "keywords": "web development, Next.js, React, web applications, hosting, Saudi Arabia, UAE, Kuwait"
     }

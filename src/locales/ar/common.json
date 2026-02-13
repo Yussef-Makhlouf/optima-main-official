@@ -8,7 +8,7 @@
         "contact": "تواصل معنا"
     },
     "header": {
-        "logo": "OPYIMA",
+        "logo": "OPTIMA",
         "partnership": "شراكة استراتيجية"
     },
     "footer": {
@@ -18,7 +18,7 @@
         "servicesTitle": "خدماتنا",
         "companyTitle": "الشركة",
         "connectTitle": "تواصل",
-        "copyright": "© {{year}} OPYIMA. جميع الحقوق محفوظة.",
+        "copyright": "© {{year}} OPTIMA. جميع الحقوق محفوظة.",
         "secureTransmission": "نقل_آمن_للبيانات",
         "email": "البريد الإلكتروني",
         "phone": "الهاتف",
@@ -75,7 +75,7 @@
         "loading": "جاري التحميل..."
     },
     "meta": {
-        "title": "OPYIMA - تطوير الويب المتقدم للسوق الخليجي",
+        "title": "OPTIMA- تطوير الويب المتقدم للسوق الخليجي",
         "description": "شريكك التقني الموثوق ل بناء حضور رقمي متقدم. متخصصون في تطوير المواقع وتطبيقات الويب باستخدام Next.js وReact.",
         "keywords": "تطوير الويب، Next.js، React، تطبيقات الويب، استضافة، السعودية، الإمارات، الكويت"
     }

@@ -65,12 +65,12 @@ const Footer: React.FC = () => {
                         <Link to="/" className={`flex items-center group w-fit transition-transform duration-500 hover:scale-105 ${isRTL ? 'flex-row-reverse' : ''}`}>
                             <img
                                 src="/logos/optima-05-symbol-light.svg"
-                                alt="OPYIMA"
+                                alt="OPTIMA"
                                 className="h-20 md:h-20 w-auto dark:hidden rounded-full border border-slate-200 dark:border-white/10"
                             />
                             <img
                                 src="/logos/optima-04-symbol-dark.svg"
-                                alt="OPYIMA"
+                                alt="OPTIMA"
                                 className="h-20 md:h-24 w-auto hidden dark:block rounded-full border border-slate-200 dark:border-white/10"
                             />
                         </Link>
