@@ -90,9 +90,9 @@ const ModuleSection: React.FC<{ id: string, slug: string, tag: string, icon: Rea
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-24 items-center">
         <div className={`lg:col-span-6 ${isReversed ? 'lg:order-2' : ''}`}>
             <div className="flex items-center space-x-4 mb-8">
-                <div className="w-12 h-12 bg-primary/10 flex items-center justify-center text-secondary">
+                {/* <div className="w-12 h-12 bg-primary/10 flex items-center justify-center text-secondary">
                     {icon}
-                </div>
+                </div> */}
                 <div>
                     <span className="text-[10px] font-black text-primary uppercase tracking-[0.3em]">{t(`services:services.${id}.tag`)}</span>
                     <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase transition-colors">{t(`services:services.${id}.title`)}</h2>
