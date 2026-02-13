@@ -25,12 +25,15 @@ export interface GalleryImage {
 // Tech Item and Category for Projects
 export interface TechItem {
     name: string;
+    description?: string;
+    logo?: string;
     icon?: React.ReactNode;
     color?: string;
 }
 
 export interface TechCategory {
     category: string;
+    description?: string;
     technologies: TechItem[];
 }
 

@@ -238,28 +238,86 @@ export const PROJECTS: ProjectInfo[] = [
         techStack: [
             {
                 category: 'Infrastructure',
+                description: 'High-availability foundations for global scale operations.',
                 technologies: [
-                    { name: 'Kubernetes', color: '#326CE5' },
-                    { name: 'Docker', color: '#2496ED' },
-                    { name: 'AWS', color: '#FF9900' },
-                    { name: 'Terraform', color: '#7B42BC' }
+                    {
+                        name: 'Kubernetes',
+                        description: 'Self-healing container orchestration for zero-downtime deployments.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
+                        color: '#326CE5'
+                    },
+                    {
+                        name: 'Docker',
+                        description: 'Standardized application environments for consistent cross-region performance.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
+                        color: '#2496ED'
+                    },
+                    {
+                        name: 'AWS',
+                        description: 'Global cloud infrastructure with multi-zone redundancy and low-latency transit.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
+                        color: '#FF9900'
+                    },
+                    {
+                        name: 'Terraform',
+                        description: 'Infrastructure as code for reproducible and audited environment scaling.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
+                        color: '#7B42BC'
+                    }
                 ]
             },
             {
                 category: 'Backend',
+                description: 'High-performance processing engines for financial precision.',
                 technologies: [
-                    { name: 'Node.js', color: '#339933' },
-                    { name: 'GraphQL', color: '#E10098' },
-                    { name: 'PostgreSQL', color: '#4169E1' },
-                    { name: 'Redis', color: '#DC382D' }
+                    {
+                        name: 'Node.js',
+                        description: 'Non-blocking I/O for handling massive concurrent transaction volumes.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                        color: '#339933'
+                    },
+                    {
+                        name: 'GraphQL',
+                        description: 'Efficient data fetching with precise schema-based API contracts.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
+                        color: '#E10098'
+                    },
+                    {
+                        name: 'PostgreSQL',
+                        description: 'ACID-compliant relational storage for guaranteed transactional integrity.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+                        color: '#4169E1'
+                    },
+                    {
+                        name: 'Redis',
+                        description: 'In-memory caching layer for sub-millisecond data retrieval speeds.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
+                        color: '#DC382D'
+                    }
                 ]
             },
             {
                 category: 'Security',
+                description: 'Bank-grade defense layers for asset and data protection.',
                 technologies: [
-                    { name: 'OAuth 2.0', color: '#145D90' },
-                    { name: 'AES-256', color: '#56A5DD' },
-                    { name: 'TLS 1.3', color: '#145D90' }
+                    {
+                        name: 'OAuth 2.0',
+                        description: 'Industry-standard authorization for secure identity management systems.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/auth0/auth0-original.svg',
+                        color: '#145D90'
+                    },
+                    {
+                        name: 'AES-256',
+                        description: 'Military-grade encryption for safeguarding data at rest and in transit.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matcha/matcha-original.svg', // Placeholder for AES
+                        color: '#56A5DD'
+                    },
+                    {
+                        name: 'TLS 1.3',
+                        description: 'State-of-the-art transport security for encrypted client communication.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg', // Placeholder for TLS
+                        color: '#145D90'
+                    }
                 ]
             }
         ],
@@ -301,7 +359,39 @@ export const PROJECTS: ProjectInfo[] = [
         solution: "A bespoke data-segmentation engine that streams only visible segments to the browser, combined with a WebSocket-driven collaboration layer.",
         impact: "Researchers reduced analysis time by 40% and enabled the first global real-time collaboration on the Human Genome v4 project.",
         tags: ['Web App', 'BioTech', 'Big Data'],
-        color: '#56A5DD'
+        color: '#56A5DD',
+        techStack: [
+            {
+                category: 'Architecture',
+                description: 'Proprietary streaming engines for massive genomic datasets.',
+                technologies: [
+                    {
+                        name: 'React',
+                        description: 'Responsive interface for high-density data visualization.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'TypeScript',
+                        description: 'Type-safe codebase for mission-critical bio-research accuracy.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+                        color: '#3178C6'
+                    },
+                    {
+                        name: 'WebSockets',
+                        description: 'Real-time synchronization for multi-continent collaboration.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
+                        color: '#010101'
+                    },
+                    {
+                        name: 'WebAssembly',
+                        description: 'Near-native performance for in-browser client-side sequencing.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wasm/wasm-original.svg',
+                        color: '#654FF0'
+                    }
+                ]
+            }
+        ]
     },
     {
         id: 'p3',
@@ -314,7 +404,33 @@ export const PROJECTS: ProjectInfo[] = [
         solution: "Development of a unified data lake integrated with a WebGL-based 3D globe visualization tool and automated alerting systems.",
         impact: "Optimized route efficiency by 15%, reduced inventory shrinkage by 22%, and provided clients with real-time transparency for the first time.",
         tags: ['Transformation', 'IoT', 'Logistics'],
-        color: '#162427'
+        color: '#162427',
+        techStack: [
+            {
+                category: 'Visual Data',
+                description: 'Real-time spatial awareness and sensory integration.',
+                technologies: [
+                    {
+                        name: 'WebGL',
+                        description: 'Low-latency 3D rendering of global supply chain networks.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-plain.svg',
+                        color: '#990000'
+                    },
+                    {
+                        name: 'MQTT',
+                        description: 'Ultra-efficient protocol for massive IoT sensor data ingestion.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', // Placeholder
+                        color: '#660066'
+                    },
+                    {
+                        name: 'React Three Fiber',
+                        description: 'Declarative 3D abstractions for interactive digital twins.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
+                        color: '#000000'
+                    }
+                ]
+            }
+        ]
     }
 ];
 
