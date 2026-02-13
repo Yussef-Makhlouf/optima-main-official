@@ -5,23 +5,32 @@ interface Partner {
     name: string;
     logo?: string;
     sectorKey: string;
+    companyKey: string;
 }
 
 const TrustedPartners: React.FC = () => {
     const { t } = useTranslation(['contact']);
 
     const partners: Partner[] = [
-        { name: 'Tarmez Tech', sectorKey: 'software', logo: '/partners/tarmezmain.svg' },
-        { name: 'Logix Pro', sectorKey: 'software', logo: '/partners/logixi.png' },
-        { name: 'Technova', sectorKey: 'ai', logo: '/partners/technova.svg' },
-        { name: 'Fifth Floor', sectorKey: 'marketing', logo: '/partners/fifith-floor-light.png' },
-        { name: 'Golden Moon', sectorKey: 'digitalMarketing', logo: '/partners/golden-moon.png' },
-        { name: 'MACC', sectorKey: 'facility', logo: '/partners/macc.svg' },
-        { name: 'UAEMMAF', sectorKey: 'sports', logo: '/partners/uaemmaf.svg' },
-        { name: 'ARTAT', sectorKey: 'animalHealth', logo: '/partners/artat.png' },
-        { name: 'Tasis Al-Binaa', sectorKey: 'realEstate', logo: '/partners/tasis-albinaa.svg' },
-        { name: 'RAF', sectorKey: 'realEstate', logo: '/partners/raf.png' },
-        { name: 'Ghanfa', sectorKey: 'facility', logo: '/partners/mainlogo.png' },
+    { name: 'UAE MMA Federation', logo: '/partners/uaemmaf.svg', sectorKey: 'Sports', companyKey: 'uaeMmaFederation' },
+    { name: 'TECHNOVA', logo: '/partners/technova.svg', sectorKey: 'AI', companyKey: 'technova' },
+    { name: 'Tarmeez Tech', logo: '/partners/tarmezmain.svg', sectorKey: 'Technology', companyKey: 'tarmeezTech' },
+    { name: 'RAAF Construction', logo: '/partners/raf.png', sectorKey: 'Construction', companyKey: 'raafConstruction' },
+    { name: 'Ghanpha Interior', logo: '/partners/mainlogo.png', sectorKey: 'Interior Design', companyKey: 'ghanphaInterior' },
+    { name: 'Artat Company', logo: '/partners/artat.png', sectorKey: 'Agriculture', companyKey: 'artatCompany' },
+    { name: 'Emmar Elevators', logo: '/partners/emmar-logo.png', sectorKey: 'Manufacturing', companyKey: 'emmarElevators' },
+    { name: 'MACC', logo: '/partners/macc.svg', sectorKey: 'Construction', companyKey: 'macc' },
+    { name: 'Tasis Al Binaa', logo: '/partners/tasis-albinaa.svg', sectorKey: 'Construction', companyKey: 'tasisAlBinaa' },
+    { name: 'Logixi', logo: '/partners/logixi.png', sectorKey: 'Logistics', companyKey: 'logixi' },
+    { name: 'Fifth Floor', logo: '/partners/fifith-floor-light.png', sectorKey: 'Consulting', companyKey: 'fifthFloor' },
+    { name: 'White Dream', logo: '/partners/white-dream-logo.webp', sectorKey: 'Events', companyKey: 'whiteDream' },
+    { name: 'Ghbary', logo: '/partners/ghbary.avif', sectorKey: 'building materials', companyKey: 'ghbary' },
+    { name: 'Habsi', logo: '/partners/habsi.png', sectorKey: 'Education', companyKey: 'habsi' },
+    { name: 'Karam-el-Toruk', logo: '/partners/karam-toruq.png', sectorKey: 'building and real estate', companyKey: 'karamElToruk' },
+    { name: 'Digital-Events', logo: '/partners/digital-events.png', sectorKey: 'Events and Entertainment', companyKey: 'digitalEvents' },
+    { name: 'Golden Moon Agency', logo: '/partners/golden-mon.webp', sectorKey: 'Marketing', companyKey: 'goldenMoonAgency' },
+    { name: 'El-Qady', logo: '/partners/el-qady.jpeg', sectorKey: 'Law Firm', companyKey: 'elQady' },
+    { name: 'Yussef-Dev-Studio', logo: '/partners/yussef-dev-studio.png', sectorKey: 'Software Development', companyKey: 'yussefDevStudio' },
     ];
 
     return (
@@ -81,7 +90,7 @@ const TrustedPartners: React.FC = () => {
                                         {partner.logo ? (
                                             <img
                                                 src={partner.logo}
-                                                alt={partner.name}
+                                                alt={t(`contact:partners.companies.${partner.companyKey}`)}
                                                 className="max-h-32 w-auto opacity-60 dark:opacity-40 group-hover:opacity-100 transition-opacity duration-300 filter grayscale group-hover:grayscale-0"
                                                 onError={(e) => {
                                                     // Fallback to text if image doesn't exist
@@ -94,7 +103,7 @@ const TrustedPartners: React.FC = () => {
                                         {/* Text Fallback */}
                                         <div className={partner.logo ? "hidden" : "block text-center"}>
                                             <h3 className="text-2xl font-black text-slate-700 dark:text-white/70 group-hover:text-slate-900 dark:group-hover:text-white uppercase tracking-tight transition-colors">
-                                                {partner.name}
+                                                {t(`contact:partners.companies.${partner.companyKey}`)}
                                             </h3>
                                         </div>
                                     </div>

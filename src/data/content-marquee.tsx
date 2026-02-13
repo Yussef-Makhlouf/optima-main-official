@@ -14,7 +14,13 @@ export const CLIENTS = [
     { name: 'Tasis Al Binaa', logo: '/partners/tasis-albinaa.svg', industry: 'Construction' },
     { name: 'Logixi', logo: '/partners/logixi.png', industry: 'Logistics' },
     { name: 'Fifth Floor', logo: '/partners/fifith-floor-light.png', industry: 'Consulting' },
-    { name: 'White Dream', logo: '/partners/white-dream-logo.webp', industry: 'Events' }
+    { name: 'White Dream', logo: '/partners/white-dream-logo.webp', industry: 'Events' },
+    { name: 'Ghbary', logo: '/partners/ghbary.avif', industry: 'building materials' },
+    { name: 'Habsi', logo: '/partners/habsi.png', industry: 'Education' },
+    { name: 'Karam-el-Toruk', logo: '/partners/karam-toruq.png', industry: 'building and real estate' },
+    { name: 'Digital-Events', logo: '/partners/digital-events.png', industry: 'Events and Entertainment' },
+    { name: 'El-Qady', logo: '/partners/el-qady.jpeg', industry: 'Law Firm' },
+    { name: 'Yussef-Dev-Studio', logo: '/partners/yussef-dev-studio.png', industry: 'Software Development' },
 ];
 
 // Technologies used across projects - Core Tech Stack
