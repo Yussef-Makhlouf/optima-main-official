@@ -2,39 +2,43 @@
     "title": "Contact Us",
     "subtitle": "Let's Build Your Digital Success Together",
     "hero": {
-        "title": "Start",
-        "titleHighlight": "The Conversation.",
-        "subtitle": "Ready to improve your digital presence? Our team is ready to help you every step of the way."
+        "title": "Let's",
+        "titleHighlight": "Connect.",
+        "subtitle": "Ready to transform your digital presence? Our expert team delivers cutting-edge IT solutions across the GCC region."
     },
     "form": {
-        "nameLabel": "Name",
+        "nameLabel": "Full Name",
         "namePlaceholder": "Enter your full name",
-        "emailLabel": "Email",
-        "emailPlaceholder": "Enter your email",
-        "companyLabel": "Company",
-        "companyPlaceholder": "Your company name",
-        "interestLabel": "Service Required",
-        "messageLabel": "Project Details",
-        "messagePlaceholder": "Tell us about your project and needs...",
-        "submitButton": "Send Message",
-        "successMessage": "Thank you for contacting us. We will respond within 24 hours.",
+        "emailLabel": "Business Email",
+        "emailPlaceholder": "name@company.com",
+        "companyLabel": "Organization",
+        "companyPlaceholder": "Your company or organization",
+        "interestLabel": "Service Interest",
+        "messageLabel": "Project Description",
+        "messagePlaceholder": "Describe your project requirements, timeline, and goals...",
+        "submitButton": "Send Inquiry",
+        "successMessage": "Thank you for contacting OPTIMA. Our team will review your inquiry and respond within 24 hours.",
         "options": {
-            "hosting": "Hosting & Domain Management",
-            "web-dev": "Website Development",
-            "web-app": "Web Application Development",
-            "wordpress": "WordPress Migration",
-            "support": "Support & Maintenance",
-            "consultation": "Consultation"
+            "hosting": "Cloud Hosting & Infrastructure",
+            "transformation": "Digital Transformation",
+            "webapp": "Custom Web Applications",
+            "consultation": "Free Consultation"
         }
     },
     "info": {
-        "locationsTitle": "Our Locations",
-        "contactTitle": "Direct Contact",
-        "email": "hello@yussefdevstudio.com",
-        "phone": "+966-XX-XXX-XXXX"
+        "locationsTitle": "Regional Offices",
+        "contactTitle": "Get In Touch",
+        "locations": {
+            "hq": "Riyadh, Saudi Arabia (HQ)",
+            "uae": "Abu Dhabi, UAE",
+            "kuwait": "Kuwait City, Kuwait"
+        },
+        "email": "partnerships@optima.solutions",
+        "phone": "+966 54 165 1795"
     },
     "regional": {
         "title": "Our GCC Presence",
+        "subtitle": "Delivering innovative IT solutions across the Gulf region",
         "tag": "REGIONAL_REACH",
         "description": "Serving clients across the Gulf Cooperation Council countries",
         "gcc": "Gulf Cooperation Council",
@@ -68,7 +72,7 @@
             },
             "omn": {
                 "name": "Oman",
-                "city": "Muscat"
+                "city": "Masqat"
             }
         }
     },

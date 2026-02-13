@@ -2,41 +2,45 @@
     "title": "تواصل معنا",
     "subtitle": "لنبني نجاحك الرقمي معًا",
     "hero": {
-        "title": "ابدأ",
-        "titleHighlight": "الحوار.",
-        "subtitle": "مستعد لتحسين حضورك الرقمي؟ فريقنا جاهز ل مساعدتك في كل خطوة."
+        "title": "لنتواصل",
+        "titleHighlight": "معاً.",
+        "subtitle": "مستعد لتحول حضورك الرقمي؟ فريقنا المتخصص يقدم حلولاً تقنية متطورة في جميع أنحاء الخليج العربي."
     },
     "form": {
-        "nameLabel": "الاسم",
+        "nameLabel": "الاسم الكامل",
         "namePlaceholder": "أدخل اسمك الكامل",
         "emailLabel": "البريد الإلكتروني",
-        "emailPlaceholder": "أدخل بريدك الإلكتروني",
-        "companyLabel": "الشركة",
-        "companyPlaceholder": "اسم شركتك",
+        "emailPlaceholder": "الاسم@الشركة.com",
+        "companyLabel": "المنشأة",
+        "companyPlaceholder": "شركتك أو مؤسستك",
         "interestLabel": "الخدمة المطلوبة",
-        "messageLabel": "تفاصيل مشروعك",
-        "messagePlaceholder": "أخبرنا عن مشروعك واحتياجاتك...",
-        "submitButton": "أرسل الرسالة",
-        "successMessage": "شكراً لتواصلك. سنرد عليك خلال 24 ساعة.",
+        "messageLabel": "وصف المشروع",
+        "messagePlaceholder": "صف متطلبات مشروعك والجدول الزمني والأهداف...",
+        "submitButton": "إرسال الاستفسار",
+        "successMessage": "شكراً لتواصلك مع OPTIMA. سيقوم فريقنا بمراجعة استفسارك والرد خلال 24 ساعة.",
         "options": {
-            "hosting": "استضافة وإدارة النطاق",
-            "web-dev": "تطوير موقع",
-            "web-app": "تطوير تطبيق ويب",
-            "wordpress": "تحويل WordPress",
-            "support": "دعم وصيانة",
-            "consultation": "استشارة"
+            "hosting": "الاستضافة السحابية والبنية التحتية",
+            "transformation": "التحول الرقمي",
+            "webapp": "تطبيقات الويب المخصصة",
+            "consultation": "استشارة مجانية"
         }
     },
     "info": {
-        "locationsTitle": "مواقعنا",
-        "contactTitle": "تواصل مباشر",
-        "email": "hello@yussefdevstudio.com",
-        "phone": "+966-XX-XXX-XXXX"
+        "locationsTitle": "مكاتبنا الإقليمية",
+        "contactTitle": "تواصل معنا",
+        "locations": {
+            "hq": "الرياض، المملكة العربية السعودية (المقر)",
+            "uae": "أبوظبي، الإمارات",
+            "kuwait": "مدينة الكويت، الكويت"
+        },
+        "email": "partnerships@optima.solutions",
+        "phone": "+966 54 165 1795"
     },
     "regional": {
         "title": "تواجدنا في الخليج",
+        "subtitle": "نقدم حلولاً تقنية مبتكرة في جميع أنحاء المنطقة الخليجية",
         "tag": "التواجد_الإقليمي",
-        "description": "نخدم العملاء في seluruh دول الخليج العربي",
+        "description": "نخدم العملاء في دول الخليج العربي",
         "gcc": "الخليج العربي",
         "europe": "أوروبا",
         "northAmerica": "أمريكا الشمالية",
@@ -74,8 +78,8 @@
     },
     "partners": {
         "tag": "عملاؤنا",
-        "title": "شركاء",
-        "titleHighlight": "النجاح",
+        "title": "شـــركــــاء",
+        "titleHighlight": "الـــنــجــاح",
         "subtitle": "فخورون بثقتهم",
         "description": "نخدم مؤسسات رائدة في seluruh sectors sectors sectors sectors sectors في الخليج",
         "sectorLabel": "القطاع",
@@ -95,7 +99,7 @@
             "whiteDream": "الحلم الأبيض",
             "ghbary": "غباري",
             "habsi": "حبسي",
-            "karamElToruk": "كرام奥运",
+            "karamElToruk": "كريم الطرق ",
             "digitalEvents": "الفعاليات الرقمية",
             "goldenMoonAgency": "وكالة القمر الذهبي",
             "elQady": "القاضي",

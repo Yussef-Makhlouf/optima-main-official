@@ -4,7 +4,63 @@
         "title": "Industries",
         "titleHighlight": "We Serve.",
         "description": "We have proven experience across multiple GCC market sectors. We understand each sector's challenges and provide customized solutions.",
-        "visualSchema": "SECTORS"
+        "visualSchema": "SECTORS",
+        "relatedProjects": "View Projects",
+        "seo": {
+            "description": "OPTIMA provides specialized digital solutions for construction, real estate, sports, technology, marketing, healthcare, education, and e-commerce industries across the GCC market.",
+            "keywords": "industrial solutions, B2B services, construction technology, real estate portals, sports websites, AI platforms, digital marketing, healthcare systems, e-learning, e-commerce development, GCC market, UAE digital transformation"
+        }
+    },
+    "stats": {
+        "projects": "Projects Completed",
+        "clients": "Happy Clients",
+        "experience": "Years Experience",
+        "satisfaction": "Client Satisfaction"
+    },
+    "caseStudies": {
+        "tag": "OUR WORK",
+        "title": "Success Stories",
+        "description": "Explore our portfolio of successful projects across various industries. Each project demonstrates our commitment to excellence and innovation.",
+        "viewAll": "View All Projects"
+    },
+    "benefits": {
+        "tag": "WHY CHOOSE US",
+        "title": "Industry Expertise",
+        "description": "With years of experience serving clients across the GCC, we understand the unique challenges and opportunities in each sector. Our tailored solutions drive real business results.",
+        "ctaTitle": "Get Started Today",
+        "industryLabel": "Industry",
+        "selectIndustry": "Select your industry",
+        "submit": "Request Consultation",
+        "points": [
+            {
+                "title": "Sector-Specific Solutions",
+                "text": "We develop tailored solutions that address the unique challenges of each industry."
+            },
+            {
+                "title": "Proven Track Record",
+                "text": "Our portfolio showcases successful projects with measurable results across multiple sectors."
+            },
+            {
+                "title": "End-to-End Support",
+                "text": "From consultation to deployment and beyond, we provide comprehensive support."
+            },
+            {
+                "title": "Scalable Technology",
+                "text": "Our solutions grow with your business, ensuring long-term success."
+            }
+        ]
+    },
+    "cta": {
+        "tag": "GET STARTED",
+        "title": "Ready to Transform Your Business?",
+        "titleHighlight": "Together",
+        "description": "Partner with OPTIMA to elevate your digital presence and achieve measurable growth in your industry.",
+        "contact": "Contact Us",
+        "projects": "View Projects",
+        "button": {
+            "connect": "Connect Now",
+            "initialize": "Initialize"
+        }
     },
     "construction": {
         "title": "Construction & Development",

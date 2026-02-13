@@ -34,6 +34,6 @@ export const TECHNOLOGIES = [
     { name: 'Docker', icon: <Icons.Hosting />, logo: 'https://cdn.simpleicons.org/docker/2496ED', color: '#2496ED', category: 'DevOps' },
     { name: 'Next.js', icon: <Icons.WebDev />, logo: 'https://cdn.simpleicons.org/nextdotjs/000000', color: '#000000', category: 'Framework' },
     { name: 'TailwindCSS', icon: <Icons.WebDev />, logo: 'https://cdn.simpleicons.org/tailwindcss/06B6D4', color: '#06B6D4', category: 'Styling' },
-    { name: 'VPS', icon: <Icons.Network />, logo: 'https://cdn.simpleicons.org/server/607CA8', color: '#607CA8', category: 'Hosting' },
+    { name: 'VPS', icon: <Icons.Network />, logo: 'https://cdn.simpleicons.org/hostinger/673DE6', color: '#607CA8', category: 'Hosting' },
     { name: 'Nginx', icon: <Icons.Hosting />, logo: 'https://cdn.simpleicons.org/nginx/009639', color: '#009639', category: 'Server' }
 ];

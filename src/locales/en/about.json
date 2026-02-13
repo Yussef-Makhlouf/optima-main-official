@@ -27,18 +27,22 @@
             "availability": "Years Experience",
             "operations": "Projects Delivered",
             "deployments": "Happy Clients",
-            "partners": "Industries Served"
+            "partners": "Industries Served",
+            "yearsExperience": "Years Experience",
+            "projectsDelivered": "Projects Delivered",
+            "happyClients": "Happy Clients",
+            "industriesServed": "Industries Served"
         }
     },
     "team": {
         "tag": "Our Team",
-        "title": "Technical",
+        "title": "Deep Technical Expertise",
         "titleHighlight": "Experts.",
         "members": {
             "t1": {
                 "name": "Yussef Makhlouf",
-                "role": "Founder & CTO",
-                "bio": "Web development expert with years of experience building digital platforms for the GCC market. Specialized in Next.js and React."
+                 "role": "Project Manager",
+                "bio": "Technical project management expert ensuring on-time delivery. Ensures client satisfaction and quality execution."
             },
             "t2": {
                 "name": "Eslam Hussein",
@@ -47,8 +51,9 @@
             },
             "t3": {
                 "name": "Mohamed Hosny",
-                "role": "Project Manager",
-                "bio": "Technical project management expert ensuring on-time delivery. Ensures client satisfaction and quality execution."
+                 "role": "Founder & CTO",
+                "bio": "Web development expert with years of experience building digital platforms for the GCC market. Specialized in Next.js and React."
+              
             },
             "t4": {
                 "name": "Mahmoud Taha",
@@ -59,6 +64,11 @@
                 "name": "Momen Ahmed",
                 "role": "UI/UX Designer",
                 "bio": "Experience in modern user interface and exceptional user experience design. Combines beauty with functionality."
+            },
+            "t6": {
+                "name": "mohamed Fahmy",
+                "role": "Head of Sales",
+                "bio": "Sales and business development expert with a focus on the GCC market. Dedicated to building strong client partnerships and driving digital growth."
             }
         }
     },
@@ -97,6 +107,36 @@
             "TailwindCSS",
             "VPS/Nginx"
         ]
+    },
+    "timeline": {
+        "tag": "Our Journey",
+        "title": "Company Milestones",
+        "2015": {
+            "title": "Foundation",
+            "description": "OPTIMA was founded with a vision to transform digital presence in the GCC region, starting as a small team of passionate developers."
+        },
+        "2018": {
+            "title": "Regional Expansion",
+            "description": "Expanded operations across the GCC, serving clients in Saudi Arabia, UAE, Kuwait, and Qatar with innovative web solutions."
+        },
+        "2021": {
+            "title": "Technology Leader",
+            "description": "Recognized as a leading digital agency in the region, delivering 100+ successful projects for enterprise clients."
+        },
+        "2024": {
+            "title": "Market Dominance",
+            "description": "Continuing to innovate with cutting-edge technologies, serving 50+ clients across 15+ industries in the GCC market."
+        }
+    },
+    "skills": {
+        "tag": "Expertise",
+        "title": "Technical",
+        "titleHighlight": "Expertise",
+        "description": "Our team combines years of experience with cutting-edge technologies to deliver exceptional digital solutions that drive business growth."
+    },
+    "clients": {
+        "tag": "CLIENTS",
+        "title": "Trusted By Industry Leaders"
     },
     "cta": {
         "tag": "GET_STARTED",

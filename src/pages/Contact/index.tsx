@@ -14,7 +14,7 @@ const Contact: React.FC = () => {
         email: '',
         company: '',
         message: '',
-        interest: 'Consultation'
+        interest: 'consultation'
     });
 
     const handleSubmit = (e: React.FormEvent) => {
@@ -23,7 +23,7 @@ const Contact: React.FC = () => {
     };
 
     return (
-        <div className="relative min-h-screen pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-black transition-colors">
+        <div className="relative min-h-screen pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-[#162427] transition-colors">
             {/* Background Effects */}
             <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
 
@@ -66,15 +66,15 @@ const Contact: React.FC = () => {
                                 <div className="space-y-4 font-mono text-sm">
                                     <div className="flex items-center space-x-4">
                                         <span className="text-secondary">01 ::</span>
-                                        <span className="text-slate-700 dark:text-gray-300">Austin, Texas (HQ)</span>
+                                        <span className="text-slate-700 dark:text-gray-300">{t('contact:info.locations.hq')}</span>
                                     </div>
                                     <div className="flex items-center space-x-4">
                                         <span className="text-secondary">02 ::</span>
-                                        <span className="text-slate-700 dark:text-gray-300">London, UK</span>
+                                        <span className="text-slate-700 dark:text-gray-300">{t('contact:info.locations.uae')}</span>
                                     </div>
                                     <div className="flex items-center space-x-4">
                                         <span className="text-secondary">03 ::</span>
-                                        <span className="text-slate-700 dark:text-gray-300">Singapore</span>
+                                        <span className="text-slate-700 dark:text-gray-300">{t('contact:info.locations.kuwait')}</span>
                                     </div>
                                 </div>
                             </div>
@@ -86,10 +86,10 @@ const Contact: React.FC = () => {
                                     {t('contact:info.contactTitle')}
                                 </h3>
                                 <div className="space-y-2">
-                                    <a href="mailto:partnerships@optima.solutions" className="block text-xl md:text-2xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors">
-                                        partnerships@optima.solutions
+                                    <a href={`mailto:${t('contact:info.email')}`} className="block text-xl md:text-2xl font-bold text-slate-900 dark:text-white hover:text-primary transition-colors">
+                                        {t('contact:info.email')}
                                     </a>
-                                    <p className="text-slate-500 dark:text-gray-500 font-mono">+1 (800) OPTIMA-IT</p>
+                                    <p className="text-slate-500 dark:text-gray-500 font-mono">{t('contact:info.phone')}</p>
                                 </div>
                             </div>
                         </div>
@@ -154,10 +154,10 @@ const Contact: React.FC = () => {
                                                 value={formState.interest}
                                                 onChange={(e) => setFormState({ ...formState, interest: e.target.value })}
                                             >
-                                                <option>{t('contact:form.options.hosting')}</option>
-                                                <option>{t('contact:form.options.transformation')}</option>
-                                                <option>{t('contact:form.options.webapp')}</option>
-                                                <option>{t('contact:form.options.consultation')}</option>
+                                                <option value="hosting">{t('contact:form.options.hosting')}</option>
+                                                <option value="transformation">{t('contact:form.options.transformation')}</option>
+                                                <option value="webapp">{t('contact:form.options.webapp')}</option>
+                                                <option value="consultation">{t('contact:form.options.consultation')}</option>
                                             </select>
                                             <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-slate-400">
                                                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>
