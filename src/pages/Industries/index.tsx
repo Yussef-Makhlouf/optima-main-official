@@ -1,6 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { Icons, TechIllustrations } from '../../data/content';
+import { Icons } from '../../data/content';
 import BrandDecoration from '../../components/common/BrandDecoration';
 
 

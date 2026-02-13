@@ -1,65 +1,160 @@
 {
     "page": {
-        "tag": "Sector_Vertical_Engineering",
-        "title": "Vertical",
-        "titleHighlight": "Precision.",
-        "description": "Deploying domain-specific infrastructure modules across mission-critical sectors with absolute architectural integrity.",
-        "visualSchema": "VISUAL_SCHEMA::UNIT_"
+        "tag": "OPTIMA",
+        "title": "Industries",
+        "titleHighlight": "We Serve.",
+        "description": "We have proven experience across multiple GCC market sectors. We understand each sector's challenges and provide customized solutions.",
+        "visualSchema": "SECTORS"
     },
-    "finance": {
-        "title": "Finance & Banking",
-        "tag": "FIN_INFRA_v4",
-        "description": "In the high-stakes environment of global capital, latency is risk. We engineer ultra-low latency transaction environments that combine the agility of modern Fintech with the security of central bank systems.",
+    "construction": {
+        "title": "Construction & Development",
+        "tag": "SECTOR_ONE",
+        "description": "We provide integrated digital solutions for construction and development companies. From project management to portfolio showcase, we keep pace with the Gulf construction sector's development.",
         "points": [
             {
-                "title": "Deterministic Performance",
-                "text": "Sub-millisecond packet processing for high-frequency trading and instant settlement protocols."
+                "title": "Project Management Platforms",
+                "text": "Integrated systems for project management and real-time progress tracking."
             },
             {
-                "title": "Compliance Architecture",
-                "text": "Automated, immutable audit trails designed for strict banking regulations and real-time reporting."
+                "title": "Portfolio Showcase",
+                "text": "Professional digital portfolios showcasing your work."
             },
             {
-                "title": "Crypto-Asset Security",
-                "text": "Hardware-backed signing environments and cold-storage integration for digital asset pioneers."
+                "title": "Quote Systems",
+                "text": "Electronic quote submission and follow-up systems."
+            }
+        ]
+    },
+    "realestate": {
+        "title": "Real Estate",
+        "tag": "SECTOR_TWO",
+        "description": "Advanced property portals and unit booking systems. We help real estate companies digitize.",
+        "points": [
+            {
+                "title": "Property Portals",
+                "text": "Platforms for displaying units and real estate projects professionally."
+            },
+            {
+                "title": "Booking Systems",
+                "text": "Integrated unit booking and appointment management."
+            },
+            {
+                "title": "Customer Management",
+                "text": "Integrated CRM systems for real estate."
+            }
+        ]
+    },
+    "sports": {
+        "title": "Sports & Federations",
+        "tag": "SECTOR_THREE",
+        "description": "Official websites for sports federations and bodies. We serve the sports sector in Abu Dhabi and the Gulf.",
+        "points": [
+            {
+                "title": "Federation Websites",
+                "text": "Official websites reflecting the federation's stature and serving the audience."
+            },
+            {
+                "title": "Registration Systems",
+                "text": "Player and event registration systems."
+            },
+            {
+                "title": "E-Ticketing",
+                "text": "Ticket sales and seat booking systems."
+            }
+        ]
+    },
+    "ai": {
+        "title": "Technology & AI",
+        "tag": "SECTOR_FOUR",
+        "description": "Technology and AI product showcase platforms. We understand the language of technology and speak it.",
+        "points": [
+            {
+                "title": "Product Showcase",
+                "text": "Interactive platforms for showcasing technology products."
+            },
+            {
+                "title": "Powerful APIs",
+                "text": "Advanced API development."
+            },
+            {
+                "title": "Innovative Platforms",
+                "text": "Smart solutions meeting market needs."
+            }
+        ]
+    },
+    "marketing": {
+        "title": "Digital Marketing & Media",
+        "tag": "SECTOR_FIVE",
+        "description": "Websites for digital agencies and media centers. We excel at creativity and quality.",
+        "points": [
+            {
+                "title": "Agency Websites",
+                "text": "Websites reflecting the agency's creativity."
+            },
+            {
+                "title": "CMS Systems",
+                "text": "Advanced content management systems."
+            },
+            {
+                "title": "Digital Marketing",
+                "text": "Integration with digital marketing tools."
             }
         ]
     },
     "healthcare": {
-        "title": "Healthcare & BioTech",
-        "tag": "BIO_DATA_v2",
-        "description": "Protecting the most sensitive data on earth while enabling global scientific cooperation. Our Bio-Cloud architectures support massive genetic research datasets and HIPAA-compliant delivery.",
+        "title": "Healthcare",
+        "tag": "SECTOR_SIX",
+        "description": "Websites for clinics and medical centers. Reliable and integrated healthcare solutions.",
         "points": [
             {
-                "title": "Genomic Computation",
-                "text": "Distributed parallel processing clusters for real-time DNA sequencing and protein folding simulations."
+                "title": "Appointment Booking",
+                "text": "Easy and effective appointment booking system."
             },
             {
-                "title": "Data Sovereignity",
-                "text": "Encrypted-at-rest storage architectures ensuring absolute patient privacy across international borders."
+                "title": "Patient Management",
+                "text": "Record tracking and management systems."
             },
             {
-                "title": "Telemetry Platforms",
-                "text": "High-availability streams for remote medical interventions and IoT patient monitoring systems."
+                "title": "Health Information",
+                "text": "Health information and services platforms."
             }
         ]
     },
-    "logistics": {
-        "title": "Logistics & Supply",
-        "tag": "LOG_AUTO_v9",
-        "description": "Transforming physical movement into digital clarity. We leverage real-time IoT telemetry and digital twin simulations to drive operational efficiency across the global supply chain.",
+    "education": {
+        "title": "E-Learning",
+        "tag": "SECTOR_SEVEN",
+        "description": "Learning Management Systems (LMS) and interactive training interfaces.",
         "points": [
             {
-                "title": "Dynamic Digital Twins",
-                "text": "Virtual mirroring of your entire physical fleet for predictive maintenance and route optimization."
+                "title": "LMS Systems",
+                "text": "Integrated learning management platforms."
             },
             {
-                "title": "Sensor Ecosystems",
-                "text": "Real-time tracking of cold-chain metrics, asset location, and vibration sensing for sensitive cargo."
+                "title": "Interactive Interfaces",
+                "text": "Interactive learning experiences."
             },
             {
-                "title": "Autonomous Nodes",
-                "text": "Engineering the backend for automated warehouses and self-navigating freight infrastructure."
+                "title": "Digital Content",
+                "text": "Educational content delivery systems."
+            }
+        ]
+    },
+    "ecommerce": {
+        "title": "E-Commerce",
+        "tag": "SECTOR_EIGHT",
+        "description": "Custom store solutions with integrated payment systems.",
+        "points": [
+            {
+                "title": "Custom Stores",
+                "text": "Stores designed to reflect your identity."
+            },
+            {
+                "title": "Payment Systems",
+                "text": "Payment gateway integration."
+            },
+            {
+                "title": "Inventory Management",
+                "text": "Product tracking and management systems."
             }
         ]
     }

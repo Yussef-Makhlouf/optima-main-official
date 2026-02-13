@@ -1,74 +1,111 @@
 {
     "page": {
-        "tag": "OPTIMA Protocol",
-        "titleHighlight": "Absolute.",
-        "title": "Built for",
-        "subtitle": "We operate at the intersection of technical excellence and strategic certainty. We build for enterprises that refuse to fail.",
+        "tag": "OPTIMA",
+        "titleHighlight": "OPTIMA",
+        "title": "About Us",
+        "subtitle": "Your trusted technical partner for building digital presence in the GCC market. We combine deep technical expertise with understanding of local market needs.",
         "corePhilosophy": {
-            "tag": "Core Philosophy",
-            "title": "Strategy is Engineering.",
-            "description": "OPTIMA Solutions was established to bridge the gap between corporate ambition and infrastructure reality. We move beyond trends to focus on long-term systemic stability."
+            "tag": "Our Philosophy",
+            "title": "Technical Excellence.",
+            "description": "We believe digital success requires more than just a website. It requires a true partnership with a team that understands your vision and leverages modern technologies to achieve your goals."
         },
         "values": {
-            "redundancy": {
-                "title": "Redundancy",
-                "description": "Every system we architect includes failure tolerance as a baseline. Zero-downtime is not a goal; it is a standard."
+            "quality": {
+                "title": "Zero-Compromise Quality",
+                "description": "We use the latest technologies and best practices in every project. Quality of work is our identity."
             },
-            "integrity": {
-                "title": "Integrity",
-                "description": "Security is not a feature added later. It is baked into the very core of our modular architecture."
+            "partnership": {
+                "title": "True Partnership",
+                "description": "We work as a strategic partner, not just a vendor. Your success is our success."
             },
-            "scale": {
-                "title": "Scale",
-                "description": "We build for the future versions of your enterprise, ensuring your stack grows with your global reach."
+            "growth": {
+                "title": "Continuous Growth",
+                "description": "We build platforms that scale and grow with your business. We look to the future."
             }
         },
         "stats": {
-            "availability": "Availability SLA",
-            "operations": "Network Operations",
-            "deployments": "Global Deployments",
-            "partnerships": "Year Partnerships"
+            "availability": "Years Experience",
+            "operations": "Projects Delivered",
+            "deployments": "Happy Clients",
+            "partners": "Industries Served"
         }
     },
     "team": {
-        "tag": "Personnel",
-        "title": "System Architects.",
+        "tag": "Our Team",
+        "title": "Technical",
+        "titleHighlight": "Experts.",
         "members": {
             "t1": {
                 "name": "Yussef Makhlouf",
-                "role": "Chief Architect",
-                "bio": "Former infrastructure lead at massive-scale fintech. Specializes in zero-downtime migration strategies."
+                "role": "Founder & CTO",
+                "bio": "Web development expert with years of experience building digital platforms for the GCC market. Specialized in Next.js and React."
             },
             "t2": {
-                "name": "Eslam Hussien",
+                "name": "Eslam Hussein",
                 "role": "Head of Engineering",
-                "bio": "Rigorous focus on code quality and automated testing pipelines. 15+ years in systems programming."
+                "bio": "Software engineering specialist building scalable systems. Extensive experience in Node.js and MongoDB."
             },
             "t3": {
                 "name": "Mohamed Hosny",
-                "role": "Security Ops",
-                "bio": "Dedicated to proactive threat modeling and defensive architecture. Certified CISSP."
+                "role": "Project Manager",
+                "bio": "Technical project management expert ensuring on-time delivery. Ensures client satisfaction and quality execution."
             },
             "t4": {
                 "name": "Mahmoud Taha",
                 "role": "Product Strategy",
-                "bio": "Bridging the gap between technical capability and business objectives. Data-driven decision making."
+                "bio": "Specializes in turning technical visions into successful strategies. Bridges technology and business objectives."
             },
             "t5": {
                 "name": "Momen Ahmed",
-                "role": "UI/UX & Graphic Designer",
-                "bio": "Specializes in user interface and user experience design. Expert in graphic design and visual identity creation."
+                "role": "UI/UX Designer",
+                "bio": "Experience in modern user interface and exceptional user experience design. Combines beauty with functionality."
             }
         }
     },
+    "whyChooseUs": {
+        "tag": "WHY_US",
+        "title": "Why",
+        "titleHighlight": "OPTIMA?",
+        "items": {
+            "tech": {
+                "title": "Deep Technical Expertise",
+                "description": "We use Next.js, React, and Node.js to build advanced platforms."
+            },
+            "market": {
+                "title": "GCC Market Understanding",
+                "description": "We understand Saudi, UAE, and Kuwait market needs."
+            },
+            "support": {
+                "title": "Ongoing Support",
+                "description": "We stay with you after launch to ensure your continued success."
+            },
+            "results": {
+                "title": "Measurable Results",
+                "description": "We measure our success by your digital goals achievement."
+            }
+        }
+    },
+    "techStack": {
+        "tag": "Our Tech",
+        "title": "We Use",
+        "titleHighlight": "The Latest",
+        "items": [
+            "Next.js",
+            "React.js",
+            "Node.js",
+            "MongoDB",
+            "TailwindCSS",
+            "VPS/Nginx"
+        ]
+    },
     "cta": {
-        "tag": "Establish Protocol",
+        "tag": "GET_STARTED",
         "title": "Ready to",
-        "titleHighlight": "Architect",
-        "titleSuffix": "absolute certainty?",
+        "titleHighlight": "Collaborate?",
+        "titleSuffix": "Let's build your digital success together",
         "button": {
-            "initialize": "Initialize",
-            "connect": "Connect"
+            "initialize": "Start Project",
+            "connect": "Contact Us"
         }
     }
 }

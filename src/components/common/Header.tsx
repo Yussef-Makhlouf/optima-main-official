@@ -107,12 +107,12 @@ const Header: React.FC = () => {
                             )}
                         </button>
 
-                        <Link
+                        {/* <Link
                             to="/contact"
                             className="bg-primary hover:bg-secondary text-white px-6 py-2.5 rounded-full text-[11px] font-bold transition-all duration-500 shadow-lg shadow-primary/20 hover:shadow-primary/40 tracking-widest"
                         >
                             {t('header.partnership')}
-                        </Link>
+                        </Link> */}
                     </div>
 
                     {/* Mobile Toggle */}

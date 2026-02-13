@@ -3,8 +3,9 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 const Footer: React.FC = () => {
-    const { t } = useTranslation('common');
+    const { t, i18n } = useTranslation('common');
     const currentYear = new Date().getFullYear();
+    const isRTL = i18n.language === 'ar';
 
     const socialLinks = [
         {
@@ -57,29 +58,29 @@ const Footer: React.FC = () => {
                     </h2>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20">
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 ${isRTL ? 'text-right' : ''}`}>
 
                     {/* Brand Column */}
                     <div className="lg:col-span-5 space-y-8">
-                        <Link to="/" className="flex items-center group w-fit transition-transform duration-500 hover:scale-105">
+                        <Link to="/" className={`flex items-center group w-fit transition-transform duration-500 hover:scale-105 ${isRTL ? 'flex-row-reverse' : ''}`}>
                             <img
                                 src="/logos/optima-05-symbol-light.svg"
-                                alt="OPTIMA"
+                                alt="OPYIMA"
                                 className="h-20 md:h-20 w-auto dark:hidden rounded-full border border-slate-200 dark:border-white/10"
                             />
                             <img
                                 src="/logos/optima-04-symbol-dark.svg"
-                                alt="OPTIMA"
+                                alt="OPYIMA"
                                 className="h-20 md:h-24 w-auto hidden dark:block rounded-full border border-slate-200 dark:border-white/10"
                             />
                         </Link>
-                        <p className="text-slate-500 dark:text-gray-400 text-base leading-relaxed max-w-sm transition-colors">
+                        <p className={`text-slate-500 dark:text-gray-400 text-base leading-relaxed max-w-sm transition-colors ${isRTL ? 'ml-auto' : ''}`}>
                             {t('footer.description')}
                         </p>
 
-                        <div className="pt-4">
+                        <div className={`pt-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
                             <h5 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-4">{t('footer.social')}</h5>
-                            <div className="flex gap-4">
+                            <div className={`flex gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                 {socialLinks.map((social) => (
                                     <a
                                         key={social.name}
@@ -97,8 +98,8 @@ const Footer: React.FC = () => {
                     {/* Quick Links */}
                     <div className="lg:col-span-3">
                         <h4 className="text-slate-900 dark:text-white font-black mb-8 text-[11px] uppercase tracking-[0.4em] transition-colors border-l-2 border-primary pl-4">{t('footer.servicesTitle')}</h4>
-                        <ul className="space-y-4 text-sm font-medium text-slate-500 dark:text-gray-400 transition-colors">
-                            <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-primary rounded-full opacity-0 -ml-3 transition-all duration-300 group-hover:opacity-100 group-hover:ml-0"></span>{t('nav.services')}</Link></li>
+                        <ul className={`space-y-4 text-sm font-medium text-slate-500 dark:text-gray-400 transition-colors ${isRTL ? 'text-right' : ''}`}>
+                            <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2">{t('nav.services')}</Link></li>
                             <li><Link to="/projects" className="hover:text-primary transition-colors">{t('nav.projects')}</Link></li>
                             <li><Link to="/industries" className="hover:text-primary transition-colors">{t('nav.industries')}</Link></li>
                             <li><Link to="/about" className="hover:text-primary transition-colors">{t('nav.about')}</Link></li>
@@ -108,22 +109,22 @@ const Footer: React.FC = () => {
                     {/* Global Addresses */}
                     <div className="lg:col-span-4">
                         <h4 className="text-slate-900 dark:text-white font-black mb-8 text-[11px] uppercase tracking-[0.4em] transition-colors border-l-2 border-primary pl-4">{t('footer.global')}</h4>
-                        <div className="space-y-6">
+                        <div className={`space-y-6 ${isRTL ? 'text-right' : ''}`}>
                             <address className="not-italic text-sm text-slate-500 dark:text-gray-400 space-y-3 transition-colors">
-                                <div className="flex items-start gap-3">
+                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                     <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></div>
                                     <p>{t('footer.office.hq')}</p>
                                 </div>
-                                <div className="flex items-start gap-3">
+                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mt-1.5 flex-shrink-0"></div>
                                     <p>{t('footer.office.london')}</p>
                                 </div>
-                                <div className="flex items-start gap-3">
+                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
                                     <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mt-1.5 flex-shrink-0"></div>
                                     <p>{t('footer.office.singapore')}</p>
                                 </div>
                             </address>
-                            <div className="pt-4 border-t border-slate-200 dark:border-white/5">
+                            <div className={`pt-4 border-t border-slate-200 dark:border-white/5 ${isRTL ? 'text-left' : ''}`}>
                                 <a href={`mailto:${t('footer.contact.partnerships')}`} className="text-secondary hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
                                     <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -136,13 +137,13 @@ const Footer: React.FC = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 dark:text-gray-500 uppercase tracking-widest transition-colors font-medium space-y-4 md:space-y-0 text-center md:text-left">
+                <div className={`border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 dark:text-gray-500 uppercase tracking-widest transition-colors font-medium space-y-4 md:space-y-0 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
                     <p>{t('footer.copyright', { year: currentYear })}</p>
-                    <div className="flex flex-wrap justify-center gap-6 md:gap-8">
+                    <div className={`flex flex-wrap justify-center gap-6 md:gap-8 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
                         <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.privacy')}</a>
                         <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.terms')}</a>
                         <span className="text-slate-300 dark:text-white/10 hidden md:inline">|</span>
-                        <span className="font-mono text-[10px] opacity-70"> SYS_VER: 4.2.0</span>
+                        <span className="font-mono text-[10px] opacity-70"> OPYIMA v1.0</span>
                     </div>
                 </div>
             </div>

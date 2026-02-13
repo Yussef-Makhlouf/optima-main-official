@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PROJECTS, SERVICES, TechIllustrations } from '../../data/content';
+import { PROJECTS, SERVICES } from '../../data/content';
 import FAQ from '../../components/sections/FAQ';
 
 import ClientTransmissions from '../../components/home/ClientTransmissions';
@@ -11,6 +11,9 @@ import Philosophy from '../../components/home/Philosophy';
 import ClientLogos from '../../components/common/ClientLogos';
 import { CLIENTS } from '../../data/content-marquee';
 import BrandDecoration from '../../components/common/BrandDecoration';
+import InteractiveSphere from '../../components/common/InteractiveSphere';
+import InteractiveTorus from '../../components/common/InteractiveTorus';
+import InteractiveCrystal from '../../components/common/InteractiveCrystal';
 
 
 const Home: React.FC = () => {
@@ -43,6 +46,11 @@ const Home: React.FC = () => {
                 </div>
                 <div className="scanline"></div>
                 <BrandDecoration />
+
+                {/* 3D Interactive Sphere Background */}
+                <div className="absolute inset-0 z-0 opacity-60">
+                    <InteractiveSphere />
+                </div>
 
 
                 {/* Abstract HUD Decorative Elements - Hidden on small mobile */}
@@ -96,6 +104,9 @@ const Home: React.FC = () => {
             <TechMarquee />
             {/* Abnormal Capabilities Layout */}
             <section className="py-24 md:py-40 relative bg-white dark:bg-dark transition-colors border-y border-white/5">
+                <div className="absolute top-20 right-0 w-80 h-80 opacity-30 pointer-events-none z-0 hidden lg:block">
+                    <InteractiveTorus />
+                </div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="flex flex-col lg:flex-row justify-between items-start mb-16 md:mb-32 gap-12">
                         <div className="max-w-2xl relative">
@@ -148,9 +159,7 @@ const Home: React.FC = () => {
             </section>
 
             {/* Tech Illustration Divider */}
-            <div className="hidden md:block">
-                <TechIllustrations.CircuitDivider />
-            </div>
+            <div className="hidden md:block h-24 bg-gradient-to-r from-transparent via-primary/10 to-transparent"></div>
 
             {/* 4. Methodology Section - The Diagnostic View */}
             <section className="py-24 md:py-40 bg-slate-50 dark:bg-surface/30 border-b border-slate-200 dark:border-white/5 relative overflow-hidden transition-colors">
@@ -253,6 +262,11 @@ const Home: React.FC = () => {
             {/* 9. Footer CTA */}
             <section className="relative py-32 md:py-60 border-t border-slate-200 dark:border-white/5 bg-slate-50 dark:bg-dark transition-colors overflow-hidden">
                 <div className="absolute inset-0 grid-bg opacity-30"></div>
+
+                {/* 3D Crystal Decoration */}
+                <div className="absolute -left-20 bottom-0 w-96 h-96 opacity-40 pointer-events-none z-0 hidden lg:block">
+                    <InteractiveCrystal />
+                </div>
 
                 {/* Brand Decos */}
                 <div className="absolute -right-20 -bottom-20 w-[400px] md:w-[600px] h-[400px] md:h-[600px] opacity-[0.03] dark:opacity-[0.05] pointer-events-none -rotate-12">

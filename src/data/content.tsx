@@ -61,6 +61,21 @@ export const Icons = {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
         </svg>
     ),
+    WordPress: () => (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 21a3 3 0 01-3-3v-4a3 3 0 016 0v4a3 3 0 01-3 3zM3 9a3 3 0 013-3h14a3 3 0 013 3v6a3 3 0 01-3 3H6a3 3 0 01-3-3V9z" />
+        </svg>
+    ),
+    Domain: () => (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+        </svg>
+    ),
+    Support: () => (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+        </svg>
+    ),
     Finance: () => (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -68,71 +83,24 @@ export const Icons = {
     ),
     Healthcare: () => (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.423 3.977a6 6 0 00-8.485 0l-.938.938-.938-.938a6 6 0 00-8.485 8.485l.938.938 8.485 8.485 8.485-8.485.938-.938a6 6 0 000-8.485z" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
         </svg>
     ),
     Logistics: () => (
         <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 17a2 2 0 11-4 0 2 2 0 014 0zM19 17a2 2 0 11-4 0 2 2 0 014 0z" />
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16V6a1 1 0 00-1-1H4a1 1 0 00-1 1v10a1 1 0 001 1h1m8-1a1 1 0 01-1 1H9m4-1V8a1 1 0 011-1h2.586a1 1 0 01.707.293l3.414 3.414a1 1 0 01.293.707V16a1 1 0 01-1 1h-1m-6-1a1 1 0 001 1h1" />
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
     ),
-};
-
-// --- Abnormal Illustrations ---
-export const TechIllustrations = {
-    CircuitDivider: () => (
-        <svg className="w-full h-24 opacity-30" viewBox="0 0 1000 100" fill="none">
-            <path d="M0 50H200L220 30H400L420 70H600L620 50H1000" stroke="currentColor" strokeWidth="1" strokeDasharray="5 5" />
-            <circle cx="200" cy="50" r="3" fill="currentColor" />
-            <circle cx="220" cy="30" r="3" fill="currentColor" />
-            <circle cx="420" cy="70" r="3" fill="currentColor" />
-            <circle cx="620" cy="50" r="3" fill="currentColor" />
-        </svg>
-    ),
-    PacketFlow: () => (
-        <div className="absolute inset-0 pointer-events-none overflow-hidden opacity-20">
-            {[...Array(10)].map((_, i) => (
-                <div
-                    key={i}
-                    className="data-stream"
-                    style={{
-                        left: `${Math.random() * 100}%`,
-                        top: `${Math.random() * 100}%`,
-                        animationDelay: `${Math.random() * 5}s`,
-                        animationDuration: `${3 + Math.random() * 5}s`
-                    }}
-                />
-            ))}
-        </div>
-    )
 };
 
 export const SERVICES: any[] = [
     {
-        id: 'hosting',
-        slug: 'scalable-infrastructure',
-        // Text content is now in locales/services.json
-        icon: <Icons.Hosting />,
-        features: ["loadBalancing", "redundancy", "security", "uptime"],
-        technicalCode: "SYS_INFRA_RES_01",
-        technicalSpecs: ["soc2", "pci", "cdn", "performance"],
-        processSteps: [
-            { number: "01", key: "step1", icon: <Icons.Security /> },
-            { number: "02", key: "step2", icon: <Icons.Network /> },
-            { number: "03", key: "step3", icon: <Icons.DigitalTransform /> },
-            { number: "04", key: "step4", icon: <Icons.Scalability /> }
-        ],
-        faqs: ["q1", "q2", "q3", "q4"],
-        relatedProjects: ['stellaris-bank-core-infrastructure', 'aura-logistics-digital-twin']
-    },
-    {
         id: 'web-dev',
-        slug: 'enterprise-platforms',
+        slug: 'professional-website-development',
         icon: <Icons.WebDev />,
-        features: ["cms", "performance", "edge", "roadmaps"],
-        technicalCode: "SYS_PLAT_ENG_02",
-        technicalSpecs: ["vitals", "accessibility", "i18n", "ssg"],
+        features: ["design", "responsive", "seo", "performance", "cms"],
+        technicalCode: "SERVICE_WEB_01",
+        technicalSpecs: ["tech", "vitals", "accessibility", "i18n"],
         processSteps: [
             { number: "01", key: "step1", icon: <Icons.Globe /> },
             { number: "02", key: "step2", icon: <Icons.WebDev /> },
@@ -140,15 +108,15 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
         faqs: ["q1", "q2", "q3"],
-        relatedProjects: ['neogen-bio-genomic-visualization']
+        relatedProjects: ['uae-mma-federation', 'golden-moon-agency']
     },
     {
-        id: 'apps',
-        slug: 'intelligent-workflow',
+        id: 'web-apps',
+        slug: 'custom-web-applications',
         icon: <Icons.WebApp />,
-        features: ["api", "realtime", "saas", "legacy"],
-        technicalCode: "SYS_APP_DEV_03",
-        technicalSpecs: ["graphql", "websockets", "encryption", "kubernetes"],
+        features: ["custom", "api", "automation", "dashboard", "security"],
+        technicalCode: "SERVICE_APPS_02",
+        technicalSpecs: ["frontend", "backend", "auth", "realtime"],
         processSteps: [
             { number: "01", key: "step1", icon: <Icons.Network /> },
             { number: "02", key: "step2", icon: <Icons.Hosting /> },
@@ -156,7 +124,71 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
         faqs: ["q1", "q2", "q3"],
-        relatedProjects: ['neogen-bio-genomic-visualization', 'aura-logistics-digital-twin']
+        relatedProjects: ['artat-company', 'technova']
+    },
+    {
+        id: 'wordpress',
+        slug: 'wordpress-migration',
+        icon: <Icons.WordPress />,
+        features: ["migration", "seo", "performance", "security", "modern"],
+        technicalCode: "SERVICE_MIGRATION_03",
+        technicalSpecs: ["stack", "migration", "speed"],
+        processSteps: [
+            { number: "01", key: "step1", icon: <Icons.Security /> },
+            { number: "02", key: "step2", icon: <Icons.WebDev /> },
+            { number: "03", key: "step3", icon: <Icons.Hosting /> },
+            { number: "04", key: "step4", icon: <Icons.Check /> }
+        ],
+        faqs: ["q1", "q2", "q3", "q4"],
+        relatedProjects: ['raaf-construction', 'ghonfa-interior']
+    },
+    {
+        id: 'hosting',
+        slug: 'managed-hosting',
+        icon: <Icons.Hosting />,
+        features: ["uptime", "backup", "security", "cdn", "ssl"],
+        technicalCode: "SERVICE_HOSTING_04",
+        technicalSpecs: ["server", "monitoring", "support"],
+        processSteps: [
+            { number: "01", key: "step1", icon: <Icons.Security /> },
+            { number: "02", key: "step2", icon: <Icons.Hosting /> },
+            { number: "03", key: "step3", icon: <Icons.Network /> },
+            { number: "04", key: "step4", icon: <Icons.Scalability /> }
+        ],
+        faqs: ["q1", "q2", "q3"],
+        relatedProjects: ['uae-mma-federation', 'emmar-elevators']
+    },
+    {
+        id: 'domain',
+        slug: 'domain-email-management',
+        icon: <Icons.Domain />,
+        features: ["domain", "email", "forwarding", "dns", "privacy"],
+        technicalCode: "SERVICE_DOMAIN_05",
+        technicalSpecs: ["mail", "protection"],
+        processSteps: [
+            { number: "01", key: "step1", icon: <Icons.Globe /> },
+            { number: "02", key: "step2", icon: <Icons.Security /> },
+            { number: "03", key: "step3", icon: <Icons.Hosting /> },
+            { number: "04", key: "step4", icon: <Icons.Check /> }
+        ],
+        faqs: ["q1", "q2"],
+        relatedProjects: ['tarmeez-tech', 'golden-moon-agency']
+    },
+    {
+        id: 'support',
+        slug: 'technical-support',
+        icon: <Icons.Support />,
+        features: ["maintenance", "monitoring", "backup", "updates", "consulting"],
+        technicalCode: "SERVICE_SUPPORT_06",
+        technicalSpecs: ["response", "hours"],
+        processSteps: [
+            { number: "01", key: "step1", icon: <Icons.Security /> },
+            { number: "02", key: "step2", icon: <Icons.Network /> },
+            { number: "03", key: "step3", icon: <Icons.DigitalTransform /> },
+            { number: "04", key: "step4", icon: <Icons.Scalability /> }
+        ],
+        faqs: ["q1", "q2"],
+        relatedProjects: ['all-projects']
     }
 ];
 
@@ -164,8 +196,8 @@ export const TEAM = [
     {
         id: 't1',
         name: 'Yussef_Makhlouf',
-        role: 'Chief Architect',
-        bio: 'Former infrastructure lead at massive-scale fintech. Specializes in zero-downtime migration strategies.',
+        role: 'Founder & CTO',
+        bio: 'Web development expert with years of experience building digital platforms for the GCC market. Specialized in Next.js and React.',
         code: 'ARCH_LEAD_01',
         image: '/about.png'
     },
@@ -173,15 +205,15 @@ export const TEAM = [
         id: 't2',
         name: 'Eslam_Hussien',
         role: 'Head of Engineering',
-        bio: ' rigorous focus on code quality and automated testing pipelines. 15+ years in systems programming.',
+        bio: 'Software engineering specialist building scalable systems. Extensive experience in Node.js and MongoDB.',
         code: 'ENG_HEAD_02',
         image: '/about.png'
     },
     {
         id: 't3',
         name: 'Mohamed_Hosny',
-        role: 'Security Ops',
-        bio: 'Dedicated to proactive threat modeling and defensive architecture. Certified CISSP.',
+        role: 'Project Manager',
+        bio: 'Technical project management expert ensuring on-time delivery. Ensures client satisfaction and quality execution.',
         code: 'SEC_OPS_03',
         image: '/about.png'
     },
@@ -189,134 +221,85 @@ export const TEAM = [
         id: 't4',
         name: 'Mahmoud_Taha',
         role: 'Product Strategy',
-        bio: 'Bridging the gap between technical capability and business objectives. Data-driven decision making.',
+        bio: 'Specializes in turning technical visions into successful strategies. Bridges technology and business objectives.',
         code: 'PROD_STRAT_04',
         image: '/about.png'
     },
     {
         id: 't5',
-        name: 'Moamen_Ahmed',
-        role: 'UI/UX Designer & Graphic Designer',
-        bio: 'Bridging the gap between technical capability and business objectives. Data-driven decision making.',
+        name: 'Momen_Ahmed',
+        role: 'UI/UX Designer',
+        bio: 'Experience in modern user interface and exceptional user experience design. Combines beauty with functionality.',
         code: 'UI_UX_05',
         image: '/about.png'
     },
 ];
 
-
 export const PROJECTS: ProjectInfo[] = [
     {
         id: 'p1',
-        slug: 'stellaris-bank-core-infrastructure',
-        client: 'Stellaris Bank',
-        // Content for title/desc is in locales/projects.json under items.p1
-        title: 'Core Banking Infrastructure',
-        description: 'A complete overhaul of their high-frequency transaction environment using cloud-native architectures.',
-        longDescription: 'Stellaris Bank faced critical bottlenecks during peak trading hours. We redesigned their core infrastructure from the ground up, implementing a private cloud environment that utilizes distributed ledgers and microservices to handle over 100,000 transactions per second with sub-millisecond latency.',
-        challenge: "Scaling legacy monolithic architectures to support modern high-frequency trading demands without sacrificing security or uptime.",
-        solution: "Transition to a zero-trust, microservices-based cloud architecture with automated scaling and real-time fraud detection pipelines.",
-        impact: "99% reduction in transaction latency, 100% uptime during record-breaking traffic events, and enhanced regulatory compliance visibility.",
-        tags: ['Cloud', 'Security', 'FinTech'],
+        slug: 'uae-mma-federation',
+        client: 'UAE MMA Federation',
+        title: 'Official Federation Website',
+        description: 'Design and development of the official federation website.',
+        longDescription: 'We are proud to develop the official website for the UAE MMA Federation in Abu Dhabi. The website provides a seamless user experience and displays all federation events professionally.',
+        challenge: 'Need for an official website that reflects the federation\'s stature and provides comprehensive information.',
+        solution: 'We designed and built a comprehensive website including event pages, player registration system, federation news, and electronic ticketing system.',
+        impact: 'Increase in monthly visitors, improved user experience, and efficient event management system.',
+        tags: ['Web Dev', 'Sports', 'Portal'],
         color: '#145D90',
         gallery: [
             {
-                url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
-                title: 'Trading Dashboard',
-                description: 'Real-time trading interface with microsecond latency'
+                url: 'https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=800',
+                title: 'Federation Homepage',
+                description: 'Modern homepage with event showcase'
             },
             {
-                url: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800',
-                title: 'Analytics Platform',
-                description: 'Advanced data visualization and reporting'
-            },
-            {
-                url: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800',
-                title: 'Security Console',
-                description: 'Zero-trust security monitoring dashboard'
+                url: 'https://images.unsplash.com/photo-1517927033932-b3d18e61fb3a?w=800',
+                title: 'Event Calendar',
+                description: 'Upcoming events and championships'
             }
         ],
         techStack: [
             {
-                category: 'Infrastructure',
-                description: 'High-availability foundations for global scale operations.',
+                category: 'Frontend',
+                description: 'Modern responsive frontend for better user experience.',
                 technologies: [
                     {
-                        name: 'Kubernetes',
-                        description: 'Self-healing container orchestration for zero-downtime deployments.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg',
-                        color: '#326CE5'
+                        name: 'Next.js',
+                        description: 'React framework for production.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
                     },
                     {
-                        name: 'Docker',
-                        description: 'Standardized application environments for consistent cross-region performance.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg',
-                        color: '#2496ED'
+                        name: 'React',
+                        description: 'UI library for building interfaces.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
                     },
                     {
-                        name: 'AWS',
-                        description: 'Global cloud infrastructure with multi-zone redundancy and low-latency transit.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg',
-                        color: '#FF9900'
-                    },
-                    {
-                        name: 'Terraform',
-                        description: 'Infrastructure as code for reproducible and audited environment scaling.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/terraform/terraform-original.svg',
-                        color: '#7B42BC'
+                        name: 'TailwindCSS',
+                        description: 'Utility-first CSS framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
                     }
                 ]
             },
             {
                 category: 'Backend',
-                description: 'High-performance processing engines for financial precision.',
+                description: 'Robust backend for content management.',
                 technologies: [
                     {
                         name: 'Node.js',
-                        description: 'Non-blocking I/O for handling massive concurrent transaction volumes.',
+                        description: 'JavaScript runtime for server.',
                         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
                         color: '#339933'
                     },
                     {
-                        name: 'GraphQL',
-                        description: 'Efficient data fetching with precise schema-based API contracts.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg',
-                        color: '#E10098'
-                    },
-                    {
-                        name: 'PostgreSQL',
-                        description: 'ACID-compliant relational storage for guaranteed transactional integrity.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
-                        color: '#4169E1'
-                    },
-                    {
-                        name: 'Redis',
-                        description: 'In-memory caching layer for sub-millisecond data retrieval speeds.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg',
-                        color: '#DC382D'
-                    }
-                ]
-            },
-            {
-                category: 'Security',
-                description: 'Bank-grade defense layers for asset and data protection.',
-                technologies: [
-                    {
-                        name: 'OAuth 2.0',
-                        description: 'Industry-standard authorization for secure identity management systems.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/auth0/auth0-original.svg',
-                        color: '#145D90'
-                    },
-                    {
-                        name: 'AES-256',
-                        description: 'Military-grade encryption for safeguarding data at rest and in transit.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/matcha/matcha-original.svg', // Placeholder for AES
-                        color: '#56A5DD'
-                    },
-                    {
-                        name: 'TLS 1.3',
-                        description: 'State-of-the-art transport security for encrypted client communication.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg', // Placeholder for TLS
-                        color: '#145D90'
+                        name: 'MongoDB',
+                        description: 'NoSQL database for flexible content.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+                        color: '#47A248'
                     }
                 ]
             }
@@ -324,70 +307,58 @@ export const PROJECTS: ProjectInfo[] = [
         timeline: [
             {
                 date: 'Q1 2024',
-                title: 'Discovery & Planning',
-                description: 'Infrastructure audit and architecture design',
+                title: 'Discovery',
+                description: 'Requirements gathering and planning',
                 status: 'completed'
             },
             {
                 date: 'Q2 2024',
                 title: 'Development',
-                description: 'Microservices implementation and security integration',
+                description: 'Design and implementation',
                 status: 'completed'
             },
             {
                 date: 'Q3 2024',
-                title: 'Testing & Migration',
-                description: 'Load testing and zero-downtime migration',
-                status: 'completed'
-            },
-            {
-                date: 'Q4 2024',
-                title: 'Launch & Optimization',
-                description: 'Production deployment and performance tuning',
+                title: 'Launch',
+                description: 'Testing and deployment',
                 status: 'completed'
             }
         ]
     },
     {
         id: 'p2',
-        slug: 'neogen-bio-genomic-visualization',
-        client: 'NeoGen Bio',
-        title: 'Genomic Data Visualization',
-        description: 'A custom web application allowing real-time collaboration on petabyte-scale genetic sequencing data.',
-        longDescription: 'NeoGen Bio needed a way for researchers across four continents to collaborate on massive genomic datasets. We developed a custom web application that streams data segments on-demand, allowing researchers to visualize and annotate complex DNA strands in real-time through a secure browser interface.',
-        challenge: "Rendering and collaborating on petabyte-scale data files over standard internet connections without data loss or significant lag.",
-        solution: "A bespoke data-segmentation engine that streams only visible segments to the browser, combined with a WebSocket-driven collaboration layer.",
-        impact: "Researchers reduced analysis time by 40% and enabled the first global real-time collaboration on the Human Genome v4 project.",
-        tags: ['Web App', 'BioTech', 'Big Data'],
+        slug: 'technova-ai',
+        client: 'TECHNOVA',
+        title: 'AI Products Showcase Platform',
+        description: 'Platform for showcasing AI products and solutions.',
+        longDescription: 'We provided TECHNOVA with a comprehensive digital solution that showcases their innovations in artificial intelligence in an innovative and professional manner.',
+        challenge: 'Need for a modern platform to showcase AI products and company solutions.',
+        solution: 'We built an advanced platform that displays products in an attractive way with an interactive system.',
+        impact: 'Improved digital brand image, increased product interest, and successful digital transformation.',
+        tags: ['Web Dev', 'AI', 'Design'],
         color: '#56A5DD',
         techStack: [
             {
-                category: 'Architecture',
-                description: 'Proprietary streaming engines for massive genomic datasets.',
+                category: 'Frontend',
+                description: 'Interactive frontend for product showcase.',
                 technologies: [
                     {
+                        name: 'Next.js',
+                        description: 'React framework for production.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
+                    },
+                    {
                         name: 'React',
-                        description: 'Responsive interface for high-density data visualization.',
+                        description: 'UI library for building interfaces.',
                         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
                         color: '#61DAFB'
                     },
                     {
-                        name: 'TypeScript',
-                        description: 'Type-safe codebase for mission-critical bio-research accuracy.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
-                        color: '#3178C6'
-                    },
-                    {
-                        name: 'WebSockets',
-                        description: 'Real-time synchronization for multi-continent collaboration.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/socketio/socketio-original.svg',
-                        color: '#010101'
-                    },
-                    {
-                        name: 'WebAssembly',
-                        description: 'Near-native performance for in-browser client-side sequencing.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wasm/wasm-original.svg',
-                        color: '#654FF0'
+                        name: 'TailwindCSS',
+                        description: 'Utility-first CSS framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
                     }
                 ]
             }
@@ -395,38 +366,233 @@ export const PROJECTS: ProjectInfo[] = [
     },
     {
         id: 'p3',
-        slug: 'aura-logistics-digital-twin',
-        client: 'Aura Logistics',
-        title: 'Supply Chain Digital Twin',
-        description: 'End-to-end digital transformation of their global logistics network using IoT and real-time dashboards.',
-        longDescription: 'Aura Logistics operated with a fragmented view of their global fleet. We implemented an IoT-integrated digital twin platform that provides a real-time, 3D visualization of their entire supply chain, from container temperatures in the Atlantic to truck locations in Berlin.',
-        challenge: "Consolidating thousands of disparate data points from third-party shippers, internal GPS units, and environmental sensors into a single source of truth.",
-        solution: "Development of a unified data lake integrated with a WebGL-based 3D globe visualization tool and automated alerting systems.",
-        impact: "Optimized route efficiency by 15%, reduced inventory shrinkage by 22%, and provided clients with real-time transparency for the first time.",
-        tags: ['Transformation', 'IoT', 'Logistics'],
+        slug: 'artat-company',
+        client: 'Artat Company',
+        title: 'Livestock Management System',
+        description: 'Comprehensive management system for horse farms.',
+        longDescription: 'We are proud to develop a comprehensive management system for horse farms and livestock for Artat Company. The system includes all necessary functions for efficient farm management.',
+        challenge: 'Need for an integrated system for managing horse farms and livestock.',
+        solution: 'We built a comprehensive livestock management system including horse management, veterinary records, and inventory.',
+        impact: 'Improved farm management efficiency, time and effort savings, improved tracking and statistics.',
+        tags: ['Web App', 'Agriculture', 'Management'],
         color: '#162427',
         techStack: [
             {
-                category: 'Visual Data',
-                description: 'Real-time spatial awareness and sensory integration.',
+                category: 'Full Stack',
+                description: 'Complete solution for farm management.',
                 technologies: [
                     {
-                        name: 'WebGL',
-                        description: 'Low-latency 3D rendering of global supply chain networks.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/opengl/opengl-plain.svg',
-                        color: '#990000'
+                        name: 'React',
+                        description: 'Frontend framework for dashboard.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
                     },
                     {
-                        name: 'MQTT',
-                        description: 'Ultra-efficient protocol for massive IoT sensor data ingestion.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg', // Placeholder
-                        color: '#660066'
+                        name: 'Node.js',
+                        description: 'Backend API development.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                        color: '#339933'
                     },
                     {
-                        name: 'React Three Fiber',
-                        description: 'Declarative 3D abstractions for interactive digital twins.',
-                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/threejs/threejs-original.svg',
+                        name: 'MongoDB',
+                        description: 'Database for farm data.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+                        color: '#47A248'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'p4',
+        slug: 'raaf-construction',
+        client: 'RAAF Construction',
+        title: 'Project Management Platform',
+        description: 'Platform for showcasing construction projects.',
+        longDescription: 'We provided RAAF Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.',
+        challenge: 'Need for a platform to showcase company projects and manage projects digitally.',
+        solution: 'We designed a comprehensive platform that showcases projects and reflects professionalism.',
+        impact: 'Improved company image, ease of showcasing work to new clients.',
+        tags: ['Web Dev', 'Construction', 'Portfolio'],
+        color: '#145D90',
+        techStack: [
+            {
+                category: 'Frontend',
+                description: 'Modern frontend for portfolio showcase.',
+                technologies: [
+                    {
+                        name: 'Next.js',
+                        description: 'React framework for production.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
                         color: '#000000'
+                    },
+                    {
+                        name: 'React',
+                        description: 'UI library.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'TailwindCSS',
+                        description: 'Utility-first CSS framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'p5',
+        slug: 'ghonfa-interior',
+        client: 'Ghonfa Interior Design',
+        title: 'Digital Portfolio',
+        description: 'Professional digital portfolio for interior design.',
+        longDescription: 'We provided Ghonfa Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.',
+        challenge: 'Need for a digital portfolio to showcase company work attractively.',
+        solution: 'We designed a professional digital portfolio with gallery integration.',
+        impact: 'Increase in potential clients, improved digital image.',
+        tags: ['Web Dev', 'Design', 'Portfolio'],
+        color: '#56A5DD',
+        techStack: [
+            {
+                category: 'Frontend',
+                description: 'Gallery-focused frontend.',
+                technologies: [
+                    {
+                        name: 'Next.js',
+                        description: 'React framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
+                    },
+                    {
+                        name: 'React',
+                        description: 'UI library.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'TailwindCSS',
+                        description: 'CSS framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'p6',
+        slug: 'golden-moon-agency',
+        client: 'Golden Moon Agency',
+        title: 'Digital Marketing Agency Website',
+        description: 'Website for digital marketing agency.',
+        longDescription: 'We provided Golden Moon Agency in Jeddah with a digital website that reflects creative creativity and attracts clients.',
+        challenge: 'Need for a website that reflects the agency\'s creativity.',
+        solution: 'We designed a creative website with animations.',
+        impact: 'Improved digital image, increase in client inquiries.',
+        tags: ['Web Dev', 'Marketing', 'Design'],
+        color: '#162427',
+        techStack: [
+            {
+                category: 'Frontend',
+                description: 'Creative frontend with animations.',
+                technologies: [
+                    {
+                        name: 'Next.js',
+                        description: 'React framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
+                    },
+                    {
+                        name: 'React',
+                        description: 'UI library.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'TailwindCSS',
+                        description: 'CSS framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'p7',
+        slug: 'emmar-elevators',
+        client: 'Emmar Elevators',
+        title: 'Company Platform & Admin Dashboard',
+        description: 'Company website with administrative dashboard.',
+        longDescription: 'We provided Emmar Elevators with an integrated digital platform including the official website and administrative dashboard.',
+        challenge: 'Need for company website and administrative dashboard.',
+        solution: 'We designed a professional website with admin dashboard.',
+        impact: 'Improved operational efficiency, ease of project management.',
+        tags: ['Web Dev', 'Admin', 'Dashboard'],
+        color: '#145D90',
+        techStack: [
+            {
+                category: 'Full Stack',
+                description: 'Complete solution with admin panel.',
+                technologies: [
+                    {
+                        name: 'Next.js',
+                        description: 'React framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
+                    },
+                    {
+                        name: 'React',
+                        description: 'Frontend framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'Node.js',
+                        description: 'Backend API.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                        color: '#339933'
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        id: 'p8',
+        slug: 'tarmeez-tech',
+        client: 'Tarmeez Tech',
+        title: 'Software Development Projects',
+        description: 'Joint software development projects.',
+        longDescription: 'We work with Tarmeez Tech in a strategic partnership to develop advanced software solutions.',
+        challenge: 'Developing innovative software solutions.',
+        solution: 'Strategic collaboration in software projects.',
+        impact: 'Successful ongoing partnership, multiple successful projects.',
+        tags: ['Web App', 'Software', 'Development'],
+        color: '#56A5DD',
+        techStack: [
+            {
+                category: 'Development',
+                description: 'Various technologies for different projects.',
+                technologies: [
+                    {
+                        name: 'React',
+                        description: 'Frontend framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'Node.js',
+                        description: 'Backend runtime.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                        color: '#339933'
+                    },
+                    {
+                        name: 'MongoDB',
+                        description: 'Database.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+                        color: '#47A248'
                     }
                 ]
             }
@@ -437,18 +603,42 @@ export const PROJECTS: ProjectInfo[] = [
 export const TESTIMONIALS = [
     {
         id: 't1',
-        client: 'Stellaris Bank',
+        client: 'UAE MMA Federation',
     },
     {
         id: 't2',
-        client: 'NeoGen Bio',
+        client: 'TECHNOVA',
     },
     {
         id: 't3',
-        client: 'Aura Logistics',
+        client: 'Artat Company',
     },
     {
         id: 't4',
-        client: 'CyberDyne Systems',
+        client: 'RAAF Construction',
     }
 ];
+
+export const TechIllustrations = {
+    PacketFlow: () => (
+        <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
+            <svg className="w-full h-full opacity-20 text-primary" viewBox="0 0 800 600" preserveAspectRatio="none">
+                <defs>
+                    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+                        <path d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" strokeWidth="0.5" opacity="0.2" />
+                    </pattern>
+                </defs>
+                <rect width="100%" height="100%" fill="url(#grid)" />
+                <path d="M0 300 C 200 100, 600 500, 800 300" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
+                <circle r="4" fill="#00FFCC">
+                    <animateMotion dur="4s" repeatCount="indefinite" path="M0 300 C 200 100, 600 500, 800 300" />
+                </circle>
+                <path d="M0 400 C 300 500, 500 100, 800 200" stroke="currentColor" strokeWidth="1" fill="none" opacity="0.5" />
+                <circle r="3" fill="#56A5DD">
+                    <animateMotion dur="6s" repeatCount="indefinite" path="M0 400 C 300 500, 500 100, 800 200" />
+                </circle>
+            </svg>
+        </div>
+    )
+};
+

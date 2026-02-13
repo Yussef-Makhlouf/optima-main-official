@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next';
 import RegionalPresence from '../../components/contact/RegionalPresence';
 import TrustedPartners from '../../components/contact/TrustedPartners';
 import BrandDecoration from '../../components/common/BrandDecoration';
+import InteractiveParticles from '../../components/common/InteractiveParticles';
 
 
 const Contact: React.FC = () => {
@@ -25,6 +26,12 @@ const Contact: React.FC = () => {
         <div className="relative min-h-screen pt-32 pb-32 overflow-hidden bg-slate-50 dark:bg-black transition-colors">
             {/* Background Effects */}
             <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none"></div>
+
+            {/* 3D Particles Decoration */}
+            <div className="absolute inset-0 opacity-40 pointer-events-none z-0 hidden lg:block">
+                <InteractiveParticles />
+            </div>
+
             <BrandDecoration />
             <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-gradient-to-b from-primary/5 to-transparent rounded-bl-full pointer-events-none"></div>
 

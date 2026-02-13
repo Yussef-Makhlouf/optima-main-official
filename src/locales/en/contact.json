@@ -1,50 +1,54 @@
 {
     "title": "Contact Us",
-    "subtitle": "Let's Build Together",
+    "subtitle": "Let's Build Your Digital Success Together",
     "hero": {
-        "title": "Initialize",
-        "titleHighlight": "Connection.",
-        "subtitle": "Ready to architect the backbone of your digital future? Our team is standing by."
+        "title": "Start",
+        "titleHighlight": "The Conversation.",
+        "subtitle": "Ready to improve your digital presence? Our team is ready to help you every step of the way."
     },
     "form": {
         "nameLabel": "Name",
         "namePlaceholder": "Enter your full name",
         "emailLabel": "Email",
-        "emailPlaceholder": "Enter your work email",
+        "emailPlaceholder": "Enter your email",
         "companyLabel": "Company",
-        "companyPlaceholder": "Organization name",
-        "interestLabel": "Project Interest",
+        "companyPlaceholder": "Your company name",
+        "interestLabel": "Service Required",
         "messageLabel": "Project Details",
-        "messagePlaceholder": "Tell us about your infrastructure needs...",
-        "submitButton": "Initialize Protocol",
-        "successMessage": "Transmission Received. Stand by for contact.",
+        "messagePlaceholder": "Tell us about your project and needs...",
+        "submitButton": "Send Message",
+        "successMessage": "Thank you for contacting us. We will respond within 24 hours.",
         "options": {
-            "hosting": "Secure Hosting",
-            "transformation": "Digital Transformation",
-            "webapp": "Web App Development",
-            "consultation": "Strategic Consultation"
+            "hosting": "Hosting & Domain Management",
+            "web-dev": "Website Development",
+            "web-app": "Web Application Development",
+            "wordpress": "WordPress Migration",
+            "support": "Support & Maintenance",
+            "consultation": "Consultation"
         }
     },
     "info": {
-        "locationsTitle": "Global Hubs",
-        "contactTitle": "Direct Line"
+        "locationsTitle": "Our Locations",
+        "contactTitle": "Direct Contact",
+        "email": "hello@yussefdevstudio.com",
+        "phone": "+966-XX-XXX-XXXX"
     },
     "regional": {
-        "title": "Regional Presence",
-        "tag": "[ GLOBAL_REACH ]",
-        "description": "Strategic locations across key markets",
-        "gcc": "GCC Hub",
+        "title": "Our GCC Presence",
+        "tag": "REGIONAL_REACH",
+        "description": "Serving clients across the Gulf Cooperation Council countries",
+        "gcc": "Gulf Cooperation Council",
         "europe": "Europe",
         "northAmerica": "North America",
-        "statusLive": "LIVE_FEED",
+        "statusLive": "ACTIVE",
         "items": {
             "ksa": {
                 "name": "Saudi Arabia",
-                "city": "Riyadh"
+                "city": "Riyadh - Jeddah"
             },
             "uae": {
-                "name": "UAE",
-                "city": "Abu Dhabi"
+                "name": "United Arab Emirates",
+                "city": "Abu Dhabi - Dubai"
             },
             "egy": {
                 "name": "Egypt",
@@ -69,22 +73,33 @@
         }
     },
     "partners": {
-        "tag": "[ ENTERPRISE_ECOSYSTEM ]",
-        "title": "Trusted By",
-        "titleHighlight": "Industry Pioneers",
-        "subtitle": "Leading Organizations",
-        "description": "Powering digital transformation for the Middle East's most ambitious organizations",
+        "tag": "OUR CLIENTS",
+        "title": "Success",
+        "titleHighlight": "Partners",
+        "subtitle": "Proud of Their Trust",
+        "description": "Serving leading organizations across all sectors in the Gulf",
         "sectorLabel": "SECTOR",
         "activeStatus": "ACTIVE",
         "sectors": {
-            "software": "Software Development",
-            "ai": "AI Innovation",
-            "marketing": "Marketing & Branding",
-            "digitalMarketing": "Digital Marketing",
-            "facility": "Facility Solutions",
-            "sports": "Sports & Entertainment",
-            "animalHealth": "Animal Health",
-            "realEstate": "Real Estate"
+            "construction": "Construction & Development",
+            "realestate": "Real Estate",
+            "sports": "Sports & Federations",
+            "ai": "Artificial Intelligence",
+            "marketing": "Marketing",
+            "healthcare": "Healthcare",
+            "education": "Education",
+            "ecommerce": "E-commerce"
+        }
+    },
+    "whyContact": {
+        "tag": "WHY_CONTACT_US",
+        "title": "Ready to",
+        "titleHighlight": "Succeed?",
+        "items": {
+            "response": "Response within 24 hours",
+            "consultation": "Free consultation",
+            "quote": "Custom quote",
+            "support": "Ongoing support"
         }
     }
 }

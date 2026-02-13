@@ -1,50 +1,54 @@
 {
     "title": "تواصل معنا",
-    "subtitle": "لنبني معاً",
+    "subtitle": "لنبني نجاحك الرقمي معًا",
     "hero": {
-        "title": "افتتح",
-        "titleHighlight": "الاتصال.",
-        "subtitle": "مستعد لهندسة العمود الفقري لمستقبلك الرقمي؟ فريقنا في انتظارك."
+        "title": "ابدأ",
+        "titleHighlight": "الحوار.",
+        "subtitle": "مستعد لتحسين حضورك الرقمي؟ فريقنا جاهز ل مساعدتك في كل خطوة."
     },
     "form": {
         "nameLabel": "الاسم",
         "namePlaceholder": "أدخل اسمك الكامل",
         "emailLabel": "البريد الإلكتروني",
-        "emailPlaceholder": "أدخل بريد العمل",
+        "emailPlaceholder": "أدخل بريدك الإلكتروني",
         "companyLabel": "الشركة",
-        "companyPlaceholder": "اسم المؤسسة",
-        "interestLabel": "اهتمام المشروع",
-        "messageLabel": "تفاصيل المشروع",
-        "messagePlaceholder": "أخبرنا عن احتياجات بنيتك التحتية...",
-        "submitButton": "بدء البروتوكول",
-        "successMessage": "تم استلام الإرسال. انتظر الاتصال.",
+        "companyPlaceholder": "اسم شركتك",
+        "interestLabel": "الخدمة المطلوبة",
+        "messageLabel": "تفاصيل مشروعك",
+        "messagePlaceholder": "أخبرنا عن مشروعك واحتياجاتك...",
+        "submitButton": "أرسل الرسالة",
+        "successMessage": "شكراً لتواصلك. سنرد عليك خلال 24 ساعة.",
         "options": {
-            "hosting": "استضافة آمنة",
-            "transformation": "تحول رقمي",
-            "webapp": "تطوير تطبيقات الويب",
-            "consultation": "استشارات استراتيجية"
+            "hosting": "استضافة وإدارة النطاق",
+            "web-dev": "تطوير موقع",
+            "web-app": "تطوير تطبيق ويب",
+            "wordpress": "تحويل WordPress",
+            "support": "دعم وصيانة",
+            "consultation": "استشارة"
         }
     },
     "info": {
-        "locationsTitle": "المراكز العالمية",
-        "contactTitle": "خط مباشر"
+        "locationsTitle": "مواقعنا",
+        "contactTitle": "تواصل مباشر",
+        "email": "hello@yussefdevstudio.com",
+        "phone": "+966-XX-XXX-XXXX"
     },
     "regional": {
-        "title": "التواجد الإقليمي",
-        "tag": "[ الانتشار_العالمي ]",
-        "description": "مواقع استراتيجية عبر الأسواق الرئيسية",
-        "gcc": "مركز دول الخليج",
+        "title": "تواجدنا في الخليج",
+        "tag": "التواجد_الإقليمي",
+        "description": "نخدم العملاء في seluruh دول الخليج العربي",
+        "gcc": "الخليج العربي",
         "europe": "أوروبا",
         "northAmerica": "أمريكا الشمالية",
-        "statusLive": "بث_مباشر",
+        "statusLive": "نشط",
         "items": {
             "ksa": {
                 "name": "المملكة العربية السعودية",
-                "city": "الرياض"
+                "city": "الرياض - جدة"
             },
             "uae": {
                 "name": "الإمارات العربية المتحدة",
-                "city": "أبو ظبي"
+                "city": "أبوظبي - دبي"
             },
             "egy": {
                 "name": "مصر",
@@ -69,22 +73,33 @@
         }
     },
     "partners": {
-        "tag": "[ بيئة_الشركات ]",
-        "title": "موثوق به من قبل",
-        "titleHighlight": "رواد الصناعة",
-        "subtitle": "المؤسسات الرائدة",
-        "description": "تمكين التحول الرقمي لأكثر المؤسسات طموحاً في الشرق الأوسط",
+        "tag": "عملاؤنا",
+        "title": "شركاء",
+        "titleHighlight": "النجاح",
+        "subtitle": "فخورون بثقتهم",
+        "description": "نخدم مؤسسات رائدة في seluruh sectors sectors sectors sectors sectors في الخليج",
         "sectorLabel": "القطاع",
         "activeStatus": "نشط",
         "sectors": {
-            "software": "تطوير البرمجيات",
-            "ai": "ابتكارات الذكاء الاصطناعي",
-            "marketing": "التسويق والعلامات التجارية",
-            "digitalMarketing": "التسويق الرقمي",
-            "facility": "حلول المرافق",
-            "sports": "الرياضة والترفيه",
-            "animalHealth": "صحة الحيوان",
-            "realEstate": "العقارات"
+            "construction": "البناء والتطوير",
+            "realestate": "العقارات",
+            "sports": "الرياضة والاتحادات",
+            "ai": "الذكاء الاصطناعي",
+            "marketing": "التسويق",
+            "healthcare": "الرعاية الصحية",
+            "education": "التعليم",
+            "ecommerce": "التجارة الإلكترونية"
+        }
+    },
+    "whyContact": {
+        "tag": "لماذا_تتواصل_معنا",
+        "title": "مستعد",
+        "titleHighlight": "للنجاح؟",
+        "items": {
+            "response": "رد خلال 24 ساعة",
+            "consultation": "استشارة مجانية",
+            "quote": "عرض مخصص",
+            "support": "دعم مستمر"
         }
     }
 }

@@ -1,84 +1,198 @@
 {
     "page": {
-        "title": "Case Studies.",
-        "description": "A proven track record of delivering technical excellence for high-stakes enterprise projects across finance, logistics, and biotech.",
+        "title": "Our Work.",
+        "description": "We showcase some of our successful projects that we are proud of. Each project tells a different success story in a different sector.",
         "verticals": {
-            "tag": "Verticals",
-            "title": "Domain Specialized.",
+            "tag": "SECTORS",
+            "title": "Sector",
+            "titleHighlight": "Diversity.",
             "finance": {
-                "title": "Finance & Banking",
-                "description": "Securing high-frequency transactional data and cloud migration for global banks."
+                "title": "Construction & Development",
+                "description": "Project management platforms and portfolio展示"
             },
             "biotech": {
-                "title": "BioTech & Health",
-                "description": "Building collaborative platforms for genomic research and clinical trial data."
+                "title": "Real Estate",
+                "description": "Property portals and booking systems"
             },
             "logistics": {
-                "title": "Logistics & Supply",
-                "description": "Developing real-time IoT dashboards for end-to-end supply chain visibility."
+                "title": "Sports",
+                "description": "Federation and event websites"
+            },
+            "ai": {
+                "title": "Technology & AI",
+                "description": "Innovative platforms and smart solutions"
+            },
+            "marketing": {
+                "title": "Marketing & Digital Media",
+                "description": "Digital agency websites"
+            },
+            "interior": {
+                "title": "Interior Design",
+                "description": "Digital portfolios and quote systems"
             }
         },
-        "viewProject": "Read Full Case Study"
+        "viewProject": "View Project"
     },
     "tags": {
-        "cloud": "Cloud",
-        "security": "Security",
-        "fintech": "FinTech",
-        "web-app": "Web App",
-        "biotech": "BioTech",
-        "big-data": "Big Data",
-        "transformation": "Transformation",
-        "iot": "IoT",
-        "logistics": "Logistics"
+        "web-dev": "Web Development",
+        "web-app": "Web Application",
+        "hosting": "Hosting",
+        "wordpress": "WordPress Migration",
+        "design": "Design",
+        "ai": "Artificial Intelligence",
+        "ecommerce": "E-commerce",
+        "portal": "Portal"
     },
     "detail": {
-        "backToArchives": "BACK_TO_ARCHIVES",
-        "caseStudy": "CASE_STUDY",
-        "challenge": "Client Challenge",
-        "solution": "Implemented Solution",
-        "architecture": "Architecture",
-        "impact": "Impact Metrics",
-        "techSpecs": "TECHNICAL_SPECS.v4",
+        "backToArchives": "Back to Portfolio",
+        "caseStudy": "Case Study",
+        "challenge": "The Challenge",
+        "solution": "The Solution",
+        "architecture": "Services",
+        "impact": "Results",
+        "techSpecs": "Technologies",
         "projectShowcase": "Project Showcase",
         "techUsed": "Technologies Used",
-        "nextDeployment": "NEXT_DEPLOYMENT",
+        "nextDeployment": "Next Project",
         "metrics": {
-            "efficiency": "Efficiency Lift",
-            "uptime": "Uptime Standard",
-            "latency": "Latency Reduction"
+            "performance": "Performance Improvement",
+            "user": "Client Satisfaction",
+            "conversion": "Increased Conversions"
         },
         "tech_items": {
-            "distributed": "Distributed Cluster Node",
-            "encryption": "End-to-end Encryption (AES-256)",
-            "zeroTrust": "Zero-Trust Access Architecture",
-            "telemetry": "Real-time Telemetry Dashboard",
-            "pci": "PCI-DSS Compliance Layer"
+            "nextjs": "Next.js",
+            "react": "React",
+            "nodejs": "Node.js",
+            "mongodb": "MongoDB",
+            "tailwind": "TailwindCSS"
         }
     },
     "items": {
         "p1": {
-            "title": "Core Banking Infrastructure",
-            "description": "A complete overhaul of their high-frequency transaction environment using cloud-native architectures.",
-            "challenge": "Scaling legacy monolithic architectures to support modern high-frequency trading demands without sacrificing security or uptime.",
-            "solution": "Transition to a zero-trust, microservices-based cloud architecture with automated scaling and real-time fraud detection pipelines.",
-            "longDescription": "Stellaris Bank faced critical bottlenecks during peak trading hours. We redesigned their core infrastructure from the ground up, implementing a private cloud environment that utilizes distributed ledgers and microservices to handle over 100,000 transactions per second with sub-millisecond latency.",
-            "impact": "99% reduction in transaction latency, 100% uptime during record-breaking traffic events, and enhanced regulatory compliance visibility."
+            "title": "UAE MMA Federation - Abu Dhabi",
+            "description": "Official federation website design and development",
+            "client": "UAE MMA Federation",
+            "sector": "Sports & Federations",
+            "challenge": "Need for an official website that reflects the federation's stature and provides comprehensive information about events and matches.",
+            "solution": "We designed and built a comprehensive website including event pages, player registration system, federation news, and electronic ticketing system.",
+            "longDescription": "We are proud to develop the official website for the UAE MMA Federation in Abu Dhabi. The website provides a seamless user experience and displays all federation events professionally.",
+            "impact": "Increase in monthly visitors, improved user experience, and efficient event management system.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "Node.js",
+                "MongoDB"
+            ]
         },
         "p2": {
-            "title": "Genomic Data Visualization",
-            "description": "A custom web application allowing real-time collaboration on petabyte-scale genetic sequencing data.",
-            "challenge": "Rendering and collaborating on petabyte-scale data files over standard internet connections without data loss or significant lag.",
-            "solution": "A bespoke data-segmentation engine that streams only visible segments to the browser, combined with a WebSocket-driven collaboration layer.",
-            "longDescription": "NeoGen Bio needed a way for researchers across four continents to collaborate on massive genomic datasets. We developed a custom web application that streams data segments on-demand, allowing researchers to visualize and annotate complex DNA strands in real-time through a secure browser interface.",
-            "impact": "Researchers reduced analysis time by 40% and enabled the first global real-time collaboration on the Human Genome v4 project."
+            "title": "TECHNOVA for AI",
+            "description": "AI products and solutions showcase platform",
+            "client": "TECHNOVA",
+            "sector": "Technology & AI",
+            "challenge": "Need for a modern platform to showcase AI products and company solutions.",
+            "solution": "We built an advanced platform that displays TECHNOVA's products in an attractive way with an interactive system to showcase AI capabilities.",
+            "longDescription": "We provided TECHNOVA with a comprehensive digital solution that showcases their innovations in artificial intelligence in an innovative and professional manner.",
+            "impact": "Improved digital brand image, increased product interest, and successful digital transformation.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "TailwindCSS"
+            ]
         },
         "p3": {
-            "title": "Supply Chain Digital Twin",
-            "description": "End-to-end digital transformation of their global logistics network using IoT and real-time dashboards.",
-            "challenge": "Consolidating thousands of disparate data points from third-party shippers, internal GPS units, and environmental sensors into a single source of truth.",
-            "solution": "Development of a unified data lake integrated with a WebGL-based 3D globe visualization tool and automated alerting systems.",
-            "longDescription": "Aura Logistics operated with a fragmented view of their global fleet. We implemented an IoT-integrated digital twin platform that provides a real-time, 3D visualization of their entire supply chain, from container temperatures in the Atlantic to truck locations in Berlin.",
-            "impact": "Optimized route efficiency by 15%, reduced inventory shrinkage by 22%, and provided clients with real-time transparency for the first time."
+            "title": "Tarmeez Tech",
+            "description": "Joint software development and digital marketing projects",
+            "client": "Tarmeez Tech",
+            "sector": "Technology & Software",
+            "challenge": "Developing innovative software solutions and integrated digital marketing projects.",
+            "solution": "Strategic collaboration in developing advanced software projects and innovative digital marketing solutions.",
+            "longDescription": "We work with Tarmeez Tech in a strategic partnership to develop advanced software solutions and digital marketing solutions.",
+            "impact": "Successful ongoing partnership, multiple successful projects, and continuous innovation.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Various APIs"
+            ]
+        },
+        "p4": {
+            "title": "RAAF Construction",
+            "description": "Project management platform and portfolio showcase",
+            "client": "RAAF Construction",
+            "sector": "Construction & Development",
+            "challenge": "Need for a platform to showcase company projects and manage projects digitally.",
+            "solution": "We designed a comprehensive platform that showcases the company's projects and reflects its professionalism in construction and development.",
+            "longDescription": "We provided RAAF Construction with an integrated digital platform that showcases their construction projects and manages projects professionally.",
+            "impact": "Improved company image, ease of showcasing work to new clients.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "TailwindCSS"
+            ]
+        },
+        "p5": {
+            "title": "Ghonfa Interior Design",
+            "description": "Professional digital portfolio for interior design company",
+            "client": "Ghonfa Interior Design",
+            "sector": "Interior Design",
+            "challenge": "Need for a digital portfolio to showcase company work attractively.",
+            "solution": "We designed a professional digital portfolio that showcases interior work and designs in an attractive project display system.",
+            "longDescription": "We provided Ghonfa Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.",
+            "impact": "Increase in potential clients, improved digital image.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "TailwindCSS",
+                "Gallery Integration"
+            ]
+        },
+        "p6": {
+            "title": "Golden Moon Agency - Jeddah",
+            "description": "Digital marketing agency website",
+            "client": "Golden Moon Agency",
+            "sector": "Digital Marketing & Media",
+            "challenge": "Need for a website that reflects the agency's creativity and showcases its services.",
+            "solution": "We designed a creative website that reflects the agency's spirit and showcases its marketing services in an innovative way.",
+            "longDescription": "We provided Golden Moon Agency in Jeddah with a digital website that reflects creative creativity and attracts clients.",
+            "impact": "Improved digital image, increase in client inquiries.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "TailwindCSS",
+                "Animations"
+            ]
+        },
+        "p7": {
+            "title": "Artat Company",
+            "description": "Comprehensive management system for horse farms and livestock",
+            "client": "Artat Company",
+            "sector": "Livestock & Agriculture",
+            "challenge": "Need for an integrated system for managing horse farms and livestock.",
+            "solution": "We built a comprehensive livestock management system including horse management, veterinary records, and inventory.",
+            "longDescription": "We are proud to develop a comprehensive management system for horse farms and livestock for Artat Company. The system includes all necessary functions for efficient farm management.",
+            "impact": "Improved farm management efficiency, time and effort savings, improved tracking and statistics.",
+            "technologies": [
+                "React",
+                "Node.js",
+                "MongoDB",
+                "Dashboard Analytics"
+            ]
+        },
+        "p8": {
+            "title": "Emmar Elevators",
+            "description": "Company platform and administrative dashboard",
+            "client": "Emmar Elevators",
+            "sector": "Construction & Development",
+            "challenge": "Need for company website and administrative dashboard for operations management.",
+            "solution": "We designed a professional company website with an integrated administrative dashboard for managing projects and requests.",
+            "longDescription": "We provided Emmar Elevators with an integrated digital platform including the official website and administrative dashboard.",
+            "impact": "Improved operational efficiency, ease of project management, improved customer service.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "Node.js",
+                "Admin Dashboard"
+            ]
         }
     }
 }

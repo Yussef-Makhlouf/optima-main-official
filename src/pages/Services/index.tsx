@@ -5,6 +5,7 @@ import { SERVICES } from '../../data/content';
 import ClientLogos from '../../components/common/ClientLogos';
 import { CLIENTS } from '../../data/content-marquee';
 import BrandDecoration from '../../components/common/BrandDecoration';
+import InteractiveOrbs from '../../components/common/InteractiveOrbs';
 
 
 const Services: React.FC = () => {
@@ -54,7 +55,11 @@ const Services: React.FC = () => {
             <ClientLogos clients={CLIENTS} title={t('services:page.clientsTitle')} />
 
             {/* Engagement Models */}
-            <section className="py-40 mt-40 bg-slate-50 dark:bg-surface/20 border-t border-slate-200 dark:border-white/5 transition-colors">
+            <section className="py-40 mt-40 bg-slate-50 dark:bg-surface/20 border-t border-slate-200 dark:border-white/5 transition-colors relative overflow-hidden">
+                {/* 3D Orbs Decoration */}
+                <div className="absolute -left-40 top-1/2 -translate-y-1/2 w-96 h-96 opacity-30 pointer-events-none z-0 hidden lg:block">
+                    <InteractiveOrbs />
+                </div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="mb-24 flex flex-col lg:flex-row justify-between items-end gap-8">
                         <h3 className="text-5xl font-black text-slate-900 dark:text-white tracking-tighter uppercase">{t('services:page.engagementTitle')}</h3>

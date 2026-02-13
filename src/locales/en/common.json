@@ -8,39 +8,39 @@
         "contact": "Contact"
     },
     "header": {
-        "logo": "OPTIMA",
-        "partnership": "PARTNERSHIP"
+        "logo": "OPYIMA",
+        "partnership": "Strategic Partnership"
     },
     "footer": {
-        "description": "Engineering resilient digital infrastructure for the world's most ambitious enterprises.",
-        "tagline": "We are providers of digital solutions in GCC and Egypt",
+        "description": "Your trusted technical partner for building advanced digital presence in the GCC market.",
+        "tagline": "Specializing in web development for Saudi, UAE, and Kuwait markets",
         "social": "Follow Us",
         "servicesTitle": "Services",
         "companyTitle": "Company",
         "connectTitle": "Connect",
-        "copyright": "© {{year}} OPTIMA Solutions. All rights reserved.",
-        "secureTransmission": "SECURE_DATA_TRANSFER_PROTOCOL_ACTIVE",
+        "copyright": "© {{year}} OPYIMA. All rights reserved.",
+        "secureTransmission": "SECURE_DATA_TRANSFER",
         "email": "Email",
         "phone": "Phone",
-        "global": "GLOBAL",
+        "global": "GULF",
         "office": {
-            "hq": "TX-HQ: 01_Enterprise_Plaza",
-            "london": "LDN: 50_Innovation_Way",
-            "singapore": "SG: 88_Marina_Blvd"
+            "hq": "Saudi Arabia: Riyadh",
+            "london": "UAE: Abu Dhabi",
+            "singapore": "Kuwait: Kuwait City"
         },
         "contact": {
-            "partnerships": "partnerships@optima.solutions"
+            "partnerships": "hello@yussefdevstudio.com"
         },
         "legal": {
-            "privacy": "[ PRIVACY ]",
-            "terms": "[ TERMS ]"
+            "privacy": "Privacy",
+            "terms": "Terms"
         },
         "newsletter": {
-            "title": "INTEL_FEED",
-            "description": "Join 12,000+ engineers receiving our monthly technical updates.",
-            "placeholder": "ENTER_COORDINATES...",
-            "button": "TRANSMIT",
-            "status": "TELEMETRY_FEED :: ACTIVE"
+            "title": "Newsletter",
+            "description": "Join our mailing list for the latest tech news and offers.",
+            "placeholder": "Enter your email...",
+            "button": "Subscribe",
+            "status": "ACTIVE"
         }
     },
     "buttons": {
@@ -54,13 +54,30 @@
         "inquire": "Inquire"
     },
     "status": {
-        "stable": "STABLE",
+        "stable": "ACTIVE",
         "optimizing": "OPTIMIZING",
         "online": "ONLINE",
         "verified": "VERIFIED"
     },
     "techStack": {
-        "tag": "TECH_STACK",
-        "title": "Powered By Modern Technologies"
+        "tag": "OUR TECH",
+        "title": "Built With Modern Technologies"
+    },
+    "accessibility": {
+        "toggleTheme": "Toggle Theme",
+        "toggleMenu": "Toggle Menu",
+        "languageSwitcher": "Switch Language",
+        "skipToContent": "Skip to Content",
+        "previous": "Previous",
+        "next": "Next",
+        "close": "Close",
+        "menu": "Menu",
+        "search": "Search",
+        "loading": "Loading..."
+    },
+    "meta": {
+        "title": "OPYIMA - Advanced Web Development for GCC Market",
+        "description": "Your trusted technical partner for building advanced digital presence. Specializing in web development and web applications using Next.js and React.",
+        "keywords": "web development, Next.js, React, web applications, hosting, Saudi Arabia, UAE, Kuwait"
     }
 }

@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next';
 import TeamGrid from '../../components/about/TeamGrid';
 import SecureHandshakeCTA from '../../components/about/SecureHandshakeCTA';
 import BrandDecoration from '../../components/common/BrandDecoration';
+import InteractiveGrid from '../../components/common/InteractiveGrid';
 
 
 const About: React.FC = () => {
@@ -55,7 +56,11 @@ const About: React.FC = () => {
             </section>
 
             {/* Industrial Numbers Section */}
-            <section className="py-40 border-b border-slate-200 dark:border-white/5 transition-colors">
+            <section className="py-40 border-b border-slate-200 dark:border-white/5 transition-colors relative overflow-hidden">
+                {/* 3D Grid Decoration */}
+                <div className="absolute -right-40 top-1/2 -translate-y-1/2 w-96 h-96 opacity-30 pointer-events-none z-0 hidden lg:block">
+                    <InteractiveGrid />
+                </div>
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
                         <div>
