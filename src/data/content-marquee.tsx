@@ -2,14 +2,19 @@ import { Icons } from './content';
 
 // Clients / Companies we worked with - Real GCC Market Clients
 export const CLIENTS = [
-    { name: 'UAE MMA Federation', logo: 'https://cdn.simpleicons.org/ufc/FF0000', industry: 'Sports' },
-    { name: 'TECHNOVA', logo: 'https://cdn.simpleicons.org/artificialintelligence/145D90', industry: 'AI' },
-    { name: 'Tarmeez Tech', logo: 'https://cdn.simpleicons.org/tech/56A5DD', industry: 'Technology' },
-    { name: 'RAAF Construction', logo: 'https://cdn.simpleicons.org/construction/F97316', industry: 'Construction' },
-    { name: 'Ghonfa Interior', logo: 'https://cdn.simpleicons.org/interiordesign/EC4899', industry: 'Interior Design' },
-    { name: 'Golden Moon Agency', logo: 'https://cdn.simpleicons.org/marketing/EAB308', industry: 'Marketing' },
-    { name: 'Artat Company', logo: 'https://cdn.simpleicons.org/agriculture/22C55E', industry: 'Agriculture' },
-    { name: 'Emmar Elevators', logo: 'https://cdn.simpleicons.org/elevator/6366F1', industry: 'Manufacturing' }
+    { name: 'UAE MMA Federation', logo: '/partners/uaemmaf.svg', industry: 'Sports' },
+    { name: 'TECHNOVA', logo: '/partners/technova.svg', industry: 'AI' },
+    { name: 'Tarmeez Tech', logo: '/partners/tarmezmain.svg', industry: 'Technology' },
+    { name: 'RAAF Construction', logo: '/partners/raf.png', industry: 'Construction' },
+    { name: 'Ghanpha Interior', logo: '/partners/mainlogo.png', industry: 'Interior Design' },
+    { name: 'Golden Moon Agency', logo: '/partners/golden-moon.webp', industry: 'Marketing' },
+    { name: 'Artat Company', logo: '/partners/artat.png', industry: 'Agriculture' },
+    { name: 'Emmar Elevators', logo: '/partners/emmar-logo.png', industry: 'Manufacturing' },
+    { name: 'MACC', logo: '/partners/macc.svg', industry: 'Construction' },
+    { name: 'Tasis Al Binaa', logo: '/partners/tasis-albinaa.svg', industry: 'Construction' },
+    { name: 'Logixi', logo: '/partners/logixi.png', industry: 'Logistics' },
+    { name: 'Fifth Floor', logo: '/partners/fifith-floor-light.png', industry: 'Consulting' },
+    { name: 'White Dream', logo: '/partners/white-dream-logo.webp', industry: 'Events' }
 ];
 
 // Technologies used across projects - Core Tech Stack
