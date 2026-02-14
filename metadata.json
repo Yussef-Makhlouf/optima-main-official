@@ -1,5 +1,33 @@
 {
   "name": "OPTIMA Solutions",
-  "description": "A high-performance corporate enterprise website for hosting, web applications, and digital transformation services, featuring a dark-themed, ultra-professional UI.",
-  "requestFramePermissions": []
+  "description": "OPTIMA is a premier digital agency specializing in web development, hosting solutions, web applications, and digital transformation services across the GCC region. Expert Next.js, React, and Node.js development.",
+  "keywords": "web development, hosting, web applications, digital transformation, Next.js, React, Node.js, Egypt, UAE, GCC, digital agency, website development",
+  "author": "OPTIMA Solutions",
+  "license": "MIT",
+  "version": "1.0.0",
+  "siteUrl": "https://optima-digital.com",
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/optima-solutions",
+    "twitter": "https://twitter.com/optima_solutions"
+  },
+  "contact": {
+    "email": "info@optima-digital.com",
+    "phone": "+20-10-1234-5678"
+  },
+  "services": [
+    "Web Development",
+    "Custom Web Applications",
+    "Managed Hosting",
+    "Technical Support",
+    "WordPress Migration",
+    "Domain Management"
+  ],
+  "regions": [
+    "Egypt",
+    "UAE",
+    "Saudi Arabia",
+    "Qatar",
+    "Kuwait",
+    "Bahrain"
+  ]
 }

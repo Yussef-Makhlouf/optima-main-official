@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                                 <Link
                                     key={item.path}
                                     to={item.path}
-                                    className={`px-5 py-2 rounded-full text-[11px] uppercase tracking-widest font-bold transition-all duration-300 ${location.pathname === item.path
+                                    className={`px-5 py-2 rounded-full text-[13px] uppercase tracking-widest font-bold transition-all duration-300  ${location.pathname === item.path
                                         ? 'bg-primary text-white shadow-md shadow-primary/20'
                                         : 'text-slate-500 dark:text-gray-400 hover:text-primary dark:hover:text-white hover:bg-slate-100 dark:hover:bg-white/5'
                                         }`}

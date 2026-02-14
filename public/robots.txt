@@ -1,0 +1,40 @@
+# Robots.txt for OPTIMA Solutions
+# https://optima-digital.com/robots.txt
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /*.json$
+Disallow: /*?utm_*
+Disallow: /*&utm_*
+
+# Googlebot specific rules
+User-agent: Googlebot
+Allow: /*.js$
+Allow: /*.css$
+Allow: /assets/
+Disallow: /api/
+Disallow: /*.json$
+
+# Googlebot Image
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /assets/
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://optima-digital.com/sitemap.xml
+
+# Crawl-delay (use sparingly)
+Crawl-delay: 1
