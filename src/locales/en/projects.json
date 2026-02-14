@@ -57,14 +57,22 @@
         "metrics": {
             "performance": "Performance Improvement",
             "user": "Client Satisfaction",
-            "conversion": "Increased Conversions"
+            "conversion": "Increased Conversions",
+            "efficiency": "Efficiency Gain",
+            "uptime": "Uptime",
+            "latency": "Latency Reduction"
         },
         "tech_items": {
             "nextjs": "Next.js",
             "react": "React",
             "nodejs": "Node.js",
             "mongodb": "MongoDB",
-            "tailwind": "TailwindCSS"
+            "tailwind": "TailwindCSS",
+            "distributed": "Distributed Architecture",
+            "encryption": "End-to-End Encryption",
+            "zeroTrust": "Zero Trust Security",
+            "telemetry": "Real-Time Telemetry",
+            "pci": "PCI DSS Compliant"
         }
     },
     "items": {
@@ -131,13 +139,13 @@
             ]
         },
         "p5": {
-            "title": "Ghonfa Interior Design",
+            "title": "Ghanpha Interior Design",
             "description": "Professional digital portfolio for interior design company",
-            "client": "Ghonfa Interior Design",
+            "client": "Ghanpha Interior Design",
             "sector": "Interior Design",
             "challenge": "Need for a digital portfolio to showcase company work attractively.",
             "solution": "We designed a professional digital portfolio that showcases interior work and designs in an attractive project display system.",
-            "longDescription": "We provided Ghonfa Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.",
+            "longDescription": "We provided Ghanpha Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.",
             "impact": "Increase in potential clients, improved digital image.",
             "technologies": [
                 "Next.js",

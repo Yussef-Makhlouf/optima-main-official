@@ -7,6 +7,24 @@
         "engagementTitle": "Engagement Models",
         "engagementSubtitle": "Flexible collaboration to match your project needs",
         "viewDocs": "View Details",
+        "initStatus": "SYSTEM_STATUS",
+        "metricsTag": "PERFORMANCE_METRICS",
+        "metricsTitle": "Service Performance",
+        "stats": {
+            "uptime": "Uptime Guarantee",
+            "nodes": "Global Nodes",
+            "support": "24/7 Support",
+            "secure": "Security Certified"
+        },
+        "engageTitle1": "Ready to",
+        "engageTitle2": "Get Started?",
+        "engageSubtitle": "Configure your custom solution today",
+        "configure": "Start Project",
+        "processTag": "DEPLOYMENT_PROCESS",
+        "processTitle": "How We Work",
+        "faqTitle": "Common Questions",
+        "projectsTag": "RELATED_DEPLOYMENTS",
+        "projectsTitle": "Related Projects",
         "engagementCards": {
             "audit": {
                 "name": "Assessment & Consulting",

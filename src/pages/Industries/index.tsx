@@ -68,7 +68,7 @@ const STATS = [
 
 // Related projects for each industry
 const INDUSTRY_PROJECTS: Record<string, string[]> = {
-    construction: ['raf-construction', 'ghonfa-interior'],
+    construction: ['raf-construction', 'Ghanpha-interior'],
     sports: ['uae-mma-federation'],
     ai: ['technova-ai'],
     marketing: ['golden-moon-agency'],

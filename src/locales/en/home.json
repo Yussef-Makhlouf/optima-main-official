@@ -219,6 +219,10 @@
             }
         ]
     },
+    "signalHub": {
+        "tag": "GCC_NETWORK",
+        "title": "Regional Network Coverage"
+    },
     "clients": {
         "tag": "OUR CLIENTS",
         "title": "Success",
@@ -228,7 +232,7 @@
             "TECHNOVA for AI",
             "Tarmeez Tech",
             "raf Construction",
-            "Ghonfa Interior Design",
+            "Ghanpha Interior Design",
             "Golden Moon Agency",
             "Artat Company",
             "Emmar Elevators"

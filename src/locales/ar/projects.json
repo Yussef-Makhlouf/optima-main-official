@@ -57,14 +57,22 @@
         "metrics": {
             "performance": "تحسين الأداء",
             "user": "رضا العملاء",
-            "conversion": "زيادة التحويلات"
+            "conversion": "زيادة التحويلات",
+            "efficiency": "زيادة الكفاءة",
+            "uptime": "وقت التشغيل",
+            "latency": "تقليل زمن الاستجابة"
         },
         "tech_items": {
             "nextjs": "Next.js",
             "react": "React",
             "nodejs": "Node.js",
             "mongodb": "MongoDB",
-            "tailwind": "TailwindCSS"
+            "tailwind": "TailwindCSS",
+            "distributed": "بنية موزعة",
+            "encryption": "تشفير من البداية للنهاية",
+            "zeroTrust": "أمان Zero Trust",
+            "telemetry": "استقبال في الوقت الفعلي",
+            "pci": "متوافق مع PCI DSS"
         }
     },
     "items": {
@@ -131,13 +139,13 @@
             ]
         },
         "p5": {
-            "title": "Ghonfa Interior Design",
+            "title": "Ghanpha Interior Design",
             "description": "محفظة رقمية احترافية لشركة الديكور",
-            "client": "Ghonfa Interior Design",
+            "client": "Ghanpha Interior Design",
             "sector": "الديكور والتشطيبات",
             "challenge": "الحاجة إلى محفظة رقمية تعرض أعمال الشركة بطريقة جذابة.",
             "solution": "صممنا محفظة رقمية احترافية تعرض أعمال الديكور والتصاميم بشكل جذاب مع نظام عرض مشاريع.",
-            "longDescription": "قدمنا لشركة Ghonfa Interior Design محفظة رقمية مبتكرة تعرض تصاميمها بطريقة فنية واحترافية.",
+            "longDescription": "قدمنا لشركة Ghanpha Interior Design محفظة رقمية مبتكرة تعرض تصاميمها بطريقة فنية واحترافية.",
             "impact": "زيادة في العملاء المحتملين، تحسن في الصورة الرقمية.",
             "technologies": [
                 "Next.js",

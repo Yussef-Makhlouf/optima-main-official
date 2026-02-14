@@ -162,7 +162,7 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
         faqs: ["q1", "q2", "q3"],
-        relatedProjects: ['artat-company', 'technova']
+        relatedProjects: ['technova-ai', 'artat-company']
     },
     {
         id: 'wordpress',
@@ -178,7 +178,7 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Check /> }
         ],
         faqs: ["q1", "q2", "q3", "q4"],
-        relatedProjects: ['raf-construction', 'ghonfa-interior']
+        relatedProjects: ['Ghanpha-interior', 'raf-construction']
     },
     {
         id: 'hosting',
@@ -194,7 +194,7 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Scalability /> }
         ],
         faqs: ["q1", "q2", "q3"],
-        relatedProjects: ['uae-mma-federation', 'emmar-elevators']
+        relatedProjects: ['emmar-elevators', 'uae-mma-federation']
     },
     {
         id: 'domain',
@@ -226,7 +226,7 @@ export const SERVICES: any[] = [
             { number: "04", key: "step4", icon: <Icons.Scalability /> }
         ],
         faqs: ["q1", "q2"],
-        relatedProjects: ['all-projects']
+        relatedProjects: ['tarmeez-tech', 'emmar-elevators']
     }
 ];
 
@@ -490,11 +490,11 @@ export const PROJECTS: ProjectInfo[] = [
     },
     {
         id: 'p5',
-        slug: 'ghonfa-interior',
-        client: 'Ghonfa Interior Design',
+        slug: 'Ghanpha-interior',
+        client: 'Ghanpha Interior Design',
         title: 'Digital Portfolio',
         description: 'Professional digital portfolio for interior design.',
-        longDescription: 'We provided Ghonfa Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.',
+        longDescription: 'We provided Ghanpha Interior Design with an innovative digital portfolio that showcases their designs in an artistic and professional manner.',
         challenge: 'Need for a digital portfolio to showcase company work attractively.',
         solution: 'We designed a professional digital portfolio with gallery integration.',
         impact: 'Increase in potential clients, improved digital image.',

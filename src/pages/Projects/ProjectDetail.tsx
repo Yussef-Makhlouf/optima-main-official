@@ -96,8 +96,8 @@ const ProjectDetail: React.FC = () => {
 
                             {/* Impact Metrics */}
                             <div>
-                                <h2 className="text-[10px] md:text-xs font-black text-primary uppercase tracking-[0.4em] mb-10 md:mb-12 flex items-center">
-                                    <span className="w-6 md:w-8 h-[1px] bg-primary mr-4"></span> 03 / {t('projects:detail.impact')}
+                                <h2 className=" md:text-xs font-black text-primary uppercase tracking-[0.4em] mb-10 md:mb-12 flex items-center ">
+                                    <span className="w-6 md:w-8 h-[1px] bg-primary mr-4 font-mono"></span> 03 / {t('projects:detail.impact')}
                                 </h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-slate-200 dark:bg-white/5 border border-slate-200 dark:border-white/5">
                                     <MetricBox label={t('projects:detail.metrics.efficiency')} value="99.9%" />
@@ -111,7 +111,7 @@ const ProjectDetail: React.FC = () => {
                         <div className="lg:col-span-4">
                             <div className="lg:sticky lg:top-40 space-y-8 md:space-y-12">
                                 <div className="p-8 md:p-10 bg-slate-900 dark:bg-black text-white space-y-8 hud-bracket hud-bracket-tl hud-bracket-br">
-                                    <h5 className="text-[10px] font-mono font-bold text-secondary uppercase tracking-[0.3em]">{t('projects:detail.techSpecs')}</h5>
+                                    <h5 className=" font-mono font-bold text-secondary uppercase tracking-[0.3em]">{t('projects:detail.techSpecs')}</h5>
                                     <ul className="space-y-6">
                                         {[
                                             t('projects:detail.tech_items.distributed'),
@@ -121,8 +121,8 @@ const ProjectDetail: React.FC = () => {
                                             t('projects:detail.tech_items.pci')
                                         ].map(item => (
                                             <li key={item} className="flex items-start space-x-4">
-                                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0"></div>
-                                                <span className="text-[11px] font-bold uppercase tracking-tight">{item}</span>
+                                                <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1.5 shrink-0 m-2"></div>
+                                                <span className=" font-bold uppercase tracking-tight">{item}</span>
                                             </li>
                                         ))}
                                     </ul>

@@ -218,6 +218,10 @@
             }
         ]
     },
+    "signalHub": {
+        "tag": "الشبكة_الخليجية",
+        "title": "تغطية الشبكة الإقليمية"
+    },
     "clients": {
         "tag": "عملاؤنا",
         "title": "شـــركــاء",
@@ -227,7 +231,7 @@
             "TECHNOVA للذكاء الاصطناعي",
             "Tarmeez Tech",
             "raf Construction",
-            "Ghonfa Interior Design",
+            "Ghanpha Interior Design",
             "Golden Moon Agency",
             "Artat Company",
             "مصاعد إعمار"
