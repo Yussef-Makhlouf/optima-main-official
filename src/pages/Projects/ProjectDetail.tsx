@@ -97,7 +97,7 @@ const ProjectDetail: React.FC = () => {
                             {/* Impact Metrics */}
                             <div>
                                 <h2 className=" md:text-xs font-black text-primary uppercase tracking-[0.4em] mb-10 md:mb-12 flex items-center ">
-                                    <span className="w-6 md:w-8 h-[1px] bg-primary mr-4 font-mono"></span> 03 / {t('projects:detail.impact')}
+                                    <span className="w-6 md:w-8 h-[1px] bg-primary mr-4 "></span> 03 / {t('projects:detail.impact')}
                                 </h2>
                                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-px bg-slate-200 dark:bg-white/5 border border-slate-200 dark:border-white/5">
                                     <MetricBox label={t('projects:detail.metrics.efficiency')} value="99.9%" />
