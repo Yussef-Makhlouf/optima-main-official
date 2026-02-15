@@ -72,7 +72,13 @@
         "consoleCleared": "> SCREEN_CLEARED",
         "error": "ERROR: COMMAND '{{cmd}}' NOT RECOGNIZED",
         "guest": "guest@OPTIMA:~$",
-        "placeholder": "ENTER_COMMAND..."
+        "placeholder": "ENTER_COMMAND...",
+        "cmdMatrix": "Initializing Matrix Protocol...",
+        "cmdSudo": "Nice try! But you don't have enough coffee for that command.",
+        "cmdHack": "Bypassing firewall... ERROR: Access Denied.",
+        "cmdWhoami": "You are a digital explorer seeking excellence.",
+        "cmdAudit": "Analyzing site performance... Result: 99/100 Digital Excellence.",
+        "cmdStats": "Stats: 50+ projects, 100% happy clients, 12 tech experts."
     },
     "faq": {
         "tag": "FAQ",

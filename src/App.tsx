@@ -18,6 +18,9 @@ import ProjectDetail from "./pages/Projects/ProjectDetail";
 import Contact from "./pages/Contact";
 import Industries from "./pages/Industries";
 import ScrollToTopButton from "./components/common/ScrollToTop";
+import CommandPalette from "./components/common/CommandPalette";
+import MagicEasterEgg from "./components/common/MagicEasterEgg";
+import LiquidCursor from "./components/common/LiquidCursor";
 
 // Helper component to handle route change scrolling
 const ScrollToTop = () => {
@@ -58,6 +61,9 @@ const App: React.FC = () => {
         <Footer />
         <ScrollToTopButton />
       </div>
+      <CommandPalette />
+      <MagicEasterEgg />
+      <LiquidCursor />
     </Router>
   );
 };

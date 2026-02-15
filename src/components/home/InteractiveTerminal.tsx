@@ -96,6 +96,37 @@ const InteractiveTerminal: React.FC = () => {
       case "clear":
         setOutput([t("home:terminal.consoleCleared")]);
         break;
+      case "matrix":
+        setOutput((prev) => [
+          ...prev,
+          response,
+          t("home:terminal.cmdMatrix"),
+          "Wake up, Neo...",
+          "The matrix has you...",
+        ]);
+        window.dispatchEvent(new CustomEvent("trigger-magic"));
+        break;
+      case "sudo":
+        setOutput((prev) => [...prev, response, t("home:terminal.cmdSudo")]);
+        break;
+      case "hack":
+        setOutput((prev) => [
+          ...prev,
+          response,
+          "Target: Mainframe",
+          "Progress: [████████░░] 80%",
+          t("home:terminal.cmdHack"),
+        ]);
+        break;
+      case "whoami":
+        setOutput((prev) => [...prev, response, t("home:terminal.cmdWhoami")]);
+        break;
+      case "audit":
+        setOutput((prev) => [...prev, response, t("home:terminal.cmdAudit")]);
+        break;
+      case "stats":
+        setOutput((prev) => [...prev, response, t("home:terminal.cmdStats")]);
+        break;
       default:
         setOutput((prev) => [
           ...prev,

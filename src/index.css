@@ -12,6 +12,10 @@ body {
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+body.hide-cursor, body.hide-cursor * {
+    cursor: none !important;
+}
+
 h1,
 h2,
 h3,
