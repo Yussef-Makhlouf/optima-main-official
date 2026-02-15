@@ -100,6 +100,7 @@ body:not(.dark) {
     left: 0;
     border-top: 1px solid;
     border-left: 1px solid;
+    width: 20px;
 }
 
 .hud-bracket-tr::after {
@@ -107,6 +108,7 @@ body:not(.dark) {
     right: 0;
     border-top: 1px solid;
     border-right: 1px solid;
+    width: 20px;
 }
 
 .hud-bracket-bl::before {
@@ -114,6 +116,7 @@ body:not(.dark) {
     left: 0;
     border-bottom: 1px solid;
     border-left: 1px solid;
+    width: 20px;
 }
 
 .hud-bracket-br::after {
@@ -121,6 +124,7 @@ body:not(.dark) {
     right: 0;
     border-bottom: 1px solid;
     border-right: 1px solid;
+    width: 20px;
 }
 
 /* Glitch Animation */
@@ -350,4 +354,41 @@ body:not(.dark) {
 
 .animate-transmission-in {
     animation: transmissionIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+/* CUSTOM SCROLLBAR - DYNAMIC THEME */
+:root {
+    /* Light Mode Defaults */
+    --scroll-track: #F1F5F9;
+    --scroll-thumb: #94A3B8;
+}
+
+.dark {
+    /* Dark Mode Overrides */
+    --scroll-track: #09090b;
+    --scroll-thumb: #4b5563;
+}
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 14px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scroll-track);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scroll-thumb);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #56A5DD; /* Brand color on hover */
+}
+
+/* Firefox Scrollbar Support */
+* {
+    scrollbar-width: auto;
+    scrollbar-color: var(--scroll-thumb) var(--scroll-track);
 }
