@@ -41,7 +41,7 @@
         "members": {
             "t1": {
                 "name": "Yussef Makhlouf",
-                 "role": "Project Manager",
+                "role": "Project Manager",
                 "bio": "Technical project management expert ensuring on-time delivery. Ensures client satisfaction and quality execution."
             },
             "t2": {
@@ -51,9 +51,8 @@
             },
             "t3": {
                 "name": "Mohamed Hosny",
-                 "role": "Founder & CTO",
+                "role": "Founder & CTO",
                 "bio": "Web development expert with years of experience building digital platforms for the GCC market. Specialized in Next.js and React."
-              
             },
             "t4": {
                 "name": "Mahmoud Taha",
@@ -135,7 +134,7 @@
         "description": "Our team combines years of experience with cutting-edge technologies to deliver exceptional digital solutions that drive business growth."
     },
     "clients": {
-        "tag": "CLIENTS",
+        "tag": "CLIENT_NETWORK",
         "title": "Trusted By Industry Leaders"
     },
     "cta": {
