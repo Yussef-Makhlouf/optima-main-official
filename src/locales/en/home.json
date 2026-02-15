@@ -55,7 +55,8 @@
     "cta": {
         "title": "Transform",
         "titleHighlight": "Your Digital Presence.",
-        "description": "Move towards an advanced digital platform that sets you apart from competitors.",
+        "subtitle": "Move towards an advanced digital platform that sets you apart from competitors.",
+        "tag": "START_DIGITAL_TRANSFORMATION",
         "status": "READY_TO_CONNECT",
         "initiate": "Start Now",
         "protocol": "Contact"

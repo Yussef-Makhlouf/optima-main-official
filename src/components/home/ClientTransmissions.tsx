@@ -67,7 +67,7 @@ const ClientTransmissions: React.FC = () => {
       }
 
       iteration += 1; // Speed of decoding
-    }, 15);
+    }, 50);
 
     return () => clearInterval(interval);
   }, [activeIndex, currentTestimonial, localizedText, i18n.language]); // Added i18n.language usage

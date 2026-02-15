@@ -22,27 +22,7 @@ const Home: React.FC = () => {
     "services",
     "projects",
   ]);
-  const [scrollY, setScrollY] = useState(0);
   const [activeStep, setActiveStep] = useState(0);
-  const [systemStatus, setSystemStatus] = useState(t("common:status.stable"));
-
-  useEffect(() => {
-    const handleScroll = () => setScrollY(window.scrollY);
-    window.addEventListener("scroll", handleScroll);
-
-    const interval = setInterval(() => {
-      setSystemStatus(
-        Math.random() > 0.9
-          ? t("common:status.optimizing")
-          : t("common:status.stable"),
-      );
-    }, 5000);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearInterval(interval);
-    };
-  }, [t]);
 
   return (
     <div className="relative">
@@ -61,29 +41,7 @@ const Home: React.FC = () => {
         </div>
 
         {/* Abstract HUD Decorative Elements - Hidden on small mobile */}
-        <div
-          className={`absolute top-40 ${i18n.language === "ar" ? "left-10" : "right-10"} w-64 text-[10px] font-mono opacity-40 hidden xl:block z-10`}
-        >
-          <div className="border-t border-secondary pt-4 mb-4">
-            <div className="flex justify-between dark:text-white">
-              <span>{t("home:hero.xCoord")}</span>
-              <span>{Math.floor(scrollY)}</span>
-            </div>
-            <div className="flex justify-between dark:text-white">
-              <span>{t("home:hero.yCoord")}</span>
-              <span>{Math.floor(Math.random() * 100)}</span>
-            </div>
-            <div className="flex justify-between dark:text-white">
-              <span>{t("home:hero.sysStatus")}</span>
-              <span className="text-cyber font-bold">{systemStatus}</span>
-            </div>
-          </div>
-          <div className="h-20 bg-primary/5 border border-primary/20 p-2 overflow-hidden">
-            <div className="ticker-text whitespace-nowrap text-secondary">
-              {t("home:hero.ticker")}
-            </div>
-          </div>
-        </div>
+        <HeroHud />
 
         <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
           <div className="grid grid-cols-12 gap-6">
@@ -412,6 +370,56 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+    </div>
+  );
+};
+
+const HeroHud: React.FC = () => {
+  const { t, i18n } = useTranslation(["home", "common"]);
+  const [scrollY, setScrollY] = useState(0);
+  const [systemStatus, setSystemStatus] = useState(t("common:status.stable"));
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+
+    const interval = setInterval(() => {
+      setSystemStatus(
+        Math.random() > 0.9
+          ? t("common:status.optimizing")
+          : t("common:status.stable"),
+      );
+    }, 5000);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearInterval(interval);
+    };
+  }, [t]);
+
+  return (
+    <div
+      className={`absolute top-40 ${i18n.language === "ar" ? "left-10" : "right-10"} w-64 text-[10px] font-mono opacity-40 hidden xl:block z-10`}
+    >
+      <div className="border-t border-secondary pt-4 mb-4">
+        <div className="flex justify-between dark:text-white">
+          <span>{t("home:hero.xCoord")}</span>
+          <span>{Math.floor(scrollY)}</span>
+        </div>
+        <div className="flex justify-between dark:text-white">
+          <span>{t("home:hero.yCoord")}</span>
+          <span>{Math.floor(Math.random() * 100)}</span>
+        </div>
+        <div className="flex justify-between dark:text-white">
+          <span>{t("home:hero.sysStatus")}</span>
+          <span className="text-cyber font-bold">{systemStatus}</span>
+        </div>
+      </div>
+      <div className="h-20 bg-primary/5 border border-primary/20 p-2 overflow-hidden">
+        <div className="ticker-text whitespace-nowrap text-secondary">
+          {t("home:hero.ticker")}
+        </div>
+      </div>
     </div>
   );
 };
