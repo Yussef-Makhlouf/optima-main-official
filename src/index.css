@@ -329,10 +329,25 @@ body:not(.dark) {
     animation: marquee 25s linear infinite;
 }
 
-.pause-animation {
-    animation-play-state: running;
-}
 
 .pause-animation:hover {
     animation-play-state: paused;
+}
+
+/* Transmission Text Animation */
+@keyframes transmissionIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.9);
+        filter: blur(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+}
+
+.animate-transmission-in {
+    animation: transmissionIn 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
 }
