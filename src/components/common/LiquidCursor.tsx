@@ -5,6 +5,9 @@ const LiquidCursor: React.FC = () => {
   const [isPressed, setIsPressed] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(
+    document.documentElement.classList.contains("dark"),
+  );
 
   const cursorRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
@@ -26,8 +29,21 @@ const LiquidCursor: React.FC = () => {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // Theme observer
+  useEffect(() => {
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          setIsDarkMode(document.documentElement.classList.contains("dark"));
+        }
+      });
+    });
+    observer.observe(document.documentElement, { attributes: true });
+    return () => observer.disconnect();
+  }, []);
+
   const animate = () => {
-    // 1. Core Dot (Immediate)
+    // 1. Core Cursor (Immediate)
     if (cursorRef.current) {
       cursorRef.current.style.transform = `translate3d(${mouse.current.x}px, ${mouse.current.y}px, 0)`;
     }
@@ -50,8 +66,9 @@ const LiquidCursor: React.FC = () => {
       if (ctx) {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        const isDarkMode = document.documentElement.classList.contains("dark");
-        const primaryColor = isDarkMode ? "#00FFCC" : "#145D90";
+        // Update primary color based on DOM to avoid stale closure
+        const isDark = document.documentElement.classList.contains("dark");
+        const primaryColor = isDark ? "#00FFCC" : "#145D90";
 
         const dx = mouse.current.x - smoothMouse.current.x;
         const dy = mouse.current.y - smoothMouse.current.y;
@@ -145,7 +162,6 @@ const LiquidCursor: React.FC = () => {
 
   if (isMobile) return null;
 
-  const isDarkMode = document.documentElement.classList.contains("dark");
   const primaryColor = isDarkMode ? "#00FFCC" : "#145D90";
 
   // Size Logic: Shrink on interaction
@@ -169,34 +185,37 @@ const LiquidCursor: React.FC = () => {
           marginLeft: -(ringSize / 2),
           marginTop: -(ringSize / 2),
           borderRadius: borderRadius,
-          borderColor: primaryColor,
-          backgroundColor: isHovering
-            ? isDarkMode
-              ? "rgba(0, 255, 204, 0.15)"
-              : "rgba(20, 93, 144, 0.1)"
-            : "transparent",
-          boxShadow: isHovering
-            ? `0 0 15px ${isDarkMode ? "rgba(0,255,204,0.3)" : "rgba(20,93,144,0.15)"}`
-            : "none",
-          willChange: "transform, border-radius, width, height",
+          borderColor: isHovering ? "transparent" : primaryColor,
+          backgroundColor: "transparent",
+          boxShadow: "none",
+          opacity: isHovering ? 0 : 1,
+          willChange: "transform, border-radius, width, height, opacity",
         }}
       />
       <div
         ref={cursorRef}
-        className="fixed top-0 left-0 flex items-center justify-center transition-opacity duration-200"
+        className="fixed top-0 left-0 z-50 pointer-events-none"
         style={{
-          width: 0,
-          height: 0,
-          opacity: isHovering ? 0 : 1,
+          width: "50px",
+          height: "50px",
+          marginTop: "-25px",
+          marginLeft: "-25px",
           willChange: "transform",
         }}
       >
-        <div
-          className="w-2 h-2 rounded-full transition-transform duration-200"
+        <img
+          key={isDarkMode ? "dark" : "light"}
+          src={
+            isDarkMode
+              ? "/logos/optima-cursor-dark.svg"
+              : "/logos/optima-cursor-light.svg"
+          }
+          alt="Optima Cursor"
+          className="w-full h-full object-contain transition-transform duration-300"
           style={{
-            backgroundColor: primaryColor,
-            boxShadow: `0 0 10px ${primaryColor}`,
-            transform: `scale(${isPressed ? 0.6 : 1})`,
+            transform: `scale(${isPressed ? 0.7 : isHovering ? 1.15 : 1}) rotate(${isHovering ? "45deg" : "0deg"})`,
+            filter: "drop-shadow(0 0 4px rgba(0,0,0,0.2))",
+            opacity: isHovering || isPressed ? 0.7 : 1,
           }}
         />
       </div>
