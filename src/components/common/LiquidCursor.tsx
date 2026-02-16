@@ -101,7 +101,7 @@ const LiquidCursor: React.FC = () => {
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.size * p.life, 0, Math.PI * 2);
           ctx.fillStyle = p.color;
-          ctx.globalAlpha = p.life * 0.6;
+          ctx.globalAlpha = p.life * 0.4;
           ctx.fill();
         });
       }
@@ -140,7 +140,7 @@ const LiquidCursor: React.FC = () => {
     const onMouseLeave = () => setIsVisible(false);
     const onMouseEnter = () => setIsVisible(true);
 
-    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("mousemove", onMouseMove, { passive: true });
     window.addEventListener("mousedown", onMouseDown);
     window.addEventListener("mouseup", onMouseUp);
     document.addEventListener("mouseleave", onMouseLeave);
@@ -173,12 +173,12 @@ const LiquidCursor: React.FC = () => {
 
   return (
     <div
-      className={`fixed inset-0 pointer-events-none z-[999999] transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}
+      className={`fixed inset-0 pointer-events-none z-[10000] transition-opacity duration-300 ${isVisible ? "opacity-100" : "opacity-0"}`}
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full" />
       <div
         ref={ringRef}
-        className="fixed top-0 left-0 border-2 transition-all duration-200 ease-out"
+        className="fixed top-0 left-0 border-2 ease-out"
         style={{
           width: ringSize,
           height: ringSize,
@@ -189,7 +189,9 @@ const LiquidCursor: React.FC = () => {
           backgroundColor: "transparent",
           boxShadow: "none",
           opacity: isHovering ? 0 : 1,
-          willChange: "transform, border-radius, width, height, opacity",
+          willChange: "transform, width, height, border-radius, opacity",
+          transition:
+            "width 0.2s, height 0.2s, border-radius 0.2s, border-color 0.2s, opacity 0.2s",
         }}
       />
       <div

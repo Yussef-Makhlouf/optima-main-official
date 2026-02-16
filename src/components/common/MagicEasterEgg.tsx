@@ -85,10 +85,10 @@ const MagicEasterEgg: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[2147483647] flex items-center justify-center p-4 md:p-8 overflow-hidden font-mono"
+          className="fixed inset-0 z-[9000] flex items-center justify-center p-4 md:p-8 overflow-hidden font-mono"
         >
           {/* Theme-aware Dynamic Backdrop */}
-          <div className="absolute inset-0 bg-slate-50/90 dark:bg-[#05080a]/95 backdrop-blur-[50px] transition-colors duration-700" />
+          <div className="absolute inset-0 bg-slate-50/80 dark:bg-[#05080a]/90 backdrop-blur-[12px] transition-colors duration-700" />
 
           {/* Animated Tech Grid */}
           <div
@@ -227,8 +227,8 @@ const MagicEasterEgg: React.FC = () => {
                       <img
                         src={
                           isDarkMode
-                            ? "/logos/optima-04-symbol-dark.svg"
-                            : "/logos/optima-05-symbol-light.svg"
+                            ? "/logos/optima-cursor-dark.svg"
+                            : "/logos/optima-cursor-light.svg"
                         }
                         alt="Optima"
                         className="w-full h-full object-contain opacity-20 dark:opacity-30"

@@ -91,7 +91,7 @@ const CommandPalette: React.FC = () => {
     <AnimatePresence>
       {isOpen && (
         <div
-          className="fixed inset-0 z-[2147483647] flex items-start justify-center pt-[15vh] px-4 pointer-events-none overflow-hidden"
+          className="fixed inset-0 z-[9000] flex items-start justify-center pt-[15vh] px-4 pointer-events-none overflow-hidden"
           style={{ direction: isRTL ? "rtl" : "ltr" }}
         >
           {/* OPTIMIZED BACKDROP: Light Glow & Grid */}
@@ -99,7 +99,7 @@ const CommandPalette: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="absolute inset-0 bg-slate-900/10 dark:bg-black/60 backdrop-blur-sm pointer-events-auto"
+            className="absolute inset-0 bg-slate-900/10 dark:bg-black/40 backdrop-blur-[4px] pointer-events-auto"
             onClick={closePalette}
           >
             {/* Simple Performance Glow */}
@@ -115,7 +115,7 @@ const CommandPalette: React.FC = () => {
             animate={{ scale: 1, opacity: 1, y: 0 }}
             exit={{ scale: 0.95, opacity: 0, y: 10 }}
             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-            className="relative z-50 w-full max-w-lg bg-white/90 dark:bg-dark/95 backdrop-blur-xl border border-white/20 dark:border-white/10 rounded-[2.5rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] overflow-hidden pointer-events-auto flex flex-col"
+            className="relative z-50 w-full max-w-lg bg-white dark:bg-dark border border-white/20 dark:border-white/10 rounded-[2.5rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.5)] overflow-hidden pointer-events-auto flex flex-col"
           >
             {/* COMPACT INNOVATIVE HEADER */}
             <div className="relative p-6 px-10">

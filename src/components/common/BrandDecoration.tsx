@@ -19,7 +19,7 @@ const BrandDecoration: React.FC<{ className?: string }> = ({ className }) => {
       />
       <img
         src="/logos/optima-04-symbol-dark.svg"
-        className="w-[300px] md:w-[500px] lg:w-[700px] h-auto hidden dark:block animate-[spin_120s_linear_infinite]"
+        className="w-[300px] md:w-[500px] lg:w-[700px] h-auto hidden dark:block animate-[spin_150s_linear_infinite]"
         alt=""
       />
     </div>
@@ -27,3 +27,4 @@ const BrandDecoration: React.FC<{ className?: string }> = ({ className }) => {
 };
 
 export default BrandDecoration;
+تم
