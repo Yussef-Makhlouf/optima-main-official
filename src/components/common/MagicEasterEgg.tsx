@@ -65,6 +65,11 @@ const MagicEasterEgg: React.FC = () => {
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       const key = e.key.toLowerCase();
+      if (key === "escape") {
+        setIsActive(false);
+        return;
+      }
+
       const newSequence = [...sequence, key].slice(-10);
       setSequence(newSequence);
 
@@ -103,7 +108,7 @@ const MagicEasterEgg: React.FC = () => {
           {/* Floating HUD Elements */}
           <div className="relative z-10 w-full max-w-6xl h-full flex flex-col justify-between py-12">
             {/* TOP BAR */}
-            <div className="flex justify-between items-start border-b border-primary/20 dark:border-white/10 pb-6">
+            <div className="flex justify-between items-start border-b border-primary/20 dark:border-white/10 pb-6 relative">
               <div className="space-y-1">
                 <motion.div
                   initial={{ x: -20, opacity: 0 }}
@@ -126,15 +131,29 @@ const MagicEasterEgg: React.FC = () => {
                 </div>
               </div>
 
-              <div className="text-right hidden md:block">
-                <div className="text-[10px] text-primary dark:text-cyber font-black mb-1">
-                  NODE_ID: OPT-X99
+              <div className="flex items-start gap-8">
+                <div className="text-right hidden md:block">
+                  <div className="text-[10px] text-primary dark:text-cyber font-black mb-1">
+                    NODE_ID: OPT-X99
+                  </div>
+                  <div className="text-[9px] text-slate-400 dark:text-white/20 uppercase tracking-widest">
+                    Latency:{" "}
+                    <span className="text-green-500 font-bold">42ms</span> |
+                    CPU: <span className="text-yellow-500 font-bold">12%</span>
+                  </div>
                 </div>
-                <div className="text-[9px] text-slate-400 dark:text-white/20 uppercase tracking-widest">
-                  Latency:{" "}
-                  <span className="text-green-500 font-bold">42ms</span> | CPU:{" "}
-                  <span className="text-yellow-500 font-bold">12%</span>
-                </div>
+
+                {/* ESC BUTTON */}
+                <button
+                  onClick={() => setIsActive(false)}
+                  className="p-2 border border-primary/20 hover:border-primary/50 text-slate-400 hover:text-primary transition-all rounded-lg group"
+                >
+                  <span className="text-[10px] font-bold block mb-1 group-hover:scale-110 transition-transform">
+                    ESC
+                  </span>
+                  <div className="w-6 h-0.5 bg-current rotate-45 translate-y-0.5"></div>
+                  <div className="w-6 h-0.5 bg-current -rotate-45 -translate-y-0.5"></div>
+                </button>
               </div>
             </div>
 
