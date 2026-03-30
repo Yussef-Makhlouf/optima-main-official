@@ -643,6 +643,77 @@ export const PROJECTS: ProjectInfo[] = [
                 ]
             }
         ]
+    },
+    {
+        id: 'p9',
+        slug: 'atomics-football-academy-uae',
+        client: 'Atomics Football Academy UAE',
+        title: 'Summer & Winter Camp Platform',
+        description: 'Camp website for schedule viewing and subscription payments.',
+        longDescription: 'A complete football academy camp platform in the UAE where parents can view summer and winter camp schedules, choose preferred days, and pay subscriptions based on selected membership plans.',
+        challenge: 'Need for a clear, mobile-friendly website that allows users to browse camp schedules and complete day-based membership subscriptions online.',
+        solution: 'We developed a web platform with camp schedule browsing, plan/day selection flow, and secure online subscription payment checkout.',
+        impact: 'Simplified registrations, faster payment completion, and better visibility for seasonal camp programs.',
+        tags: ['Web App', 'Web Dev', 'Portal'],
+        color: '#162427',
+        thumbnail: '/atomics-academy.png',
+        gallery: [
+            {
+                url: '/atomics-academy.png',
+                title: 'Summer & Winter Camp Hero',
+                description: 'Homepage hero section for the football academy camp platform'
+            }
+        ],
+        techStack: [
+            {
+                category: 'Frontend',
+                description: 'Responsive booking and subscription experience.',
+                technologies: [
+                    {
+                        name: 'React',
+                        description: 'Interactive user interface for schedules and checkout.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+                        color: '#61DAFB'
+                    },
+                    {
+                        name: 'Next.js',
+                        description: 'Fast and SEO-friendly web framework.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg',
+                        color: '#000000'
+                    },
+                    {
+                        name: 'TailwindCSS',
+                        description: 'Utility-first styling system.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+                        color: '#06B6D4'
+                    }
+                ]
+            },
+            {
+                category: 'Backend & Payments',
+                description: 'Subscription, membership logic, and online payment processing.',
+                technologies: [
+                    {
+                        name: 'Node.js',
+                        description: 'Server-side APIs for subscription logic.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+                        color: '#339933'
+                    },
+                    {
+                        name: 'MongoDB',
+                        description: 'Data storage for plans, schedules, and enrollments.',
+                        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg',
+                        color: '#47A248'
+                    },
+                    {
+                        name: 'Stripe',
+                        description: 'Secure online payments for camp subscriptions.',
+                        logo: 'https://avatars.githubusercontent.com/u/856813?s=200&v=4',
+                        color: '#635BFF'
+                    }
+                ]
+            }
+        ]
     }
 ];
 

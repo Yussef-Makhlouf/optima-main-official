@@ -201,6 +201,22 @@
                 "Node.js",
                 "Admin Dashboard"
             ]
+        },
+        "p9": {
+            "title": "Atomics Football Academy UAE",
+            "description": "Summer and winter football camp website with schedule and subscription payments",
+            "client": "Football Academy UAE",
+            "sector": "Sports & Education",
+            "challenge": "The academy needed a user-friendly website where parents can view camp schedules and subscribe based on selected days and membership type.",
+            "solution": "We built a complete camp platform that displays summer and winter schedules, allows day and membership selection, and supports secure online subscription payments.",
+            "longDescription": "This UAE football academy platform helps families explore seasonal camp programs, choose suitable attendance days, and complete membership subscriptions online in a smooth flow.",
+            "impact": "Faster registrations, better campaign conversion, and improved operational organization for seasonal camps.",
+            "technologies": [
+                "Next.js",
+                "React",
+                "Node.js",
+                "MongoDB"
+            ]
         }
     }
 }

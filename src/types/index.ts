@@ -76,6 +76,7 @@ export interface ProjectInfo {
     tags: string[];
     color: string;
     // New optional fields
+    thumbnail?: string;
     gallery?: GalleryImage[];
     techStack?: TechCategory[];
     timeline?: ProjectMilestone[];
