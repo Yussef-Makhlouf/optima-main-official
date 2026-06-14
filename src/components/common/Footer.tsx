@@ -7,6 +7,21 @@ const Footer: React.FC = () => {
     const currentYear = new Date().getFullYear();
     const isRTL = i18n.language === 'ar';
 
+    // Dynamic direction classes
+    const direction = isRTL ? 'rtl' : 'ltr';
+    const textAlign = isRTL ? 'text-right' : 'text-left';
+    const textAlignCenter = 'text-center';
+    const flexRow = isRTL ? 'flex-row-reverse' : 'flex-row';
+    const flexRowReverse = isRTL ? 'flex-row' : 'flex-row-reverse';
+    const justifyStart = isRTL ? 'justify-end' : 'justify-start';
+    const justifyEnd = isRTL ? 'justify-start' : 'justify-end';
+    const marginAuto = isRTL ? 'ml-auto mr-0' : 'mr-auto ml-0';
+    const marginAutoOpposite = isRTL ? 'mr-auto ml-0' : 'ml-auto mr-0';
+    const paddingStart = isRTL ? 'pr-4 pl-0' : 'pl-4 pr-0';
+    const paddingEnd = isRTL ? 'pl-4 pr-0' : 'pr-4 pl-0';
+    const borderStart = isRTL ? 'border-r-2 border-l-0' : 'border-l-2 border-r-0';
+    const gapStart = isRTL ? 'gap-3' : 'gap-3';
+
     const socialLinks = [
         {
             name: 'LinkedIn',
@@ -46,47 +61,84 @@ const Footer: React.FC = () => {
         }
     ];
 
+    const navLinks = [
+        { key: 'services', path: '/services' },
+        { key: 'projects', path: '/projects' },
+        { key: 'industries', path: '/industries' },
+        { key: 'about', path: '/about' },
+    ];
+
+    const officeLocations = [
+        { key: 'hq', color: 'bg-secondary' },
+        { key: 'london', color: 'bg-slate-400 dark:bg-slate-600' },
+        { key: 'singapore', color: 'bg-slate-400 dark:bg-slate-600' },
+    ];
+
     return (
-        <footer className="bg-slate-50 dark:bg-dark border-t border-slate-200 dark:border-primary/10 pt-20 pb-10 transition-colors relative overflow-hidden">
+        <footer
+            dir={direction}
+            className="bg-slate-50 dark:bg-dark border-t border-slate-200 dark:border-primary/10 pt-16 pb-8 transition-colors relative overflow-hidden"
+            role="contentinfo"
+            aria-label={t('footer.global')}
+        >
+            {/* Background Pattern */}
             <div className="absolute inset-0 grid-bg opacity-5 pointer-events-none"></div>
 
-            <div className="max-w-7xl mx-auto px-6 relative z-10">
+            {/* Decorative Gradient */}
+            <div className={`absolute top-0 w-full h-px bg-gradient-to-${isRTL ? 'l' : 'r'} from-transparent via-primary/30 to-transparent ${isRTL ? 'right-0' : 'left-0'}`}></div>
+
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
                 {/* Top Section: Tagline */}
-                <div className="text-center mb-20">
-                    <h2 className="text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-600 dark:from-white dark:to-slate-400 max-w-4xl mx-auto leading-relaxed">
+                <div className={`${textAlignCenter} mb-16`}>
+                    <h2 className={`text-xl md:text-2xl lg:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-${isRTL ? 'l' : 'r'} from-slate-900 via-slate-700 to-slate-900 dark:from-white dark:via-slate-300 dark:to-white max-w-4xl mx-auto leading-relaxed px-4`}>
                         {t('footer.tagline')}
                     </h2>
+                    <div className={`w-24 h-1 bg-gradient-to-${isRTL ? 'l' : 'r'} from-primary to-secondary mx-auto mt-6 rounded-full`}></div>
                 </div>
 
-                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-16 mb-20 ${isRTL ? 'text-right' : ''}`}>
+                {/* Main Content Grid */}
+                <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-16 mb-16`}>
 
                     {/* Brand Column */}
-                    <div className="lg:col-span-5 space-y-8">
-                        <Link to="/" className={`flex items-center group w-fit transition-transform duration-500 hover:scale-105 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                    <div className="lg:col-span-5 space-y-6">
+                        <Link
+                            to="/"
+                            className={`flex items-center gap-3 group w-fit transition-transform duration-500 hover:scale-105 ${flexRow}`}
+                            aria-label="OPTIMA Home"
+                        >
                             <img
                                 src="/logos/optima-05-symbol-light.svg"
                                 alt="OPTIMA"
-                                className="h-20 md:h-20 w-auto dark:hidden rounded-full border border-slate-200 dark:border-white/10"
+                                className="h-14 md:h-16 w-auto dark:hidden rounded-full border-2 border-slate-200 dark:border-white/10 shadow-sm"
                             />
                             <img
                                 src="/logos/optima-04-symbol-dark.svg"
                                 alt="OPTIMA"
-                                className="h-20 md:h-24 w-auto hidden dark:block rounded-full border border-slate-200 dark:border-white/10"
+                                className="h-14 md:h-16 w-auto hidden dark:block rounded-full border-2 border-white/10 dark:border-white/20 shadow-sm"
                             />
+                            <span className="text-2xl md:text-3xl font-bold tracking-wider text-slate-800 dark:text-white font-['Orbitron']">
+                                <span className="text-primary">OPT</span>IMA
+                            </span>
                         </Link>
-                        <p className={`text-slate-500 dark:text-gray-400 text-base leading-relaxed max-w-sm transition-colors ${isRTL ? 'ml-auto' : ''}`}>
+
+                        <p className={`text-slate-500 dark:text-gray-400 text-base leading-relaxed transition-colors max-w-sm ${textAlign}`}>
                             {t('footer.description')}
                         </p>
 
-                        <div className={`pt-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                            <h5 className="text-xs font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-4">{t('footer.social')}</h5>
-                            <div className={`flex gap-4 ${isRTL ? 'flex-row-reverse' : ''}`}>
+                        {/* Social Links */}
+                        <div className="pt-2">
+                            <h5 className={`font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-4 flex items-center gap-2 ${flexRow}`}>
+                                <span className="w-8 h-px bg-primary/50"></span>
+                                {t('footer.social')}
+                                <span className="w-8 h-px bg-primary/50"></span>
+                            </h5>
+                            <div className={`flex gap-3 ${flexRow}`}>
                                 {socialLinks.map((social) => (
                                     <a
                                         key={social.name}
                                         href={social.url}
                                         aria-label={social.name}
-                                        className="w-10 h-10 rounded-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-gray-400 hover:bg-primary hover:border-primary hover:text-white dark:hover:bg-primary dark:hover:border-primary dark:hover:text-white transition-all duration-300"
+                                        className="w-11 h-11 rounded-xl bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-500 dark:text-gray-400 hover:bg-primary hover:border-primary hover:text-white dark:hover:bg-primary dark:hover:border-primary dark:hover:text-white transition-all duration-300 hover:-translate-y-1 shadow-sm hover:shadow-md"
                                     >
                                         {social.icon}
                                     </a>
@@ -97,54 +149,108 @@ const Footer: React.FC = () => {
 
                     {/* Quick Links */}
                     <div className="lg:col-span-3">
-                        <h4 className="text-slate-900 dark:text-white font-black mb-8 text-[11px] uppercase tracking-[0.4em] transition-colors border-l-2 border-primary pl-4">{t('footer.servicesTitle')}</h4>
-                        <ul className={`space-y-4 text-sm font-medium text-slate-500 dark:text-gray-400 transition-colors ${isRTL ? 'text-right' : ''}`}>
-                            <li><Link to="/services" className="hover:text-primary transition-colors flex items-center gap-2">{t('nav.services')}</Link></li>
-                            <li><Link to="/projects" className="hover:text-primary transition-colors">{t('nav.projects')}</Link></li>
-                            <li><Link to="/industries" className="hover:text-primary transition-colors">{t('nav.industries')}</Link></li>
-                            <li><Link to="/about" className="hover:text-primary transition-colors">{t('nav.about')}</Link></li>
+                        <h4 className={`text-slate-900 dark:text-white font-black mb-6 text-[14px] uppercase tracking-[0.4em] transition-colors ${borderStart} ${paddingStart}`}>
+                            {t('footer.servicesTitle')}
+                        </h4>
+                        <ul className={`space-y-4 text-sm font-medium text-slate-500 dark:text-gray-400 transition-colors`}>
+                            {navLinks.map((link) => (
+                                <li key={link.key} className={`${textAlign}`}>
+                                    <Link
+                                        to={link.path}
+                                        className={`hover:text-primary transition-colors duration-300 inline-flex items-center gap-2 group ${flexRow}`}
+                                    >
+                                        <span className="w-0 group-hover:w-4 h-px bg-primary transition-all duration-300"></span>
+                                        {t(`nav.${link.key}`)}
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Global Addresses */}
                     <div className="lg:col-span-4">
-                        <h4 className="text-slate-900 dark:text-white font-black mb-8 text-[11px] uppercase tracking-[0.4em] transition-colors border-l-2 border-primary pl-4">{t('footer.global')}</h4>
-                        <div className={`space-y-6 ${isRTL ? 'text-right' : ''}`}>
-                            <address className="not-italic text-sm text-slate-500 dark:text-gray-400 space-y-3 transition-colors">
-                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                                    <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-1.5 flex-shrink-0"></div>
-                                    <p>{t('footer.office.hq')}</p>
-                                </div>
-                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mt-1.5 flex-shrink-0"></div>
-                                    <p>{t('footer.office.london')}</p>
-                                </div>
-                                <div className={`flex items-start gap-3 ${isRTL ? 'flex-row-reverse' : ''}`}>
-                                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300 dark:bg-slate-700 mt-1.5 flex-shrink-0"></div>
-                                    <p>{t('footer.office.singapore')}</p>
-                                </div>
+                        <h4 className={`text-slate-900 dark:text-white font-black mb-6 text-[14px] uppercase tracking-[0.4em] transition-colors ${borderStart} ${paddingStart}`}>
+                            {t('footer.global')}
+                        </h4>
+                        <div className="space-y-5">
+                            <address className={`not-italic text-sm text-slate-500 dark:text-gray-400 space-y-4 transition-colors`}>
+                                {officeLocations.map((office, index) => (
+                                    <div
+                                        key={office.key}
+                                        className={`flex items-start gap-3 ${flexRow}`}
+                                    >
+                                        <div className={`w-2 h-2 rounded-full ${office.color} mt-1.5 flex-shrink-0 ring-2 ring-white dark:ring-dark`}></div>
+                                        <p className={`leading-relaxed flex-1 ${textAlign}`}>{t(`footer.office.${office.key}`)}</p>
+                                    </div>
+                                ))}
                             </address>
-                            <div className={`pt-4 border-t border-slate-200 dark:border-white/5 ${isRTL ? 'text-left' : ''}`}>
-                                <a href={`mailto:${t('footer.contact.partnerships')}`} className="text-secondary hover:text-primary transition-colors text-sm font-medium flex items-center gap-2">
-                                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                                    </svg>
-                                    {t('footer.contact.partnerships')}
+
+                            <div className="pt-5 border-t border-slate-200 dark:border-white/5">
+                                <a
+                                    href={`mailto:${t('footer.contact.partnerships')}`}
+                                    className={`text-secondary hover:text-primary transition-colors text-sm font-medium inline-flex items-center gap-2 group ${flexRow}`}
+                                >
+                                    <span className="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
+                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </span>
+                                    <span className="underline decoration-secondary/30 hover:decoration-primary underline-offset-4 transition-all break-all">
+                                        {t('footer.contact.partnerships')}
+                                    </span>
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                {/* Bottom Bar */}
-                <div className={`border-t border-slate-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 dark:text-gray-500 uppercase tracking-widest transition-colors font-medium space-y-4 md:space-y-0 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
-                    <p>{t('footer.copyright', { year: currentYear })}</p>
-                    <div className={`flex flex-wrap justify-center gap-6 md:gap-8 ${isRTL ? 'md:flex-row-reverse' : ''}`}>
-                        <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.privacy')}</a>
-                        <a href="#" className="hover:text-primary transition-colors">{t('footer.legal.terms')}</a>
-                        <span className="text-slate-300 dark:text-white/10 hidden md:inline">|</span>
-                        <span className="font-mono text-[10px] opacity-70"> OPTIMA v1.0</span>
+                {/* Decorative Divider */}
+                <div className="relative py-8">
+                    <div className="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div className="w-full border-t border-slate-200 dark:border-white/10"></div>
                     </div>
+                    <div className="relative flex justify-center">
+                        <span className="bg-slate-50 dark:bg-dark px-4">
+                            <svg className={`w-6 h-6 text-primary/40 ${isRTL ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+
+                {/* Bottom Bar */}
+                <div className={`flex flex-col md:flex-row justify-between items-center text-[11px] text-slate-400 dark:text-gray-500 uppercase tracking-widest transition-colors font-medium gap-4 md:gap-0`}>
+                    <p className={`flex items-center gap-2 ${flexRow} order-1`}>
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        {t('footer.copyright', { year: currentYear })}
+                    </p>
+
+                    <div className={`flex flex-wrap justify-center items-center gap-4 md:gap-6 ${flexRow} order-2`}>
+                        <a href="#" className="hover:text-primary transition-colors duration-300 relative group">
+                            {t('footer.legal.privacy')}
+                            <span className={`absolute -bottom-1 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full ${isRTL ? 'right-0' : 'left-0'}`}></span>
+                        </a>
+                        <span className="text-slate-300 dark:text-white/10">|</span>
+                        <a href="#" className="hover:text-primary transition-colors duration-300 relative group">
+                            {t('footer.legal.terms')}
+                            <span className={`absolute -bottom-1 w-0 h-px bg-primary transition-all duration-300 group-hover:w-full ${isRTL ? 'right-0' : 'left-0'}`}></span>
+                        </a>
+                        <span className="text-slate-300 dark:text-white/10 hidden md:inline">|</span>
+                        <span className="font-mono text-[10px] opacity-60 flex items-center gap-1">
+                            <span className="w-2 h-2 rounded-full bg-green-500/60 animate-pulse"></span>
+                            OPTIMA v1.0
+                        </span>
+                    </div>
+                </div>
+
+                {/* Security Badge */}
+                <div className="mt-8 flex justify-center items-center gap-2 text-[10px] text-slate-400 dark:text-gray-600 uppercase tracking-widest">
+                    <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                    </svg>
+                    {t('footer.secureTransmission')}
                 </div>
             </div>
         </footer>

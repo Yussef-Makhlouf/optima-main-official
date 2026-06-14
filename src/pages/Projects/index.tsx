@@ -1,12 +1,33 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { PROJECTS } from '../../data/content';
+import projectsData from '../../data/projects.json';
 import { Icons } from '../../data/content';
 import TechMarquee from '../../components/common/TechMarquee';
 import { TECHNOLOGIES } from '../../data/content-marquee';
 import BrandDecoration from '../../components/common/BrandDecoration';
 
+// Filter out repositories that are empty or placeholders, selecting those with completed analysis
+const GITHUB_PROJECTS = projectsData.repos.filter((repo: any) => 
+    repo.analysis && 
+    repo.analysis.tech_stack && 
+    repo.analysis.tech_stack.length > 0 &&
+    repo.name !== 'Mac' &&
+    repo.name !== 'optima-studio-generate-content'
+).map((repo: any) => ({
+    id: repo.name,
+    slug: repo.name,
+    client: repo.name.split('-').map((w: string) => w.charAt(0).toUpperCase() + w.slice(1)).join(' '),
+    title: repo.description || '',
+    longDescription: repo.analysis.portfolio_summary || repo.description || '',
+    tags: [repo.language || 'TypeScript', repo.category || 'Web App'],
+    stars: repo.stars || 0,
+    forks: repo.forks || 0,
+    watchers: repo.watchers || 0,
+    size_kb: repo.size_kb || 0,
+    homepage: repo.homepage || '',
+    html_url: repo.url || repo.html_url || ''
+}));
 
 const Projects: React.FC = () => {
     const { t } = useTranslation(['projects']);
@@ -14,10 +35,9 @@ const Projects: React.FC = () => {
     return (
         <div className="pt-32 min-h-screen bg-white dark:bg-dark transition-colors">
             {/* Banner */}
-            <section className="py-24 bg-slate-50 dark:bg-dark relative overflow-hidden grid-bg border-b border-slate-200 dark:border-white/5 transition-colors">
+            <section className="relative py-24 bg-slate-50 dark:bg-dark overflow-hidden grid-bg border-b border-slate-200 dark:border-white/5 transition-colors">
                 <BrandDecoration />
                 <div className="max-w-7xl mx-auto px-6 relative z-10">
-
                     <h1 className="text-6xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tighter mb-8 uppercase transition-colors">{t('projects:page.title')}</h1>
                     <p className="text-xl text-slate-600 dark:text-gray-400 max-w-2xl font-light transition-colors">
                         {t('projects:page.description')}
@@ -29,7 +49,7 @@ const Projects: React.FC = () => {
             <section className="py-32">
                 <div className="max-w-7xl mx-auto px-6">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-                        {PROJECTS.map((project, index) => (
+                        {GITHUB_PROJECTS.map((project, index) => (
                             <DetailedProjectCard key={project.id} {...project} index={index} t={t} />
                         ))}
                     </div>
@@ -66,7 +86,19 @@ const Projects: React.FC = () => {
     );
 };
 
-const DetailedProjectCard: React.FC<{ id: string, slug: string, client: string, tags: string[], index: number, t: any }> = ({ id, slug, client, tags, index, t }) => {
+const DetailedProjectCard: React.FC<{ 
+    id: string, 
+    slug: string, 
+    client: string, 
+    title: string,
+    longDescription: string,
+    tags: string[], 
+    index: number, 
+    t: any,
+    stars: number,
+    forks: number,
+    size_kb: number
+}> = ({ id, slug, client, title, longDescription, tags, index, t, stars, forks, size_kb }) => {
     // Helper to format tag key (e.g. "Web App" -> "web-app")
     const getTagKey = (tag: string) => tag.toLowerCase().replace(/\s+/g, '-');
 
@@ -78,9 +110,16 @@ const DetailedProjectCard: React.FC<{ id: string, slug: string, client: string, 
                     <div className="absolute inset-0 grid-bg opacity-30 mix-blend-overlay"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
 
+                    {/* Left corner telemetry info */}
+                    <div className="absolute top-4 left-4 font-mono text-[9px] text-white/70 bg-black/60 px-2 py-1 select-none backdrop-blur-md rounded-sm">
+                        SIZE: {size_kb.toLocaleString()} KB // ★ {stars} // ⑂ {forks}
+                    </div>
+
                     <div className="absolute bottom-6 left-6 flex gap-2 z-10">
                         {tags.map(tag => (
-                            <span key={tag} className="text-[10px] font-black text-white bg-primary/90 backdrop-blur-sm px-3 py-1 uppercase tracking-widest">{t(`projects:tags.${getTagKey(tag)}`)}</span>
+                            <span key={tag} className="text-[10px] font-black text-white bg-primary/90 backdrop-blur-sm px-3 py-1 uppercase tracking-widest">
+                                {t(`projects:tags.${getTagKey(tag)}`, { defaultValue: tag })}
+                            </span>
                         ))}
                     </div>
                 </div>
@@ -88,10 +127,12 @@ const DetailedProjectCard: React.FC<{ id: string, slug: string, client: string, 
             <div className="space-y-4">
                 <div className="text-[11px] font-black text-secondary uppercase tracking-[0.4em]">{client}</div>
                 <Link to={`/projects/${slug}`}>
-                    <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase group-hover:text-primary transition-colors duration-300 leading-tight">{t(`projects:items.${id}.title`)}</h3>
+                    <h3 className="text-3xl font-black text-slate-900 dark:text-white tracking-tighter uppercase group-hover:text-primary transition-colors duration-300 leading-tight">
+                        {t(`projects:items.${id}.title`, { defaultValue: title || id })}
+                    </h3>
                 </Link>
-                <p className="text-slate-500 dark:text-gray-400 text-lg font-light leading-relaxed transition-colors">
-                    {t(`projects:items.${id}.longDescription`)}
+                <p className="text-slate-500 dark:text-gray-400 text-lg font-light leading-relaxed transition-colors line-clamp-3">
+                    {t(`projects:items.${id}.longDescription`, { defaultValue: longDescription })}
                 </p>
                 <Link to={`/projects/${slug}`} className="inline-flex items-center space-x-3 text-xs font-black tracking-[0.2em] text-slate-900 dark:text-white pt-4 group-hover:translate-x-2 transition-all duration-500 uppercase">
                     <span>{t('projects:page.viewProject')}</span>
