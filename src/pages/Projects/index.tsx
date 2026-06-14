@@ -106,7 +106,7 @@ const DetailedProjectCard: React.FC<{
         <div className={`group flex flex-col ${index % 2 !== 0 ? 'lg:mt-24' : ''}`}>
             <Link to={`/projects/${slug}`} className="block">
                 <div className="relative aspect-video bg-slate-100 dark:bg-dark mb-8 overflow-hidden border border-slate-200 dark:border-white/5 transition-colors corner-accent group-hover:shadow-2xl group-hover:shadow-primary/20">
-                    <img src={thumbnail || "/web-development2.png"} alt={client} className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
+                    <img src="/web-development2.png" alt={client} className="absolute inset-0 w-full h-full object-cover opacity-60 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700" />
                     <div className="absolute inset-0 grid-bg opacity-30 mix-blend-overlay"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent"></div>
 
